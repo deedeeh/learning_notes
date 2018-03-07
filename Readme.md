@@ -17,7 +17,7 @@ Currently I am doing a Web Developer Bootcamp on Udemy by Colt Steele who is a d
 The course covers Frontend which I have some of its skills and Backend which I know nothing about! It is a good opportunity to learn new technologies that will help me in my career and understand what happens under the hood.
 
 ###### Tuesday 6th of March
-I did an *Image Blog* using HTML and CSS as part of the Bootcamp Intermediate CSS section and next I will be creating a Blog.
++ I did an *Image Blog* using HTML and CSS as part of the Bootcamp Intermediate CSS section and next I will be creating a Blog.
 
 Here are few lines of my stylesheet:
 
@@ -34,7 +34,7 @@ Here are few lines of my stylesheet:
 }
 ```
 
-I created a *Blog* using HTML5 and CSS and I really enjoyed building it and it didn't take time.
++ I created a *Blog* using HTML5 and CSS and I really enjoyed building it and it didn't take time.
 
 ```HTML
 <article>
@@ -67,3 +67,6 @@ I created a *Blog* using HTML5 and CSS and I really enjoyed building it and it d
   padding-left: 6px;
 }
 ```
+
+###### Wednesday 7th March
++ Today I am doing the Introduction to JavaScript as a quick reminder to JS because I haven't be coding regularly for some time.
