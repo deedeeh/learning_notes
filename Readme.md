@@ -69,4 +69,6 @@ Here are few lines of my stylesheet:
 ```
 
 ###### Wednesday 7th March
-+ Today I am doing the Introduction to JavaScript as a quick reminder to JS because I haven't be coding regularly for some time.
++ Today I am doing the Introduction to JavaScript as a quick reminder to JS because I haven't be coding regularly for some time. I did the primitive data types in addition to 2 simple exercises.
+
+Next is JS Basics: Control Flow. 
