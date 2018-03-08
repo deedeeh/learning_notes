@@ -71,4 +71,26 @@ Here are few lines of my stylesheet:
 ###### Wednesday 7th March
 + Today I am doing the Introduction to JavaScript as a quick reminder to JS because I haven't be coding regularly for some time. I did the primitive data types in addition to 2 simple exercises.
 
-Next is JS Basics: Control Flow. 
+Next is JS Basics: Control Flow.
+
+###### Thursday 8th March
++ Today I went off track by having a basic knowledge about *React* and the reason for that I am going to ReactFest 9 March 2018. I applied for the diversity ticket and I got one! I am excited!
++ A dear friend recommended to check React on the [beta.freecodecamp.org](https://beta.freecodecamp.org) and that is what I am doing today just React.
++ I've learned about JSX and creating React components.
+
+Here are few lines of my code:
+
+```JavaScript
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Hello React!</h1>
+      </div>
+    );
+  }
+};
+```
