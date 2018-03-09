@@ -94,3 +94,11 @@ class MyComponent extends React.Component {
   }
 };
 ```
+
+###### Friday 9th March
++ Today I went to ReactFest which was awesomeeeeee!!! I am really glad I had the chance to attend this event.
++ I did continue some of the *Web Developer Bootcamp* JavaScript Basics: Control Flow. Here are some of the things I worked on:
+>* Comparison operators & type coercion.
+>* Logical operators & short circuit evaluation.
+>* Truthy & Falsy values.
+>* Conditional statements.
