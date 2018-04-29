@@ -128,3 +128,41 @@ while(counter <= 333) {
   counter++;
 }
 ```
++ I worked on JavaScript Basics: Functions and next will be scope and higher order functions.
+
+Here are some code from Problem Set exercises:
+
+```JavaScript
+//isEven() takes a single numeric argument and returns true if even and false otherwise.
+
+function isEven(num) {
+  if(num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+//kebabToSnake() takes a single kebab-cased string argument and returns the snake_cased version.
+
+function kebabToSnake(str) {
+  //Used a var because replace returns a new copy of the string and not changing the original string
+  var newStr = str.replace(/-/g, "_");
+  return newStr;
+}
+
+
+//factorial() takes a single numeric argument and returns the factorial of that number.
+
+function factorial(num) {
+  //define a result variable
+  var result = 1;
+  //calculate factorial and store value in result
+  for(var i = 2; i <= num; i++) {
+    result *= i;
+  }
+  //return the result variable
+  return result;
+}
+```
