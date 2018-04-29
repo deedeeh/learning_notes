@@ -102,3 +102,29 @@ class MyComponent extends React.Component {
 >* Logical operators & short circuit evaluation.
 >* Truthy & Falsy values.
 >* Conditional statements.
+
+###### Sunday 29th April
++ I am back to coding after being away for a while and I finished the *Web Developer Bootcamp* JavaScript Basics: Control Flow section. I have worked on *while* and *for* loops and done few exercises.
+
+Few lines of my code:
+
+```JavaScript
+//Print all odd numbers between 300 and 333
+
+//for loop
+for(var i = 300; i <= 333; i++) {
+  if(i % 2 !== 0) {
+    console.log(i);
+  }
+}
+
+//while loop
+var counter = 300;
+
+while(counter <= 333) {
+  if(counter % 2 === 1) {
+    console.log(counter);
+  }
+  counter++;
+}
+```
