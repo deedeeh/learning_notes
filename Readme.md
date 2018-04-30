@@ -166,3 +166,41 @@ function factorial(num) {
   return result;
 }
 ```
+###### Monday 30th April
++ I worked on  JavaScript basics: Arrays and did a small version of a todo list exercise.
+
+Here is the todo list:
+
+```HTML
+  <body>
+    <h1>Todo List</h1>
+    <ul>
+      <li>&#34;new&#34; &#8211; Add A Todo</li>
+      <li>&#34;list&#34; &#8211; View All Todos</li>
+      <li>&#34;quit&#34; &#8211; Quit App</li>
+    </ul>
+  </body>
+```
+
+```JavaScript
+var todos = ["Finish JS basics:Arrays"];
+
+window.setTimeout(function() {
+  var input = prompt("What would you like to do?");
+
+  while(input !== "quit") {
+    //handle input
+    if(input === "list") {
+      console.log(todos);
+    } else if (input === "new"){
+      //ask for new todo
+      var newTodo = prompt("Enter new todo");
+      //add to todos array
+      todos.push(newTodo);
+    }
+    //ask again for new input
+    input = prompt("What would you like to do?");
+  }
+  console.log("OK, YOU QUIT THE APP");
+}, 500);
+```
