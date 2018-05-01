@@ -204,3 +204,25 @@ window.setTimeout(function() {
   console.log("OK, YOU QUIT THE APP");
 }, 500);
 ```
+###### Tuesday 1st May
++ Today I spent couple of hours coding and the rest of the day was enjoying my birthday! I did continue the Arrays sections and finished array iteration with for loop and forEach method plus I learned about splice method.
+
++ Done todo list part 2 of the exercise where I used forEach and splice and did some refactoring.
+
+```JavaScript
+function listTodos() {
+  console.log("**********");
+  todos.forEach(function(todo, i) {
+    console.log(i + ": " + todo);
+  });
+  console.log("**********");
+}
+
+function deleteTodo() {
+    //ask for index of todo to be deleted
+    var index = prompt("Enter index of todo to delete");
+    //delete that todo
+    todos.splice(index, 1);
+    console.log("Deleted todo");
+  }
+```
