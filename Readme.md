@@ -226,3 +226,31 @@ function deleteTodo() {
     console.log("Deleted todo");
   }
 ```
+
+###### Wednesday 2nd May
++ I worked on Array Problem Set which contains 4 exercises involves using functions with arguments, loops and conditional statements.
+
+Here are couple of them:
+
+```JavaScript
+//isUniform() takes an array as an argument and returns true if all elements in
+//the array are identical
+function isUniform(arr) {
+  var first = arr[0];
+  for(var i = 1; i < arr.length; i++) {
+    if(arr[i] !== first) {
+      return false;
+    }
+  }
+  return true;
+}
+
+//sumArray() accepts an array of numbers and returns the sum of all numbers in the array
+function sumArray(arr) {
+  var sum = 0;
+  arr.forEach(function(num) {
+    sum += num
+  });
+  return sum;
+}
+```
