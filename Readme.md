@@ -260,3 +260,35 @@ var str = "name";
 someObject.str //doesn't look for "name"
 someObject[str] //does evaluate str and looks for "name"
 ```
+
++ I worked on a Movies Database Exercise using array of objects.
+
+Here is my code:
+
+```JavaScript
+var movies = [
+  {
+    title: "Taxi",
+    rating: 3.5,
+    hasWatched: true
+  },
+  {
+    title: "Finding Nemo",
+    rating: 4.5,
+    hasWatched: true
+  },
+  {
+    title: "Phantom Thread",
+    rating: 4,
+    hasWatched: false
+  }
+];
+
+movies.forEach(function(movie) {
+  if(movie.hasWatched === true) {
+    console.log('You have watched "' + movie.title + '" - ' + movie.rating + " stars");
+  } else {
+    console.log('You have not seen "' + movie.title + '" - ' + movie.rating + " stars");
+  }
+});
+```
