@@ -292,3 +292,9 @@ movies.forEach(function(movie) {
   }
 });
 ```
+
+###### Friday 4th May
++ I learned about object methods and the reasons to use them such as namespace collision.
++ The use of the keyword *this* inside methods.
+
+Next will be working on DOM Manipulation. 
