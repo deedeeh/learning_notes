@@ -1,16 +1,9 @@
 ### MY LEARNING NOTES
 
-#### Example
+#### Target:
 
 + Learn more Vanilla JS and document the outcome and share it on Github.
-+ Build more projects to build my portfolio and learn through the process.
-
-```JavaScript
-function removeTransition(e) {
-  if (e.propertyName !== 'transform') return;
-  e.target.classList.remove('playing');
-}
-```
++ Create more projects to build my portfolio and learn through the process.
 
 Currently I am doing a Web Developer Bootcamp on Udemy by Colt Steele who is a developer and bootcamp instructor.
 
@@ -253,4 +246,17 @@ function sumArray(arr) {
   });
   return sum;
 }
+```
+
+###### Thursday 3rd May
++ Today I am Working on JavaScript basics: Objects. Learned about the different ways for initialisation such as object literal notation, initialise a variable with curly braces and then add data and finally use the  keyword new Object(). Objects use key/value pairs to access data, update, add and delete.
+
++ There are few cases that I will need to use bracket notation instead of dot notation which are:
+>* property names starts with a number.
+>* property names with spaces
+>* Lookup for a variable.
+```JavaScript
+var str = "name";
+someObject.str //doesn't look for "name"
+someObject[str] //does evaluate str and looks for "name"
 ```
