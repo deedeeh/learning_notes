@@ -327,4 +327,6 @@ var fifth = document.getElementsByClassName("special")[0];
 var sixth = document.getElementsByTagName("p")[0];
 ```
 
-+ 
++ I learned about classList property to add, remove and toggle elements, properties like textContent and innerHTML and the difference between them. Also, worked with getAttribute and setAttribute properties.
+
++ Next I am going to start *Advanced DOM Manipulation* and will work on exercises and a project to practise it. 
