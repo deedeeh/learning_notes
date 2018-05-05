@@ -297,4 +297,34 @@ movies.forEach(function(movie) {
 + I learned about object methods and the reasons to use them such as namespace collision.
 + The use of the keyword *this* inside methods.
 
-Next will be working on DOM Manipulation. 
+Next will be working on DOM Manipulation.
+
+###### Saturday 5th May
++ I started to work on *DOM Manipulation* section and I did an exercise for different ways to select an element.
+
+Here is my code:
+
+```HTML
+<body>
+  <h1>I am an h1!</h1>
+  <p id="first" class="special">Hello</p>
+  <p class="special">Goodbye</p>
+  <p>Hi Again</p>
+  <p id="last">Goodbye Again</p>
+  <script type="text/javascript" src="dom.js"></script>
+</body>
+```
+
+```JavaScript
+//Different ways to select the first p element
+
+//best option for this case
+var first = document.getElementById("first");
+var second = document.querySelector("#first");
+var third = document.querySelector("p");
+var fourth = document.querySelector(".special");
+var fifth = document.getElementsByClassName("special")[0];
+var sixth = document.getElementsByTagName("p")[0];
+```
+
++ 
