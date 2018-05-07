@@ -329,4 +329,46 @@ var sixth = document.getElementsByTagName("p")[0];
 
 + I learned about classList property to add, remove and toggle elements, properties like textContent and innerHTML and the difference between them. Also, worked with getAttribute and setAttribute properties.
 
-+ Next I am going to start *Advanced DOM Manipulation* and will work on exercises and a project to practise it. 
++ Next I am going to start *Advanced DOM Manipulation* and will work on exercises and a project to practise it.
+
+###### Tuesday 8th May
++ Today I started *Advanced DOM Manipulation* and I worked on few tutorials and an exercise which is based on events Listeners.
+
+Here are few lines of my code:
+
+```HTML
+<head>
+    <meta charset="utf-8">
+    <title>Color Toggle Exercise</title>
+    <style type="text/css">
+      .purple {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <button>CLICK ME!</button>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+```
+
+```JavaScript
+var button = document.querySelector("button");
+var body = document.querySelector("body");
+var isPurple = false;
+
+//1st solution
+button.addEventListener("click", function() {
+  if(isPurple) {
+    body.style.background = "white";
+  } else {
+    body.style.background = "purple";
+  }
+  isPurple = !isPurple;
+});
+
+//2nd solution
+button.addEventListener("click", function() {
+  body.classList.toggle("purple");
+});
+```
