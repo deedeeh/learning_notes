@@ -372,3 +372,71 @@ button.addEventListener("click", function() {
   body.classList.toggle("purple");
 });
 ```
++ I worked on *score keeper* project which is basically with very simple HTML and it was focusing on JS and its functionality.
+
+Here are some of my codes:
+
+```HTML
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Score Keeper Project 1</title>
+    <link rel="stylesheet" href="scorekeeper.css">
+  </head>
+  <body>
+    <h1><span id="p1_display">0</span> to <span id="p2_display">0</span></h1>
+    <p>Playing to: <span id="winning_score">5</span></p>
+    <input type="number">
+    <button id="p1_button">Player One</button>
+    <button id="p2_button">Player Two</button>
+    <button id="reset">Reset</button>
+    <script type="text/javascript" src="scorekeeper.js"></script>
+  </body>
+</html>
+```
+
+```JavaScript
+var p1Button = document.getElementById("p1_button");
+var resetButton = document.getElementById("reset");
+var p1Display = document.querySelector("#p1_display");
+var numInput = document.querySelector("input");
+var winningScoreDisplay = document.querySelector("#winning_score");
+var p1Score = 0;
+var gameOver = false;
+var winningScore = 5;
+
+p1Button.addEventListener("click", function() {
+if(!gameOver) {
+  p1Score++;
+  console.log(p1Score, winningScore);
+  if(p1Score === winningScore) {
+    p1Display.classList.add("winner");
+    gameOver = true;
+  }
+}
+p1Display.textContent = p1Score;
+});
+
+resetButton.addEventListener("click", function() {
+  reset();
+});
+
+function reset() {
+  p1Score = 0;
+  p2Score = 0;
+  p1Display.textContent = p1Score;
+  p2Display.textContent = p2Score;
+  p1Display.classList.remove("winner");
+  p2Display.classList.remove("winner");
+  gameOver = false;
+}
+
+numInput.addEventListener("change", function() {
+  winningScoreDisplay.textContent = this.value;
+  winningScore = Number(this.value);
+  reset();
+});
+```
+
+In the previous JS I added the player 1 to show my work without player 2 to make things short. And the winner class just to add green colour to whoever has reached the winning score.
