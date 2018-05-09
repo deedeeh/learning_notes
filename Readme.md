@@ -439,3 +439,8 @@ numInput.addEventListener("change", function() {
 ```
 
 In the previous JS I added the player 1 to show my work without player 2 to make things short. And the winner class just to add green colour to whoever has reached the winning score.
+
+###### Wednesday 9th May
++ Today I applied for a scholarship for software engineering bootcamp and I have started to do the free online pre-course on Learn.co until I get a response on my application.
+
++ I will try to continue the online bootcamp I have been doing and to do the pre-course for the on campus bootcamp I applied for.
