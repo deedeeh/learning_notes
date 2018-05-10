@@ -444,3 +444,31 @@ In the previous JS I added the player 1 to show my work without player 2 to make
 + Today I applied for a scholarship for software engineering bootcamp and I have started to do the free online pre-course on Learn.co until I get a response on my application.
 
 + I will try to continue the online bootcamp I have been doing and to do the pre-course for the on campus bootcamp I applied for.
+
+###### Thursday 10th May
++ I worked on the rest of *Advanced DOM manipulation* section and did a small exercise.
+
+Few of my codes:
+
+```HTML
+<ul>
+  <li>Wash cat</li>
+  <li>Feed cat</li>
+  <li>Play with cat</li>
+</ul>
+```
+```JavaScript
+var lis = document.querySelectorAll("li");
+
+for(var i = 0; i < lis.length; i++) {
+  lis[i].addEventListener("mouseover", function() {
+    this.classList.add("selected");
+  });
+  lis[i].addEventListener("mouseout", function() {
+    this.classList.remove("selected");
+  });
+  lis[i].addEventListener("click", function() {
+    this.classList.toggle("done");
+  });
+}
+```
