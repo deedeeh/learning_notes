@@ -1,6 +1,6 @@
 #### Continue Learning Notes - 2
 
-###### Friday 10th May
+###### Thursday 10th May
 + I am working on Functions and Scopes in the *bootcamp pre-course* on Learn.co and next I am going to start Data Structures. I connected my Learn.co account to Github so all my progress and codes are available in there. Also I am using test-driven development using Mocha.
 
 Here are few lines of my code:
@@ -28,5 +28,54 @@ var funkyFunction = function() {
 
 // We want to set theFunk equal to "FUNKY!" using our funkyFunction.
 // NOTE: you only need to modify the code below this line.
-var theFunk = funkyFunction()(); 
+var theFunk = funkyFunction()();
 ```
+
+###### Friday 11th and Saturday 12th May
++ I worked on the *bootcamp pre-course* and done around four lessons including scopes and arithmetic labs.
+
+Here is a few lines of my code:
+```JavaScript
+var funkyFunction = function() {
+  return function() {
+    return "FUNKY!"
+  }
+}
+
+// We want to set theFunk equal to "FUNKY!" using our funkyFunction.
+// NOTE: you only need to modify the code below this line.
+var theFunk = funkyFunction()()
+```
+
++ I also started the Data Structures section. I worked on arrays and objects.
+
+Here are some of my codes:
+
+```JavaScript
+function updateObjectWithKeyAndValue(object, key, value) {
+  return Object.assign(object, {[key]: value});
+}
+
+function updateObjectWithKeyAndValue(object, key, value) {
+  var newObject = Object.assign({}, object, {[key]: value});
+  return newObject;
+}
+
+function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
+  object[key] = value;
+  return object;
+}
+
+function deleteFromObjectByKey(object, key) {
+  var newObject = Object.assign({}, object);
+  delete newObject[key];
+  return newObject;
+}
+
+function destructivelyDeleteFromObjectByKey(object, key) {
+  delete object[key];
+  return object;
+}
+```
+###### Sunday 13th, Monday 14th and Tuesday 15th May
+I wasn't feeling well so I wasn't able to code.
