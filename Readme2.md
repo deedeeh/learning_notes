@@ -141,3 +141,32 @@ function iLoveTheBeatles(n) {
   return arr;
 }
 ```
++ Also, I worked on the Deli counter lab which was a bit tough and I struggled to solve 2 out of 3 exercises.
+>* The takeANumber function was a bit confusing especially the part that I had to push the name parameter to the katzDeliLine parameter in order to know the length of the deli.
+
+```JavaScript
+function takeANumber(katzDeliLine, name) {
+  var katzDeli = [];
+  katzDeliLine.push(name);
+  katzDeli += "Welcome, " + name + ". You are number " + katzDeliLine.length + " in line.";
+  return katzDeli;
+}
+```
+
+>* The currentLine function I struggled with the second part of conditional statement and for loop and how to add a comma between the katzDeliLine array without adding the comma to the last index of array. This exercise took a while and coaching from Learn.on until I solved it. BUT it was a great challenge.
+
+```JavaScript
+function currentLine(katzDeliLine) {
+  if(katzDeliLine.length === 0) {
+    return "The line is currently empty.";
+  } else {
+    var newArray = [];
+    var result = 'The line is currently: ';
+    for(var i = 0; i < katzDeliLine.length; i++) {
+      newArray.push(`${i+1}. ${katzDeliLine[i]}`);
+    }
+    result += newArray.join(", ")
+    return result;
+  }
+}
+```
