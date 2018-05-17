@@ -104,4 +104,40 @@ function whileLoop(n) {
   }
   return "done";
 }
-``` 
+```
+
+###### Thursday 17th May
++ Today I am working on the rest of Data Structures section. I did the Beatles loops lab and I really enjoyed it and learned something new:
+>* I can concatenate inside push method which I didn't know that I could do that until today.
+
+Here are my codes from the lab:
+
+```JavaScript
+function theBeatlesPlay(musicians, instruments) {
+  var arr = [];
+  for(var i = 0; i < musicians.length, i < instruments.length ; i++) {
+    arr.push(musicians[i] + " plays " + instruments[i]);
+  }
+  return arr;
+}
+
+
+function johnLennonFacts(array) {
+  var i = 0;
+  while( i < array.length) {
+    array[i] += "!!!";
+    i++
+  }
+  return array;
+}
+
+
+function iLoveTheBeatles(n) {
+  var arr = [];
+  do {
+    arr.push("I love the Beatles!");
+    n++
+  } while(n < 15);
+  return arr;
+}
+```
