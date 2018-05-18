@@ -205,3 +205,26 @@ function viewCart() {
   return cartContents + ".";
 }
 ```
+
++ I did another 2 exercises in the Online Shopping Lab and I am still trying to figure out the last one.
+
+```JavaScript
+function total() {
+  var total = 0;
+  for(var i = 0; i < cart.length; i++) {
+    total += cart[i].itemPrice;
+  }
+  return total;
+}
+
+function placeOrder(cardNumber) {
+  var message = "Your total cost is ";
+  if(cardNumber === undefined) {
+    return "Sorry, we don't have a credit card on file for you."
+  } else {
+    message += `$${total()}, which will be charged to the card ${cardNumber}.`;
+    cart.splice(0);
+    return message;
+  }
+}
+```
