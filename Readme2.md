@@ -170,3 +170,38 @@ function currentLine(katzDeliLine) {
   }
 }
 ```
+###### Friday 18th May
++ I am working on Online Shopping Lab which has 5 functions to work on. I have done 2 until now and still working on the rest.
+
+Here are my codes:
+
+```JavaScript
+function addToCart(item) {
+ item = {
+   itemName: item,
+   itemPrice: Math.floor(Math.random() * 100 + 1)
+ };
+ cart.push(item);
+ return `${item.itemName} has been added to your cart.`;
+}
+
+
+function viewCart() {
+  var cartContents = "In your cart, you have ";
+  var itemsArray = [];
+  if (cart.length === 0) {
+    return "Your shopping cart is empty.";
+  } else {
+    for(var i = 0; i < cart.length; i++) {
+      itemsArray.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
+    }
+    if(cart.length > 1) {
+      let lastItem = itemsArray.pop();
+      cartContents += `${itemsArray.join(", ")}, and ${lastItem}`;
+    } else {
+      cartContents += itemsArray.join(", ");
+    }
+  }
+  return cartContents + ".";
+}
+```
