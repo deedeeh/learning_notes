@@ -228,3 +228,21 @@ function placeOrder(cardNumber) {
   }
 }
 ```
++ Finally I am done with the last function! It took ages to solve it with the help of 2 coaching chats.
+
+```JavaScript
+function removeFromCart(item) {
+  var itemObject;
+  for(var i = 0; i < getCart().length; i++) {
+    if(getCart()[i].itemName === item) {
+      itemObject = getCart()[i];
+    }
+  }
+  if(itemObject) {
+      let indexOfItem = getCart().indexOf(itemObject);
+      getCart().splice(indexOfItem, 1);
+    } else {
+      return "That item is not in your cart."
+    }
+}
+```
