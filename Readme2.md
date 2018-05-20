@@ -246,3 +246,52 @@ function removeFromCart(item) {
     }
 }
 ```
+
+###### Sunday 20th May
++ I started *The DOM* section in the bootcamp pre-course and learned about traversing nested objects and DOM tree and done a lab with 4 exercises.
+
+Here are few lines of code:
+
+```JavaScript
+function nestedTarget() {
+  const target = document.querySelector("#nested .target");
+  return target;
+}
+
+function increaseRankBy(n) {
+  const lis = document.querySelectorAll(".ranked-list li");
+  for(let i = 0; i < lis.length; i++) {
+    lis[i].innerHTML = parseInt(lis[i].innerHTML)+n;
+  }
+  return lis;
+}
+```
++ I have also learned about breadth-first search algorithm... it is a bit hard to understand at the beginning but I believe with practice things will be better to understand.
+There was an exercise that I used this algorithm to solve.
+
+```HTML
+<div id="grand-node">
+        <div>
+          <div>
+            <div>
+              <div>
+                boo!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+```
+
+```JavaScript
+function deepestChild() {
+  let node = document.querySelector("#grand-node");
+  let nextNode = node.children[0];
+
+  while(nextNode) {
+    node = nextNode;
+    nextNode = node.children[0];
+  }
+  return node;
+}
+```  
