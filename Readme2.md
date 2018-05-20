@@ -295,3 +295,19 @@ function deepestChild() {
   return node;
 }
 ```  
+
++ Today I went through something I have never seen before which is stopPropagation() event property and the difference between bubbling and capturing and how they trigger multiple events on the way up to the root(bubbling) or down to the target(capturing) and here stopPropagation() comes in handy. The only thing I was familiar with during this lesson is preventDefault() property.
+
+Here are few lines of the codes from the lesson:
+
+```JavaScript
+const divs = document.querySelectorAll("div");
+function bubble(e) {
+  e.stopPropagation();
+  console.log(this.firstChild.nodeValue.trim() + " bubbled")
+}
+
+for(let i = 0; i < divs.length; i++) {
+  divs[i].addEventListener("click", bubble)
+}
+```
