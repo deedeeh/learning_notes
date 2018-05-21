@@ -311,3 +311,52 @@ for(let i = 0; i < divs.length; i++) {
   divs[i].addEventListener("click", bubble)
 }
 ```
+
+###### Monday 21st May
++ Today I worked on the last lesson in DOM section which is Konami Code Lab.
+
+Here is my codes:
+
+```JavaScript
+function init() {
+  let index = 0;
+  document.body.addEventListener("keydown", function(e) {
+    const key = e.key;
+
+    if(key === codes[index]) {
+      index++
+
+      if(index === codes.length) {
+        alert("Hurray!");
+
+        index = 0;
+      }
+    } else {
+      index = 0;
+    }
+  })
+}
+```
+I like the refactoring solution on Learn.co that appears after passing and submitting my code. I always check it to see maybe different solution or if I can refactor my code.
+
+I think the only differences here is using arrow function as the second argument for addEventListener and using the conditional ternary operator which I still get confused when I try to use it!
+
+```JavaScript
+function init() {
+  let idx = 0
+
+  document.body.addEventListener("keydown", (e) => {
+    const key = e.key
+
+    idx = (codes[idx] === key) ? ++idx : 0
+
+    if (idx === codes.length) {
+      window.alert("Hurray!");
+      idx = 0
+    }
+
+  });
+}
+```
+
++ I think the rest of the day I will be preparing for behavioural interview questions and register on cv-library and co-hire because I am actively looking for jobs beside practising and learning new things.
