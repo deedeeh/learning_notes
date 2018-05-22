@@ -360,3 +360,54 @@ function init() {
 ```
 
 + I think the rest of the day I will be preparing for behavioural interview questions and register on cv-library and co-hire because I am actively looking for jobs beside practising and learning new things.
+
+###### Tuesday 22nd May
++ I was working on behavioural interview questions because I have an interview this week with Flatiron School Bootcamp admission team.
+
++ I started working on *jQuery* section in the pre-course bootcamp.  
+
+Here are few codes from jQuery selectors lab:
+
+```JavaScript
+function lastImageSelector() {
+  return $("div img:last");
+}
+
+function ninjaBabySelector() {
+  return $("#baby-ninja");
+}
+
+function divSelector() {
+  return $(".pics");
+}
+
+function firstListItem() {
+  return $("#pic-list li:first-child");
+}
+```
+
++ I worked on the jQuery Event Listeners Lab which was really fun. This is the last lesson I am going to do today and I might go back to the interview questions again.
+
+Here are few lines of my code:
+
+```JavaScript
+function getIt() {
+  $("p").on("click", function() {
+    alert("Hey!");
+  });
+}
+
+function frameIt() {
+  $("img").on("load", function() {
+    $("img").addClass("tasty");
+  });
+}
+
+function pressIt() {
+  $("input:first-child").on("keydown", function(key) {
+    if(key.which === 71) {
+      alert("you have pressed G");
+    }
+  });
+}
+```
