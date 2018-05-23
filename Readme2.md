@@ -411,3 +411,8 @@ function pressIt() {
   });
 }
 ```
+
+###### Wednesday 23rd May
++ I continued interview questions for the first half of the day.
+
++ I finished jQuery section and now I have one more task to do to finish *JavaScript Fundamentals* part, which is a project called Rock Dodger. It doesn't seem easy at all but hopefully will be able to do it, might not be able to finish it today tho.
