@@ -416,3 +416,9 @@ function pressIt() {
 + I continued interview questions for the first half of the day.
 
 + I finished jQuery section and now I have one more task to do to finish *JavaScript Fundamentals* part, which is a project called Rock Dodger. It doesn't seem easy at all but hopefully will be able to do it, might not be able to finish it today tho.
+
+
+###### Thursday 24th May
++ I started *Ruby Fundamentals* part which consists of many sections. I am doing today the introduction and next time I will start Debugging.
+
++ The rest of the time I will be doing interview questions.  
