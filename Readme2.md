@@ -422,3 +422,10 @@ function pressIt() {
 + I started *Ruby Fundamentals* part which consists of many sections. I am doing today the introduction and next time I will start Debugging.
 
 + The rest of the time I will be doing interview questions.  
+
+###### Sunday 27th May
++ I haven't been coding for the past 2 days cause of some circumstances. Today I worked on *Ruby Fundamentals* Debugging section. Mainly it was about the 4 types of error and how to read errors.
+
++ I started to work on the technical track for my technical interview for the bootcamp which consists of few labs and once I finish them I will book my technical interview.
+
++ Once I finish my technical track I will go back to the Rock Dodger project to finish the *Javascript Fundamentals* part in the pre-course track.
