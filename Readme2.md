@@ -429,3 +429,8 @@ function pressIt() {
 + I started to work on the technical track for my technical interview for the bootcamp which consists of few labs and once I finish them I will book my technical interview.
 
 + Once I finish my technical track I will go back to the Rock Dodger project to finish the *Javascript Fundamentals* part in the pre-course track.
+
+###### Tuesday 29th May
++ I worked on the technical track and finished it and I booked my technical interview for my admissions to the bootcamp.
+
++ I will start working on the Rock Dodger project.
