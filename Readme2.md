@@ -475,3 +475,41 @@ function checkCollision(rock) {
   }
 }
 ```
+###### Thursday 31st May
++ Finallyyyyy!!! I finished the Rock Dodger lab and I am so happy! It is a great practice and I've learned many things during the *JavaScript Fundamentals* section. Now I can continue working on *Ruby Fundamentals* plus maybe working on JS in Udemy bootcamp that I was doing before the Learn.co pre-course.
+
+Here are some lines of my code:
+
+```JavaScript
+function endGame() {
+  clearInterval(gameInterval);
+  for(let i = 0; i < ROCKS.length; i++) {
+    ROCKS[i].remove();
+  }
+  window.removeEventListener('keydown', moveDodger);
+  alert("YOU LOSE!");
+}
+
+function moveDodger(e) {
+  // implement me!
+  /**
+   * This function should call `moveDodgerLeft()`
+   * if the left arrow is pressed
+   */
+   if(e.which === LEFT_ARROW) {
+     e.preventDefault();
+     e.stopPropagation();
+     moveDodgerLeft();
+   }
+   /**
+   * and `moveDodgerRight()` if the right arrow is pressed
+   * (Check the constants we've declared for you above.)
+   * And be sure to use the functions declared below!
+  */
+  else if(e.which === RIGHT_ARROW){
+    e.preventDefault();
+    e.stopPropagation();
+    moveDodgerRight();
+  }
+}
+```
