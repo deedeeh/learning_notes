@@ -513,3 +513,4 @@ function moveDodger(e) {
   }
 }
 ```
++ I continue working on *Ruby Fundamentals* and finished the Variables and Arrays section and I've started to work on Methods section.
