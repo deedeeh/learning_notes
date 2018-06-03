@@ -23,3 +23,32 @@ def
   2003 - birth_year
 end
 ```
+
+###### Sunday 3rd June
++ I worked on the rest of Ruby *Methods* section and I leaned about default arguments and required arguments. I also learned how to use array elements with string interpolation instead of having the data stored in variables especially when it is a list of data.
+
+Here are few lines of my codes:
+
+```Ruby
+def display_board(board)
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts "-----------"
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts "-----------"
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+end
+```
+I also worked on 2 tests in Rspec.
+
+```Ruby
+board = ["O", "O", "O", "O", "O", "O", "O", "O", "O"]
+
+    output = capture_puts{ display_board(board) }
+    rows = output.split("\n")
+
+    expect(rows[0]).to eq(" O | O | O ")
+    expect(rows[1]).to eq("-----------")
+    expect(rows[2]).to eq(" O | O | O ")
+    expect(rows[3]).to eq("-----------")
+    expect(rows[4]).to eq(" O | O | O ")
+```
