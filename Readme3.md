@@ -52,3 +52,45 @@ board = ["O", "O", "O", "O", "O", "O", "O", "O", "O"]
     expect(rows[3]).to eq("-----------")
     expect(rows[4]).to eq(" O | O | O ")
 ```
+
+###### Monday 4th June
++ I started to work on *Color Game Project* in the web developer bootcamp on Udemy and it is been great so far! I am going to add this project on Github.
+
+```HTML
+<body>
+  <h1>The Great <span id="colorDisplay">RGB</span> Color Game</h1>
+
+  <div>
+    <span id="message"></span>
+  </div>
+  <div id="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
+  <script type="text/javascript" src="colorGame.js"></script>
+</body>
+```
+```javascript
+for(let i = 0; i < squares.length; i++) {
+ //add initial colors to squares
+ squares[i].style.backgroundColor = colors[i];
+
+ //add event listeners to squares
+ squares[i].addEventListener("click", function() {
+   //grab color of clicked square
+   var clickedColor = this.style.backgroundColor;
+   //compare color to pickedColor
+   if(clickedColor === pickedColor) {
+     messageDisplay.textContent = "Correct!";
+     changeColors(clickedColor);
+   } else {
+     this.style.backgroundColor = "#232323";
+     messageDisplay.textContent = "Try again!";
+   }
+ });
+}
+```
