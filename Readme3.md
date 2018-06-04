@@ -94,3 +94,62 @@ for(let i = 0; i < squares.length; i++) {
  });
 }
 ```
++ I worked on *Command Line Applications* section in Ruby and it is been great learning about it for the first time. Usually a CLI greets the user, ask for input, capture and store that input and then do something with it and have it as output.
+
+```Ruby
+#!/usr/bin/env ruby
+require_relative "../lib/greeting.rb"
+
+# code your CLI here!
+puts "Hi! I'm HAL, what's your name?"
+name = gets.strip
+greeting(name)
+```
+
+I finished the *Command Line Interface* section and the last lab was a tic tac toe project. It was fun to work on it! 
+
+Here is the Lib/move.rb file:
+
+```Ruby
+def display_board(board)
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts "-----------"
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts "-----------"
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+end
+
+# code your input_to_index and move method here!
+
+def input_to_index(user_input)
+  return user_input.to_i - 1
+end
+
+def move(board, index, character="X")
+  board[index] = character;
+end
+```
+
+Here is the bin/move file:
+
+```Ruby
+#!/usr/bin/env ruby
+
+require_relative '../lib/move.rb'
+
+# Code your CLI Here
+
+puts "Welcome to Tic Tac Toe!"
+
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
+
+puts "Where would you like to go?"
+
+input = gets.strip
+
+index = input_to_index(input)
+
+move(board, index)
+
+display_board(board)
+```
