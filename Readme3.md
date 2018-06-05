@@ -106,7 +106,7 @@ name = gets.strip
 greeting(name)
 ```
 
-I finished the *Command Line Interface* section and the last lab was a tic tac toe project. It was fun to work on it! 
+I finished the *Command Line Interface* section and the last lab was a tic tac toe project. It was fun to work on it!
 
 Here is the Lib/move.rb file:
 
@@ -153,3 +153,10 @@ move(board, index)
 
 display_board(board)
 ```
+
+###### Tuesday 5th June
++ I worked on *Logic and Conditionals* section in Ruby pre-course bootcamp. I learned that everything in Ruby is truthy except false and nil are falsey. I also learned about boolean operators (!, &&, || ) and comparison operators.
+
+Next time I am working on this section I will be working on 3 labs to practice what I've learned so far.
+
++ I went through my code for the technical track and checked the solution on Learn.co and comparing it to my code so I understand if there are different and better ways to implement my code. MY TECHNICAL INTERVIEW IS TOMORROW!
