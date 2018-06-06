@@ -160,3 +160,33 @@ display_board(board)
 Next time I am working on this section I will be working on 3 labs to practice what I've learned so far.
 
 + I went through my code for the technical track and checked the solution on Learn.co and comparing it to my code so I understand if there are different and better ways to implement my code. MY TECHNICAL INTERVIEW IS TOMORROW!
+
+###### Wednesday 6th June
++ I was preparing for my technical interview and reading about the interview process and then I had my technical interview which consisted of 2 parts: the 1st part was explaining my Deli Counter Lab code and the 2nd part I was asked to improve one of the functions in the lab. Within a week I will know the result of the interview and if I got accepted in the bootcamp!
+
++ I worked on 2 labs in the *Logic and Conditionals* section in Ruby that explains Rspec with DSL (describe, it, expect, to, eq), TDD and lots of practice with conditional statements.
+
+Here are few lines of my code:
+
+```Ruby
+def fizzbuzz(input)
+  if input % 3 == 0 && input % 5 == 0
+    "FizzBuzz"
+  elsif input % 3 == 0
+    "Fizz"
+  elsif input % 5 == 0
+    "Buzz"
+  else
+    print "nil"
+  end
+end
+```
+```Ruby
+def position_taken?(board, index)
+  if (board[index] == " " || board[index] == "" || board[index] == nil)
+    false
+  else
+    true
+  end
+end
+```
