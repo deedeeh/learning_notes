@@ -190,3 +190,19 @@ def position_taken?(board, index)
   end
 end
 ```
+
+###### Friday 8th June
++ I worked on the last lab in *Logical & Conditionals* section in Ruby Fundamentals, Valid Tic Tac Toe Move. Next is *Loops* section.
+
+Here is the lab code:
+
+```Ruby
+def valid_move?(board, index)
+  if index.between?(0, 8) && !position_taken?(board, index)
+    true
+  end
+end
+```
++ I have an interview next week and I have done my research today on the company. Still will be working on interview questions in the next few days.
+
++ The rest of the day I will working on the Color Game Project.  
