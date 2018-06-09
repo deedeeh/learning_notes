@@ -205,4 +205,38 @@ end
 ```
 + I have an interview next week and I have done my research today on the company. Still will be working on interview questions in the next few days.
 
-+ The rest of the day I will working on the Color Game Project.  
++ The rest of the day I will working on the Color Game Project.
+
+###### Saturday 9th June
++ I worked on the rest of the Color Game Project. It was mostly fixing some of the functionalities and refactoring code.
+
+You can find the project in my repositories on Github with the title *Color_Game_Project*.
+
++ I started working on *Loops* section in Ruby. I've learned about loop, while and until keywords and the difference between each one of them especially the until is the inverse of while loop. I did one lab for this section and there are 2 more to go.
+
+Here are my codes:
+
+```Ruby
+def using_while
+  levitation_force = 6
+
+  #your code here
+  while levitation_force < 10
+    puts "Wingardium Leviosa"
+    levitation_force += 1
+  end
+end
+```
+
+```Ruby
+def using_until
+  levitation_force = 6
+
+  #your code here
+  until levitation_force == 10
+    puts "Wingardium Leviosa"
+    levitation_force += 1
+  end
+end
+```
++ The rest of the day I will be working on interview questions. 
