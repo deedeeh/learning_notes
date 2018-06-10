@@ -239,4 +239,24 @@ def using_until
   end
 end
 ```
-+ The rest of the day I will be working on interview questions. 
++ The rest of the day I will be working on interview questions.
+
+###### Sunday 10th June
++ I worked on Tic Tac Toe Turn lab in *Loops* section and it was fun working on it. I still have 1 more lab to finish loops.
+
+Here is my new code:
+
+```Ruby
+def turn(board)
+  puts "Please enter 1-9:"
+  user_input = gets.strip
+  index = input_to_index(user_input)
+  if valid_move?(board, index)
+    move(board, index)
+  else
+    turn(board)
+  end
+  display_board(board)
+end
+```
++ I also worked on *Intro to jQuery* in the online web developer bootcamp and I have few more lessons to finish until I start *Advanced jQuery* section. I will create a repository on Github for small projects related to this course.
