@@ -260,3 +260,19 @@ def turn(board)
 end
 ```
 + I also worked on *Intro to jQuery* in the online web developer bootcamp and I have few more lessons to finish until I start *Advanced jQuery* section. I will create a repository on Github for small projects related to this course.
+
+###### Tuesday 12th June
++ I worked on the last lab in *Loops* section and now I am ready for the next section *Iteration*
+
+Here is my code from the lab:
+
+```Ruby
+def play(board)
+  count_turns = 0;
+  while count_turns < 9
+    turn(board)
+    count_turns += 1
+  end
+end
+```
++ I done few interview questions today as well. 
