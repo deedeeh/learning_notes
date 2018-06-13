@@ -275,4 +275,7 @@ def play(board)
   end
 end
 ```
-+ I done few interview questions today as well. 
++ I done few interview questions today as well.
+
+###### Wednesday 13th June
++ Today I worked on interview questions and still have some more to work on until next week. 
