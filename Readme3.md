@@ -278,4 +278,7 @@ end
 + I done few interview questions today as well.
 
 ###### Wednesday 13th June
-+ Today I worked on interview questions and still have some more to work on until next week. 
++ Today I worked on interview questions and still have some more to work on until next week.
+
+###### Thursday 14th June
++ I worked on *Intro to command line and BASH* plus *Intro to Git and Github*. I just practised a bit in terminal and refreshed my memory with informations I used to know.    
