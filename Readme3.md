@@ -281,4 +281,11 @@ end
 + Today I worked on interview questions and still have some more to work on until next week.
 
 ###### Thursday 14th June
-+ I worked on *Intro to command line and BASH* plus *Intro to Git and Github*. I just practised a bit in terminal and refreshed my memory with informations I used to know.    
++ I worked on *Intro to command line and BASH* plus *Intro to Git and Github*. I just practised a bit in terminal and refreshed my memory with informations I used to know.  
+
+###### Tuesday 19th June  
++ I did ittttt!!! I am going to start my Flatiron School Bootcamp in September! I am excited and ready to learn tones :)
+
+I have about 100+ hours of pre-work before the cohort, *Web Development Fundamentals*, on Learn.co and I already finished *Introduction and Set Up* and next will start *Intro to Ruby*.
+
+I haven't finished yet the pre-course which is not compulsory but I will continue it after finishing the mandatory pre-work.
