@@ -289,3 +289,5 @@ end
 I have about 100+ hours of pre-work before the cohort, *Web Development Fundamentals*, on Learn.co and I already finished *Introduction and Set Up* and next will start *Intro to Ruby*.
 
 I haven't finished yet the pre-course which is not compulsory but I will continue it after finishing the mandatory pre-work.
+
++ I worked on *Introduction* section in Ruby and I did the Fixing our broken program lab which its only purpose to fix an error and pass the Rspec tests. All I had to do is changing from  `puts Hello World!` to `puts "Hello World!"`. I finished this section and now will start *Variables & Methods*.
