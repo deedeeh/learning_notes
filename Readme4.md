@@ -33,4 +33,10 @@ end
 
 prying_into_the_method
 ```
-The previous code will freeze at  `binding.pry` line and if we want to check the variable  `inside_the_method` it will return the phrase assigned to it but if we want to check  `this_variable_hasnt_been_interpreted_yet` it will return nil cause the program freezed before this defined variable.  
+The previous code will freeze at  `binding.pry` line and if we want to check the variable  `inside_the_method` it will return the phrase assigned to it but if we want to check  `this_variable_hasnt_been_interpreted_yet` it will return nil cause the program freezed before this defined variable.
+
++ I completed the *Variables & Methods* section plus *Simple Math* and *Booleans* sections. The Simple Math lab had some exercises to practise arithmetic operators.
+
+I learned about integers and floats in Ruby so if I have  `9 / 2` I should expect  `4.5` as a result but the program will return  `4` . In order to have a float as a result I should have 2 floats or at least one float in the division example so  `9.0 / 2` or  `9.0 / 2.0` then I will have the  `4.5`. I really enjoyed working on this part.
+
+The *Booleans* section it was mostly a quiz with multiple choices using logical and comparison operators.   
