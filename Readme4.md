@@ -40,3 +40,18 @@ The previous code will freeze at  `binding.pry` line and if we want to check the
 I learned about integers and floats in Ruby so if I have  `9 / 2` I should expect  `4.5` as a result but the program will return  `4` . In order to have a float as a result I should have 2 floats or at least one float in the division example so  `9.0 / 2` or  `9.0 / 2.0` then I will have the  `4.5`. I really enjoyed working on this part.
 
 The *Booleans* section it was mostly a quiz with multiple choices using logical and comparison operators.   
+
++ I worked on the rest of *jQuery intro* in Web Development Bootcamp on Udemy and then I created a repository on Github with the exercise in this section.
+
+```html
+  <div>Div 1</div>
+  <div class="highlight">Div 2</div>
+  <div id="third">Div 3</div>
+  <div class="highlight">Div 4</div>
+```
+```JavaScript
+  $("div").css("background", "purple");
+  $(".highlight").css("width", "200px");
+  $("#third").css("border", "3px solid orange");
+  $("div:first-of-type").css("color", "pink");
+```
