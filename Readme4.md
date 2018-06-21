@@ -55,3 +55,12 @@ The *Booleans* section it was mostly a quiz with multiple choices using logical 
   $("#third").css("border", "3px solid orange");
   $("div:first-of-type").css("color", "pink");
 ```
+######  Thursday 21st June
++ I worked on operators and conditionals lab in *Conditionals* section, which introduces ternary operator.
+
+```Ruby
+def not_safe?(speed)
+	speed > 60 || speed < 40 ? true : false
+end
+```
++ I am working on the rest of this section which is a lesson and a quiz then I will start working on *Looping*.
