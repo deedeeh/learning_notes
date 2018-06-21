@@ -63,4 +63,22 @@ def not_safe?(speed)
 	speed > 60 || speed < 40 ? true : false
 end
 ```
+I also learned about *statement modifiers* for the first time which allows to put a conditional at the end of a statement.
+
+Learn.co example:
+
+```Ruby
+this_year = Time.now.year
+puts "Hey, it's 2015!" if this_year == 2015
+```
+The string will be printed if `this_year == 2015` otherwise it won't be printed.
+
+We can also use `unless`
+
+```Ruby
+this_year = Time.now.year
+puts "Hey, it's not 2015!" unless this_year == 2015
+```
+The string will be printed unless `this_year == 2015` then it will stop. 
+
 + I am working on the rest of this section which is a lesson and a quiz then I will start working on *Looping*.
