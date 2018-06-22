@@ -79,6 +79,11 @@ We can also use `unless`
 this_year = Time.now.year
 puts "Hey, it's not 2015!" unless this_year == 2015
 ```
-The string will be printed unless `this_year == 2015` then it will stop. 
+The string will be printed unless `this_year == 2015` then it will stop.
 
 + I am working on the rest of this section which is a lesson and a quiz then I will start working on *Looping*.
+
+######  Friday 22nd June
++ I started *Looping* section and I worked on `loop` & `times` constructs. This part mostly includes labs which is a great way to practice and understand more my code.
+
++ I also worked on `while` and `until` looping which isn't the 1st time to learn about them.
