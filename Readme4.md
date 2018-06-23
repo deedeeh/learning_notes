@@ -87,3 +87,70 @@ The string will be printed unless `this_year == 2015` then it will stop.
 + I started *Looping* section and I worked on `loop` & `times` constructs. This part mostly includes labs which is a great way to practice and understand more my code.
 
 + I also worked on `while` and `until` looping which isn't the 1st time to learn about them.
+
+######  Saturday 23rd June
++ I am working on just labs for the rest of *Looping* section. I already practised `break` and when to use it and also how to get standard input from user with `gets` and we use another keyword next to it `chomp` which removes the new line we have if we just use `gets` so we use `gets.chomp` and we usually store user input in a variable.
+
+Here is my code:
+
+```Ruby
+def levitation_quiz
+	#your code here
+	loop do
+	  puts "What is the spell that enacts levitation?"
+	  answer = gets.chomp
+	  break if answer == "Wingardium Leviosa"
+	end
+	puts "You passed the quiz!"
+end
+```  
+
++ Today is the first time to learn about `for` looping in Ruby. I have done a lab using it and I worked on a lab which includes all of the looping constructs so I could be able to know the difference between them.  
+
+```Ruby
+def loop_iterator(number_of_times)
+  phrase = "Welcome to Flatiron School's Web Development Course!"
+  counter = 0
+  loop do
+    puts phrase
+    counter += 1
+    break if counter == number_of_times
+  end
+end
+
+
+def times_iterator(number_of_times)
+  phrase = "Welcome to Flatiron School's Web Development Course!"
+  number_of_times.times do
+    puts phrase
+  end
+end
+
+
+def while_iterator(number_of_times)  
+  phrase = "Welcome to Flatiron School's Web Development Course!"
+  counter = 0
+  while counter < number_of_times
+    puts phrase
+    counter += 1
+  end
+end
+
+
+def until_iterator(number_of_times)  
+  phrase = "Welcome to Flatiron School's Web Development Course!"
+  counter = 0
+  until counter == number_of_times
+    puts phrase
+    counter += 1
+  end
+end
+
+
+def for_iterator(number_of_times)
+  phrase = "Welcome to Flatiron School's Web Development Course!"
+  for number in 1..number_of_times do
+    puts phrase
+  end
+end
+```
