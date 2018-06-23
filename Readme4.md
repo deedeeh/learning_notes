@@ -154,3 +154,31 @@ def for_iterator(number_of_times)
   end
 end
 ```
+
++ Today is the 1st time to do a countdown with `while` loop and to learn about a new method `sleep`
+
+```Ruby
+def countdown(n)
+  counter = n
+  while counter >= 1
+    puts "#{counter} SECOND(S)!"
+    counter -= 1
+  end
+  return "HAPPY NEW YEAR!"
+end
+
+def countdown_with_sleep(n)
+  counter = n
+  while counter >= 1
+    puts "#{counter} SECOND(S)!"
+    counter -= 1
+    sleep 5
+  end
+  return "HAPPY NEW YEAR!"
+end
+```
+The previous code could be a bit better like not having a variable counter and just do `while n >= 1` so I could remove a line of code which is useless. Also the naming of the argument could be more self explanatory like `seconds_to_midnight` like what Learn.co has in the solution.
+
++ I learned about stubbing which refers to the fake implementation of a method. Learn.co explanation of stubbing for `puts` and `gets` - we will stub the `puts` method to trick our test suite into thinking the stdout file has received the `puts` method and to trick our test suite into recognising that the `gets` method has been used.
+
++ I am working on the last lab *Blackjack CLI* and I passed 11 tests and still have 4 more tests to pass.  
