@@ -182,3 +182,12 @@ The previous code could be a bit better like not having a variable counter and j
 + I learned about stubbing which refers to the fake implementation of a method. Learn.co explanation of stubbing for `puts` and `gets` - we will stub the `puts` method to trick our test suite into thinking the stdout file has received the `puts` method and to trick our test suite into recognising that the `gets` method has been used.
 
 + I am working on the last lab *Blackjack CLI* and I passed 11 tests and still have 4 more tests to pass.  
+
+######  Sunday 24th June
++ I started my day working on *Advanced jQuery* as part of the Web Developer Bootcamp on Udemy.
+
+I learned about jQuery events and the most common ones are `click()`, `keypress()` and `on()`. The first 2 events take an argument which is usually an anonymous function but the `on()` takes 2 arguments, the 1st one is the type of event and the 2nd is a function.
+
+I also worked on jQuery effects such as `fadeIn()` and it could take 2 arguments, the 1st one duration and the 2nd is a function that will be called when the fadeIn complete. `fadeOut` has the same concept. Also, there is `fadeToggle` takes 2 arguments as well so if the element is fadeOut it will fadeIn when we call the method and vice versa.
+
+There is a 3rd argument could be added as well which is easing (A string indicating which easing function to use for the transition.) and the default is swing.
