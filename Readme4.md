@@ -181,13 +181,69 @@ The previous code could be a bit better like not having a variable counter and j
 
 + I learned about stubbing which refers to the fake implementation of a method. Learn.co explanation of stubbing for `puts` and `gets` - we will stub the `puts` method to trick our test suite into thinking the stdout file has received the `puts` method and to trick our test suite into recognising that the `gets` method has been used.
 
-+ I am working on the last lab *Blackjack CLI* and I passed 11 tests and still have 4 more tests to pass.  
++ I am working on the last lab __Blackjack CLI__ and I passed 11 tests and still have 4 more tests to pass.  
 
 ######  Sunday 24th June
-+ I started my day working on *Advanced jQuery* as part of the Web Developer Bootcamp on Udemy.
++ I started my day working on *__Advanced jQuery__* as part of the Web Developer Bootcamp on Udemy.
 
 I learned about jQuery events and the most common ones are `click()`, `keypress()` and `on()`. The first 2 events take an argument which is usually an anonymous function but the `on()` takes 2 arguments, the 1st one is the type of event and the 2nd is a function.
 
 I also worked on jQuery effects such as `fadeIn()` and it could take 2 arguments, the 1st one duration and the 2nd is a function that will be called when the fadeIn complete. `fadeOut` has the same concept. Also, there is `fadeToggle` takes 2 arguments as well so if the element is fadeOut it will fadeIn when we call the method and vice versa.
 
 There is a 3rd argument could be added as well which is easing (A string indicating which easing function to use for the transition.) and the default is swing.
+
++ I finished the *__Looping__* section in prework track. I was working yesterday on the same lab, which is __Blackjack CLI__ and still had 4 more tests that I worked on today. I had few struggles:
+
+>* Calling a method which has a conditional statement and here I used a helper method to do a comparison. I didn't know why it is not working until I got through the code with a technical coach on Learn.co and I notice that I am calling the helper method twice with different values so I thought about assigning the helper method to a variable and then use that variable with my `if` statement.
+
+This is my solution:
+
+```Ruby
+def hit?(current_card_total)
+  # code hit? here
+  prompt_user
+  user_input = get_user_input
+  if user_input == "s"
+    current_card_total
+  elsif user_input == "h"
+    current_card_total += deal_card
+  else
+    invalid_command
+  end
+end
+```
+After I passed the tests I get to check the Learn.co solution and I really liked it because it is more efficient and works really well with the game.
+
+```Ruby
+def hit?(card_total)
+  prompt_user
+  input = get_user_input
+  until input == 'h' || input == 's'
+    invalid_command
+    prompt_user
+    input = get_user_input
+  end
+  if input == 'h'
+    card_total += deal_card
+  elsif input == 's'
+    card_total
+  end
+end
+```
+So all the `#invalid_command` return is a string `puts "Please enter a valid command"`
+but the program doesn't ask the question again and gets user input so that is why using `Until` loop was an awesome idea.
+
+>* The last method was `#runner` which includes many of the helper methods in the file I just struggled with the order of the code but it makes sense to me once I got an explanation from a coach and I went through the code out loud.
+
+```Ruby
+def runner
+  # code runner here
+  welcome
+  cards = initial_round
+  until cards > 21
+    cards = hit?(cards)
+    display_card_total(cards)
+  end
+  end_game(cards)
+end
+```
