@@ -247,3 +247,15 @@ def runner
   end_game(cards)
 end
 ```
+
++ I am working on *__Arrays & Iteration__* section in prework track and so far I have learned so much about arrays; how to create, manipulate and retrieve data from arrays.
+
+>* There are 2 ways to create an array; literal constructor `array = []` and Class constructor `array = Array.new`.
+>* There are lots of methods to add and remove array elements:
+  >>* Add to the end of an array with shovel method; `<<` shovel operator so if we have an array of animals `animals << "tigers"` or `push()` which takes an argument so in here will be `animals.push("tigers")`  
+  >>* Add to the beginning of an array with `unshift()` so we will have `animals.unshift("monkeys")`
+  >>* Remove from the end of an array with `pop` and Remove from the beginning with `shift` and here we don't need to pass any arguments we don't even need the brackets after the method.
+  >>* We can also use `delete` which returns the element or elements with the given value. `animals.delete("monkeys")` now the array will delete that element and if there is another element called monkeys it will delete it as well.
+>* We check how many elements in an array with `count` so we do `animals.count`
+>* There are some methods to check the array or elements of the array such as `inspect` which returns a string containing a human-readable representation of an object. So `animals.inspect` will return an array of strings.
+>* Retrieve items from an array with an index so arrays start with 0 and not 1 like humans counting and always the indexes are less than count by one. We can also check an item index by using `index()` and it will return at which index is the item we passed as an argument. There is `include?()` which returns a boolean if the item is included in the array. At last we can use `first` to retrieve 1st item or `last` to retrieve last item.
