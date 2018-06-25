@@ -259,3 +259,79 @@ end
 >* We check how many elements in an array with `count` so we do `animals.count`
 >* There are some methods to check the array or elements of the array such as `inspect` which returns a string containing a human-readable representation of an object. So `animals.inspect` will return an array of strings.
 >* Retrieve items from an array with an index so arrays start with 0 and not 1 like humans counting and always the indexes are less than count by one. We can also check an item index by using `index()` and it will return at which index is the item we passed as an argument. There is `include?()` which returns a boolean if the item is included in the array. At last we can use `first` to retrieve 1st item or `last` to retrieve last item.
+
+
+######  Monday 25th June
++ Today I am working on *__Arrays & Iteration__* section which is mostly got labs. I will try to finish most of it today.
+
+>* I learned about array methods such as `sort` and `reverse` which returns the operation you did on an array but it doesn't alter it (change it permanently) unless using a Ruby convention `!` next to `sort!` and `reverse!`.
+>* Other methods like `size` which returns the length of the array and I think I have seen another method `count` that does the same job.
+
++ I knew the difference between *Looping* and *Iteration* so looping when I tell my program to do something a certain number of times but iteration occurs when I have a collection of data (array for example) and I want to operate on each element in the collection.
+
+>* We can have different ways to iterate over an array such as using `loop` with an `if` statement, do a comparison and if it is false just use `break` keyword.
+
+Learn.co 3 different examples but same result:
+
+```Ruby
+basket = ["apple 1","apple 2","apple 3","apple 4","apple 5","apple 6","apple 7","apple 8","apple 9","apple 10"]
+```
+
+```Ruby
+apples_in_basket = basket.size # Step 1
+apples_taken_out = 0 # Step 2
+
+loop do # Step 3
+    if apples_taken_out < apples_in_basket
+        # Step 4
+        puts "Taking out #{basket[apples_taken_out]}"
+        apples_taken_out += 1
+    else
+        # Step 5
+        break
+    end
+end
+```
+>* I believe we can use `while` and `until` which is a bit more abstract way to do iteration.
+
+```Ruby
+apples_in_basket = basket.size # Step 1
+apples_taken_out = 0 # Step 2
+
+# Step 3 + 4
+while apples_taken_out < apples_in_basket
+    puts "Taking out #{basket[apples_taken_out]}"
+    apples_taken_out += 1
+end
+```
+
+>* The most abstract iteration is using `each` so you will have more precise and less code. It doesn't alter the array so you need store the result in a variable if you want to a have an updated version of the original array.
+
+```Ruby
+# Step 1,2,3,4,5
+basket.each do |apple|
+    puts "Taking out #{apple}"
+end
+```
+Here is the lab I worked on to practice `each` method
+
+```Ruby
+def square_array(array)
+  # your code here
+  updated_array = []
+  array.each do |x|
+    updated_array.push(x ** 2)
+  end
+  return updated_array
+end
+```
+I figured out that I can do it this way and write less code:
+
+```Ruby
+def square_array(array)
+  # your code here
+  updated_array = []
+  array.each {|x| updated_array << x ** 2}
+  updated_array
+end
+```
