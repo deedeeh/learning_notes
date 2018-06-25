@@ -335,3 +335,11 @@ def square_array(array)
   updated_array
 end
 ```
+
++ I learned about array manipulation with different methods:
+ >* `concat()` which adds the items of an array to another.
+ >* `insert(index, item)` which inserts an item to the index we specify.
+ >* `uniq` which removes any duplicates in an array.
+ >* `flatten` which adds dimensional arrays into just 1 array so for example `array = [1, 2, [3, [4, 5], 6], 7, 8]` when we use this method `array.flatten` it should return `[1, 2, 3, 4, 5, 6, 7, 8]`.
+ >* `delete(item)` which deletes the item we specify in the array.
+ >* `delete_at(index)` which deletes the item in the array at the index we passed in. 
