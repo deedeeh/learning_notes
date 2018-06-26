@@ -342,4 +342,9 @@ end
  >* `uniq` which removes any duplicates in an array.
  >* `flatten` which adds dimensional arrays into just 1 array so for example `array = [1, 2, [3, [4, 5], 6], 7, 8]` when we use this method `array.flatten` it should return `[1, 2, 3, 4, 5, 6, 7, 8]`.
  >* `delete(item)` which deletes the item we specify in the array.
- >* `delete_at(index)` which deletes the item in the array at the index we passed in. 
+ >* `delete_at(index)` which deletes the item in the array at the index we passed in.
+
+######  Tuesday 26th June
++ I am practising `each` in different labs and after I pass the lab I check the solution of Learn.co and they are using `map` which takes an item and a block and returns a new array. Also we can use the `!` convention to make the changes to the original array and not returning an updated copy.
+
++ In the solution for *__Badges and Schedules__* lab I have seen method chaining such as `assign_rooms(attendees).each_with_index.map` so I believe checking other solutions is an awesome thing where I can learn about new ways of solving the problem.
