@@ -432,3 +432,34 @@ end
 The `#now_serving` didn't need any looping so I believe I shouldn't used it so I have more clean and less code.
 
 I've seen for the first time `empty?` method which returns true if self contains no elements. It is so useful when I need to check if my array is empty instead of using comparison.
+
++ I finished the last lab, *__Oxford Comma__* in *__Arrays & Iteration__* section and as usual I checked the solution for Learn.co which was a bit different than mine especially using `insert` method in the `elsif` statement.
+
+Here is the lab code:
+
+```Ruby
+# My solution
+def oxford_comma(array)
+  if array.length == 1
+    puts array.join
+  elsif array.length == 2
+    puts array.join(" and ")
+  else
+    last = array.pop
+    puts "#{array.join(", ")}, and #{last}"
+  end
+end
+
+# Learn.co solution
+def oxford_comma(array)
+  if array.length == 2
+    return "#{array[0]} and #{array[1]}"
+  elsif 2 < array.length
+    array[-1].insert(0, "and ")
+  end
+  array.join(", ")    
+end
+```
+I know there is more than 1 way to solve a problem and I am really glad that Learn.co show their solution after passing the lab.
+
++ Next is *__Enumerables__* section!
