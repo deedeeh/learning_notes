@@ -348,3 +348,25 @@ end
 + I am practising `each` in different labs and after I pass the lab I check the solution of Learn.co and they are using `map` which takes an item and a block and returns a new array. Also we can use the `!` convention to make the changes to the original array and not returning an updated copy.
 
 + In the solution for *__Badges and Schedules__* lab I have seen method chaining such as `assign_rooms(attendees).each_with_index.map` so I believe checking other solutions is an awesome thing where I can learn about new ways of solving the problem.
+
+######  Wednesday 27th June
++ I worked on just 1 lab,  *__Implementing Primes__* and I really enjoyed the challenge because I didn't really understand at the beginning what is a Prime but I googled it and seen couple of math videos and then started to solve the problem. Maybe my solution isn't the best but it is a good start!
+
+Here is my code:
+
+```Ruby
+def prime?(num)
+  range = (2..num-1).to_a
+  is_prime = true
+  range.each do |i|
+    if num % i == 0
+      is_prime = false
+    end
+  end
+  if num < 2
+    is_prime = false
+  end
+  return is_prime
+end
+```
+It took me a while to solve this lab but I've learned so much.
