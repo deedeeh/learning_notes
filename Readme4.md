@@ -370,3 +370,65 @@ def prime?(num)
 end
 ```
 It took me a while to solve this lab but I've learned so much.
+
+######  Thursday 28th June
++ I worked on the *__Deli Counter__* lab in Ruby prework and I thought it is going to take a while to solve it like it happened in JS but it seemed that I have learned so many things when I solved that lab in JS so I passed the tests in less than I expected which is awesome!
+
+I checked the Learn.co solution and I have many similar code as the platform, maybe just few differences I will share them in here.
+
+
+```Ruby
+# My solution
+def line(katz_deli)
+  line = []
+  if katz_deli.size == 0
+    puts "The line is currently empty."
+  else
+    katz_deli.each_with_index do |person, index|
+      line << "#{index + 1}. #{person}"
+    end
+    puts "The line is currently: #{line.join(" ")}"
+  end
+end
+
+# Learn.co solution
+def line(deli)
+  if deli.empty?
+    puts "The line is currently empty."
+  else
+    current_line = "The line is currently:"
+    deli.each.with_index(1) do |person, i|
+      current_line << " #{i}. #{person}"
+    end
+    puts current_line
+  end
+end
+```
+There is no big difference in the previous lab except I stored each set of `i` and its `person` as a string separately in an array and then used `join` to add them together but Learn.co stored it in a string and the added to the end of the string the `i` and `person`.
+
+```Ruby
+# My solution
+def now_serving(katz_deli)
+  if katz_deli.count == 0
+    puts "There is nobody waiting to be served!"
+  else
+    until katz_deli.count == 0
+      puts "Currently serving #{katz_deli.shift}."
+      break
+    end
+  end
+end
+
+# Learn.co solution
+def now_serving(deli)
+  if deli.empty?
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{deli.first}."
+    deli.shift
+  end
+end
+```
+The `#now_serving` didn't need any looping so I believe I shouldn't used it so I have more clean and less code.
+
+I've seen for the first time `empty?` method which returns true if self contains no elements. It is so useful when I need to check if my array is empty instead of using comparison.
