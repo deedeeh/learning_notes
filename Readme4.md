@@ -463,3 +463,62 @@ end
 I know there is more than 1 way to solve a problem and I am really glad that Learn.co show their solution after passing the lab.
 
 + Next is *__Enumerables__* section!
+
+
+######  Friday 29th June
++ Today I am working on *__Enumerables__* and I am learning about the meaning of enumerator and its methods to use with data collections specially on arrays and hashes.
+
+>* Enumerators allow for iterative actions on data structures specially over arrays and hashes.
+>* Hashes another type of collection. It stores data in associated pairs like a dictionary stores a collection of words and their definitions.
+>* Enumerator methods allow us to iterate over every member of a collection and *do something to each* member of that collection.
+>> Advantages:
+>>* clean code (not repeating ourselves)
+>>* efficient when we don't know how many elements we have in an array or hash and we can always update that collection.
+>>* When we have a long list
+>* Some of the very common methods that I will be using all the time are:
+>>* `each` which I already worked with many times. It returns the original array so if we want to see the block result we need to add `puts` or if we want to return a new array we need to make a new "placeholder" (array or hash) in memory and within the method definition, and then return that new placeholder as the last line of the method.
+>>* `collect` & `map` are identical in functionality and are similar to `each` with one distinct difference: a *new array* is returned, *not* the original one.
+>>* `select` & `find` are very similar so `select` returns a new collection containing all of the elements in the passed collection in which the block's conditional is `true` but `find` instead returns only the *first* item for which it is `true`.
+>>* `delete if` on the other hand will delete from the collection any items that return `true` for a certain condition.
+>>* `any?` will return `true` if the code block evaluates to `true` for *any* element in that collection.
+
+Check the following example for `select` and `find`:
+
+```Ruby
+cool_nums = [1, 2, 3, 4, 5]
+
+def even_nums(nums)
+ nums.select do |x|
+   x.even?
+ end
+end
+
+even_nums(cool_nums)
+#=> [2, 4]
+
+
+def first_even_nums(nums)
+  nums.select do |x|
+    x.even?
+  end
+end
+
+even_nums(cool_nums)
+#=> 2
+```
+
++ I worked on *__Reverse Each Word__* lab and it required to solve the lab 1st with `each` and then use `collect` but the tests will pass with `collect`. In my solution I created an empty array which I didn't need to unless I was using `each` but with `collect` it will return a new array anyway. Learn.co used chaining methods which made the solution in 1 line.
+
+```Ruby
+#My solution
+def reverse_each_word(sentence)
+  reversed = []
+  sentence.split.collect {|word| reversed << word.reverse}
+  reversed.join(" ")
+end
+
+#Learn.co solution
+def reverse_each_word(sentence)
+  sentence.split.collect {|word| word.reverse}.join(" ")
+end
+```
