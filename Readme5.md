@@ -75,6 +75,7 @@ def my_each(array)
   array
 end
 ```
+In the previous method it takes one argument and it loops through the array then we have the `yield` keyword which gives us the flexibility to add some operations and create my own methods such as `each`. Also, it returns the original array.
 
 ```Ruby
 def my_collect(array)
@@ -87,3 +88,7 @@ def my_collect(array)
   new_array
 end
 ```
+`#my_collect` also takes one argument and it loops through the array and it returns a new array by pushing `yield` with array elements.
+
+######  Saturday 7th July
++
