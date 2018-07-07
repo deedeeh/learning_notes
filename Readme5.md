@@ -135,3 +135,79 @@ puts some_words.inspect
 + Different datatypes and their mutability:
 >* string, array and hash *pass by reference*.
 >* Integers, floats, fixnums and booleans *pass by value*
+
++ Last lesson in this section explains how `sort` works under the hood.
+>* We can compare *strings* with greater than `>` and less than `<` operators. If we compare strings using these operators, the comparison operator will look at the first letter of each string and compare their locations in the alphabet.
+>* Letters later in the alphabet are considered greater than letters earlier in the alphabet.
+>* The sort method yields to a block with two elements. That block is the comparator, so it should compare the two elements and return `0` if they *are the same*,`-1` if *the first is less than the second*, and `1` if *the first is greater than the second*.
+
+```Ruby
+array = [7, 3, 1, 2, 6, 5]
+
+array.sort do |a, b|
+  if a == b
+    0
+  elsif a < b
+    -1
+  elsif a > b
+    1
+  end
+end
+
+# will start with the first 2 elements and compare them and return the following and it will keep doing that until we have the final result.
+#=> [3, 7, 1, 2, 6, 5]
+```
+
++ After understanding how the `sort` method works we can introduce a level of abstraction by using *"spaceship operator"* `<=>` and it is also called __combined comparison operator__
+>* returns `0` if the first operand equals the second,
+>* returns `-1` if the first operand is less than the second, and
+>* returns `1` if the first operand is greater than the second.
+
++ By default `sort` is case sensitive. It will prioritise strings that are capitalised.
+
+```Ruby
+dishes = ["steak", "apple pie", "vegetable soup"]
+
+#sort it by default from least to greatest
+dishes.sort
+#or
+dishes.sort do |a, b|
+  a <=> b
+end
+
+#=> ["apple pie", "steak", "vegetable soup"]
+
+#To reverse the order to be from greatest to least, we will need the block in order to do that
+dishes.sort do |a, b|
+  b <=> a
+end
+
+#=> ["vegetable soup", "steak", "apple pie"]
+```
++ Today I started *__Intro to Hashes__* section where it covers many lessons and labs.
+>* I can create a Hash with literal constructor `my_hash = {}` or with Class constructor `my_hash = Hash.new`.
+>* Hashes store data in an associated manner. With a hash, we can group our data into the necessary categories.
+>* Think of a dictionary or an address book. This allows us to store more complex collections of information than the arrays we've seen so far.
+>* Hashes are structured with keys and values. *Each key/value pair makes up one unit in the hash*. The entire collection of key/value pairs, which are comma separated, is enclosed in curly braces `{ }`.
+>* Keys in hashes can be any type of data: strings, integers or symbols. They are set equal to their associated values by using the `=>` symbol, known for this use as the *"hash-rocket"* (because it looks like a little rocket shooting off towards the right).
+
+```Ruby
+hash = {"key" => "value", "another_key" => "another value"}
+```
+With hashes we are able to store data in an organised and understandable manner.
+>* You can use each key once, otherwise you will overwrite the value if you have an existing key with the same name so you can't have duplicates.
+>* Each key/value pair describes a unique attribute or unit of information. A person doesn't have two names, in reality.
+>* The data structure we are creating should mirror the real-world entity we are trying to describe. The uniqueness of our hash keys reflects that.
+>* __Retrieve data from hashes__ with square brackets, is referred to as *"bracket method"*, and we give the name of the key [key]
+>* __Adding keys and values to hashes__ hashes use the *"bracket-equals"* method to add data. The syntax `hash["new_key"] = "New Value"`
+
+Retrieve data:
+
+```Ruby
+pets = {"cat" => "Maru", "dog" => "Pluto"}
+
+pets["cat"]
+#=> "Maru"
+```
+
+Hashes are not numbered lists. The data stored in them is not indexed by number, but instead associated to a unique key. Consequently a hash has no concept of the "end of the list", like an array. So the `<<` method, which tells the array to find the end of the list and add the new item to the next index, can't work on a hash. That is why we use `[]=`
