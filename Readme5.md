@@ -91,4 +91,47 @@ end
 `#my_collect` also takes one argument and it loops through the array and it returns a new array by pushing `yield` with array elements.
 
 ######  Saturday 7th July
-+
++ Today I am working on the rest of the *__Enumerables__*. I started with a lab to create my own `select` method and then I will start few lessons and a quiz.
+
+```Ruby
+def my_select(collection)
+  # your code here!
+  new_collection = []
+  i = 0
+  while i < collection.length
+    if yield(collection[i])
+      new_collection << collection[i]
+    end
+    i += 1
+  end
+  new_collection
+end
+```
++ Refresher notes about variables and scopes:
+>* Variables in Ruby don't hold object values such as `str = "Hello"` instead it contains a reference to a string object.
+>* Methods create their own scope. By default, any variable from outside a method will be unavailable inside that method. Local variables created inside a method "fall out of scope" once we are outside that method.
+>* Methods can take arguments and they act as a gateway into a method body, allowing a variable to be passed into its local scope from the external scope that calls the method.
+
++ Pass by reference VS. pass by value:
+>* When you pass in a variable, you're not passing in a value. You're passing in a reference to an object.
+>* Primitive data like integers, floats, fixnums, and symbols require a fixed, small amount of memory.
+>* When you pass around an integer, you are passing around the actual value.
+>* Objects that can grow and change, like arrays and strings, are never a fixed size.
+>* They are instead always accessed by a reference pointer in order to save memory use in a program. Passing around objects means passing around this reference pointer.
+
++ Mutability: because passing by references allows the object to be of any size, objects like strings and arrays can change; they are said to be "mutable". This means that if you pass such a variable into a method, the method can operate on the value of that variable and change its value while still keeping the reference intact.
+
+```Ruby
+def change_the_array(array, string)
+  array << string
+end
+
+some_words = ["hi", "there"]
+change_the_array(some_words, "quizmaster")
+
+puts some_words.inspect
+  #=> ["hi", "there", "quizmaster"]
+```
++ Different datatypes and their mutability:
+>* string, array and hash *pass by reference*.
+>* Integers, floats, fixnums and booleans *pass by value*
