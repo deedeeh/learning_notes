@@ -211,3 +211,60 @@ pets["cat"]
 ```
 
 Hashes are not numbered lists. The data stored in them is not indexed by number, but instead associated to a unique key. Consequently a hash has no concept of the "end of the list", like an array. So the `<<` method, which tells the array to find the end of the list and add the new item to the next index, can't work on a hash. That is why we use `[]=`
+
++ I am learning about *symbols* and why they are useful as hash keys because of their immutability. Syntax `:i_am_a_symbol` and a symbol is similar to a string, but with one primary distinction: a *symbol can't be changed*. __Symbols are unique__.
+>* *__Strings are mutable__*, meaning that we can manipulate them in various ways by adding, removing, or replacing characters.
+>* Every time you create a string, it creates a new object in memory, even if the string text is identical to another one you've already created.
+>* Ruby has to store each of them separately because any one of them may change in the future.
+>* `object_id` a handle that Ruby uses to track it in memory. It will print different id for each string even if they are exactly the same. `puts "Steve".object_id` will print a different id than `puts "Steve".object_id` and it will do the same even if I test it many times.
+
+```Ruby
+name = "Steven"
+same_as_name = "Steven"
+
+name.object_id == same_as_name.object_id
+  #=> false
+
+# Stored in 2 different locations in memory
+```
+>* *__Symbols are immutable__* this means that its state can't be modified after it is created and it will always be the same size in memory.
+
+```Ruby
+name = :steven
+same_as_name = :steven
+name.object_id == same_as_name.object_id
+  #=> true
+```
+
+Keys do not need to be mutable. Since they don't need to be mutable, and since mutable objects like strings take up more space in memory, we use immutable, memory-saving symbols as hash keys.
+>* Hashes could be written this way with symbols `flatiron_school = {:instructor => "Isaac Newton"}`
+>* In Ruby 1.9, we were introduced with the option of forgoing the hash-rocket `=>` when writing key/value pairs when the key is a symbol so `flatiron_school = {instructor: "Isaac Newton"}`. This way is recommended when using symbols as keys.
+
++ Hashes I've seen until now each key points to a single value. Hashes are so useful, however, because they can be multi-dimensional, or nested.
+>* A key in a hash can point to a value that is a collection of objects, i.e. an array or even another hash.
+>* Nested Hashes are likely to encounter them any time you find yourself working with a large collection of information. In particular, you will encounter these data structures when working with data you will pull from APIs.
+>* API stands for "Application Programming Interface" and here refers to the way in which organisations, companies and governments will expose their data to the public for use.
+>* the data you get back from them will be in the form of a nested hash that can contain information about thousands of records.
+
+One of the most common nested data structures you'll see when working with APIs is an array of hashes.
+
++ I am practising nested hashes and I have done 2 labs and still working on the rest.
+
+```Ruby
+def monopoly_with_fourth_tier
+	#copy and past the monopoly hash you build in the previous method. We're going to add stuff to it here!
+	monopoly = {
+	  :railroads => {
+	    pieces: 4,
+	    names: {
+	      reading_railroad: {"mortgage_value" => "$100"},
+	      pennsylvania_railroad: {"mortgage_value" => "$200"},
+	      b_and_o_railroad: {"mortgage_value" => "$400"},
+	      shortline: {"mortgage_value" => "$800"}
+	    },
+	    rent_in_dollars: {one_piece_owned: 25, two_pieces_owned: 50, three_pieces_owned: 100, four_pieces_owned: 200}
+	  }
+	}
+end
+```
+In the previous lab I tried to use the *hash_bracket* and the colon `:` method after the key when using symbols so instead of `:key => "value"` I did `key: "value"`
