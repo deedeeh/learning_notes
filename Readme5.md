@@ -268,3 +268,95 @@ def monopoly_with_fourth_tier
 end
 ```
 In the previous lab I tried to use the *hash_bracket* and the colon `:` method after the key when using symbols so instead of `:key => "value"` I did `key: "value"`
+
+######  Monday 9th July
++ I worked on a *Simple Nesting* lab where I practised retrieve, update and add data.
+
+Here is one exercise:
+
+```Ruby
+def adding_matz
+# add the following information to the top level of programmer_hash
+# :yukihiro_matsumoto => {
+#   :known_for => "Ruby",
+#    :languages => ["LISP, C"]
+# }
+
+	programmer_hash =
+ 		{
+        :grace_hopper => {
+          :known_for => "COBOL",
+          :languages => ["COBOL", "FORTRAN"]
+        },
+        :alan_kay => {
+          :known_for => "Object Orientation",
+          :languages => ["Smalltalk", "LISP"]
+        },
+        :dennis_ritchie => {
+          :known_for => "Unix",
+          :languages => ["C"]
+        }
+     }
+
+  programmer_hash[:yukihiro_matsumoto] = {known_for: "Ruby", languages: ["LISP", "C"]}
+
+  programmer_hash
+end
+
+
+def dennis_ritchies_language
+	programmer_hash =
+ 		{
+        :grace_hopper => {
+          :known_for => "COBOL",
+          :languages => ["COBOL", "FORTRAN"]
+        },
+        :alan_kay => {
+          :known_for => "Object Orientation",
+          :languages => ["Smalltalk", "LISP"]
+        },
+        :dennis_ritchie => {
+          :known_for => "Unix",
+          :languages => ["C"]
+        }
+     }
+     # first method to return a string not an array
+     programmer_hash[:dennis_ritchie][:languages].first
+end
+```  
++ Next I will be using `each` to iterate over hashes. Inside the iteration we have access to both the key and the value. We can `puts` out the key and value of a single pair. The return value, however, is always the original hash. `each` returns the original collection on which you are calling the method.
+
+```Ruby
+hash = {key1: "value1", key2: "value2"}
+
+hash.each do |key, value|
+  puts "#{key}: #{value}"
+end
+```
+```Ruby
+key1: value1
+key2: value2
+ => {:key1=>"value1", :key2=>"value2"}
+```
++ `start_with?()` returns true if `str` starts with one of the prefixes given.
+
+```Ruby
+# passengers = {
+# suite_a: "Amanda Presley",
+# suite_b: "Seymour Hoffman",
+# suite_c: "Alfred Tennyson",
+# suite_d: "Charlie Chaplin",
+# suite_e: "Crumpet the Elf"
+# }
+
+def select_winner(passengers)
+  # add the code snippet here!
+  winner = ""
+  passengers.each do |suite, name|
+    if suite == :suite_a && name.start_with?("A")
+      winner = name
+    end
+  end
+  winner
+end
+```
