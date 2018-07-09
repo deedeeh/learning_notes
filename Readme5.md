@@ -360,3 +360,22 @@ def select_winner(passengers)
   winner
 end
 ```
++ `collect` to iterate over hashes. It is used to collect the values of the hash's keys and/or collect data that we've operated on over the course of an iteration.
+
++ I worked on another lab *Key for min value* and there was some restrictions to use methods such as `#key`, `#values`, `#min`, `#sort_by`, etc...
+The purpose of this lab is to create my own method.
+
+```Ruby
+def key_for_min_value(name_hash)
+  min_value = 0
+  key_for_min = nil
+  name_hash.each do |key, value|
+    if min_value > value || min_value == 0
+      min_value = value
+      key_for_min = key
+    end
+  end
+  key_for_min
+end
+```
+I had to grape a pencil and paper to explain to myself the iteration process and how when we call this method it will return the *key for min value*.
