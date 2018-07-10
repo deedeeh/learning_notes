@@ -379,3 +379,25 @@ def key_for_min_value(name_hash)
 end
 ```
 I had to grape a pencil and paper to explain to myself the iteration process and how when we call this method it will return the *key for min value*.
+
+######  Wednesday 11th July
++ Today I've learned about `#values` which collects all of the values in a hash, `#keys` returns an array containing all of the keys in the hash and `#min` use it on a hash to return the key/value pair that contains that lowest key, either alphabetically or numerically.
+
++ I worked on *Manipulating Hashes* lab and I have 1 more lab to finish the *__Intro to Hashes__* section.
+
+Here is my code:
+
+```Ruby
+contacts["Freddy Mercury"][:favorite_icecream_flavors].delete_if {|value| value == "strawberry"}
+```
+Learn.co solution:
+
+```Ruby
+contacts["Freddy Mercury"].each do |attribute, value|
+      if attribute == :favorite_icecream_flavors
+        value.delete_if do |flavor|
+          flavor == "strawberry"
+      end
+    end
+  end
+```
