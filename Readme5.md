@@ -517,3 +517,5 @@ Again here Learn.co used `map` and saved extra work to do. I really liked how th
 
 >* This is the first time I see `#compact` which returns a copy of self with all nil elements removed.  
 >* The first time I see that I can chain a method with `end`.
+
++ Today I will skip the new section *__More on Hashes__* and I will be working on *__Intro to HTML/CSS__*. I will try to work on both parts so when the time I feel I need a break and work on easy topics I can work on HTML and CSS. I still have lots of labs in *__Ruby Fundamentals__* and I will try to finish it in the next couple of weeks.
