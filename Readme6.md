@@ -43,3 +43,6 @@ __Summary:__
 >* DNS servers associate a domain name with a particular IP address.
 >* IP addresses define the unique location of a computer on the internet.
 >* The communication between your browser and servers is done through the request and response cycle, which is made up of headers and a response body made up of HTML, CSS, or JavaScript.
+
++ Also, I worked on *__HTML Fundamentals__* and I create a website along with the instructor. Next lesson contains lots of HTML resources and I want to check them.
+>* HTML Language Code Reference, ISO Language codes. Check it on https://www.w3schools.com/tags/ref_language_codes.asp
