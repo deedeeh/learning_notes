@@ -401,3 +401,119 @@ contacts["Freddy Mercury"].each do |attribute, value|
     end
   end
 ```
+
+######  Thursday 12th July
++ I worked on the last lab, *Manipulation Lab*, in *__Intro to Hashes__*. It was a bit hard and I was confused most of the time especially in the last 2 methods. As usual I checked the solution after I passed the lab and I want to share some of the differences.
+
+Here is my code:
+
+```Ruby
+# given that holiday_hash looks like this:
+  # {
+  #   :winter => {
+  #     :christmas => ["Lights", "Wreath"],
+  #     :new_years => ["Party Hats"]
+  #   },
+  #   :summer => {
+  #     :fourth_of_july => ["Fireworks", "BBQ"]
+  #   },
+  #   :fall => {
+  #     :thanksgiving => ["Turkey"]
+  #   },
+  #   :spring => {
+  #     :memorial_day => ["BBQ"]
+  #   }
+  # }
+
+def add_supply_to_winter_holidays(holiday_hash, supply)
+  # holiday_hash is identical to the one above
+  # add the second argument, which is a supply, to BOTH the
+  # Christmas AND the New Year's arrays
+
+  holiday_hash[:winter][:christmas] << supply
+  holiday_hash[:winter][:new_years] << supply
+end
+```   
+Learn.co solution:
+
+```Ruby
+def add_supply_to_winter_holidays(holiday_hash, supply)
+  holiday_hash[:winter].each do |holiday, supplies|
+    supplies << supply
+  end
+end
+```
+As you can see above my code is not DRY and I could simply iterate over the winter symbol instead of hardcoding. My solution won't be so efficient when we add more holidays!
+
+My solution:
+
+```Ruby
+def all_supplies_in_holidays(holiday_hash)
+  # iterate through holiday_hash and print items such that your readout resembles:
+  # Winter:
+  #   Christmas: Lights, Wreath
+  #   New Years: Party Hats
+  # Summer:
+  #   Fourth Of July: Fireworks, BBQ
+  # etc.
+
+  holiday_hash.each do |season, holidays|
+    puts "#{season.to_s.capitalize!}:"
+    holidays.each do |holiday, supplies|
+      words_array = []
+      holiday.to_s.split("_").each do |word|
+        words_array << word.capitalize!
+      end
+      puts "  #{words_array.join(" ")}: #{supplies.join(", ")}"
+    end
+  end
+end
+```
+Learn.co:
+
+```Ruby
+def all_supplies_in_holidays(holiday_hash)
+  holiday_supplies.each do |season, holidays|
+    puts "#{season.capitalize}:"
+    holidays.each do |holiday, supplies|
+      puts"  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}"
+    end
+  end
+end
+```
+The previous method is around 3 lines less than my code but I believe my solution is easier to understand for a beginner than Learn.co solution even though I understand it very well. So using `map` saved us from creating a new array and push the words in it but when I used `each` I had to create `words_array` and iterate over word to push each one to it.
+
+My code:
+
+```Ruby
+def all_holidays_with_bbq(holiday_hash)
+  # return an array of holiday names (as symbols) where supply lists
+  # include the string "BBQ"
+  bbq_holidays = []
+  holiday_hash.each do |season, holidays|
+    holidays.each do |holiday, supplies|
+      supplies.each do |supply|
+        if supply == "BBQ"
+          bbq_holidays << holiday
+        end
+      end
+    end
+  end
+  bbq_holidays
+end
+```
+Learn.co:
+
+```Ruby
+def all_holidays_with_bbq(holiday_hash)
+  holiday_hash.map do |season, holidays|
+    holidays.map do |holiday, supplies|
+      holiday if supplies.include?("BBQ")
+    end
+  end.flatten.compact
+end
+```
+Again here Learn.co used `map` and saved extra work to do. I really liked how they used `holiday if supplies.include?("BBQ")`. They saved around 3-4 lines using just these 2 lines.
+
+>* This is the first time I see `#compact` which returns a copy of self with all nil elements removed.  
+>* The first time I see that I can chain a method with `end`.
