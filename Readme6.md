@@ -48,7 +48,7 @@ __Summary:__
 >* HTML Language Code Reference, ISO Language codes. Check it on https://www.w3schools.com/tags/ref_language_codes.asp
 
 ######  Saturday 14th July
-+ Today I worked on *__HTML Album Cover__* and the rest of this section *__Front-End HTML Fundamentals__*. Next section in *__Intro to HTML/CSS__* is *__Front-End CSS Introduction__*.
++ Today I worked on *__HTML Album Cover__* and the rest of this section *__Front-End HTML Fundamentals__*. Next section in *__Intro to HTML/CSS__* is *__Front-End HTML5__*.
 
 + I learned about a new tag `<span></span>` plus previously `<img>`, `<h1></h1>` to `<h6></h6>`, `<p></p>` and `<a></a>`. All of the previous tags have an opening and closing tags except `<img>` is a self closing tag. I also learned about attributes where we can add them in the opening tag to provide more information about the tag.
 
