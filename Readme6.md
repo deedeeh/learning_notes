@@ -51,3 +51,5 @@ __Summary:__
 + Today I worked on *__HTML Album Cover__* and the rest of this section *__Front-End HTML Fundamentals__*. Next section in *__Intro to HTML/CSS__* is *__Front-End CSS Introduction__*.
 
 + I learned about a new tag `<span></span>` plus previously `<img>`, `<h1></h1>` to `<h6></h6>`, `<p></p>` and `<a></a>`. All of the previous tags have an opening and closing tags except `<img>` is a self closing tag. I also learned about attributes where we can add them in the opening tag to provide more information about the tag.
+
++ I learned about *Developer tools* where we can change our HTML & CSS code in my browser and test my code and results but once I refresh the page my tests will go back to its original code so I have to change the source code. It is a great way to experiment and learn about different behaviours.
