@@ -53,3 +53,62 @@ __Summary:__
 + I learned about a new tag `<span></span>` plus previously `<img>`, `<h1></h1>` to `<h6></h6>`, `<p></p>` and `<a></a>`. All of the previous tags have an opening and closing tags except `<img>` is a self closing tag. I also learned about attributes where we can add them in the opening tag to provide more information about the tag.
 
 + I learned about *Developer tools* where we can change our HTML & CSS code in my browser and test my code and results but once I refresh the page my tests will go back to its original code so I have to change the source code. It is a great way to experiment and learn about different behaviours.
+
+######  Sunday 15th July
++ I finished the first lab in *__More on Hashes__* which consists of 4 methods. It took me a while to solve the first method but I've learned a lot through the process.
+
+```Ruby
+# Write your code here.
+def dictionary
+  dictionary = {
+    "hello" => "hi",
+    "for" => "4",
+    "four" => "4",
+    "to" => "2",
+    "two" => "2",
+    "too" => "2",
+    "be" => "b",
+    "you" => "u",
+    "at" => "@",
+    "and" => "&"
+  }
+end
+```
+
+Here is my first method:
+
+```Ruby
+def word_substituter(tweet)
+  tweet_array = tweet.split(" ")
+  tweet_array.each_with_index do |word, index|
+    if dictionary.keys.include?(word.downcase)
+      tweet_array.delete_at(index) && tweet_array.insert(index, dictionary[word.downcase])
+    end
+  end
+  tweet_array.join(" ")
+end
+```
+In the previous method I had to `split` the string to array of words then iterate over the words and their indices and check if the dictionary hash contain this word it will remove this original word and replace it with with the substituter with `delete_at` which takes an index and `insert` takes an index and an object which is in our case the hash `dictionary[word.downase]`.
+
+```Ruby
+def bulk_tweet_shortener(tweets)
+  tweets.map do |tweet|
+    puts word_substituter(tweet)
+  end
+end
+```
+The `bulk_tweet_shortener` is to print the tweets after it is shorten.
+
+```Ruby
+def selective_tweet_shortener(tweet)
+  tweet.length < 140 ? tweet : word_substituter(tweet)
+end
+```
+This method is to check if the original tweet number of characters is less than 140 then it will print the original tweet otherwise we will implement the `word_substituter` on this tweet. I used a ternary operator in here.
+
+```Ruby
+def shortened_tweet_truncator(tweet)
+  word_substituter(tweet).length > 140 ? "#{word_substituter(tweet)[0..135]} ..." : tweet
+end
+```
+`shortened_tweet_truncator` is to check after the tweet is replaced by the substituter if it is still more than 140 characters then I make it 140 and then add an ellipsis otherwise just print the original tweet. 
