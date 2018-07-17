@@ -258,3 +258,73 @@ def num_points_scored(player_name)
   result
 end
 ```
+
+######  Tuesday 17th July
++ I worked on the rest of the lab *__Hashketball__*. It was tough and a bit confusing working with nested hashes but I've learned a lot through the process and I used `binding.pry` all the time to check which data I am working on at the time.
+>* All I was thinking about at the beginning is to make my code work and then I can think about refactoring but I don't want my code to be confusing and not easy to understand at this stage.
+```Ruby
+def num_points_scored(player_name)
+  result = nil
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |player, stats|
+          if player == player_name
+            stats.each do |k, v|
+              if k == :points
+                result = v
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  result
+end
+```
+>* The following code is one of the methods I spent some time trying to solving it. One of the obstacles not updating max to the value while it is iterating to check the max value for `:shoe` and exiting the loop by `return stats[:rebounds]` so I had to create a variable and set it equal to `stats[:rebounds]` then return it at the end of the method.
+```Ruby
+def big_shoe_rebounds
+  big_shoe = nil
+  max = 0
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |player, stats|
+          stats.each do |k, v|
+            if k == :shoe && v > max
+              max = v
+              big_shoe = stats[:rebounds]
+            end
+          end
+        end
+      end
+    end
+  end
+  big_shoe
+end
+```
+>* Also `#player_numbers(team_name)` I spent time thinking about the conditional statement to connect the `team_name` and the `:players` together so I can access the team's players.
+```Ruby
+def player_numbers(team_name)
+  player_numbers = []
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, data|
+      if game_hash[location].values[0] == team_name && attribute == :players
+        data.each do |player, stats|
+          stats.each do |k, v|
+            if k == :number
+              player_numbers << v
+            end
+          end
+        end
+      end
+    end
+  end
+  player_numbers
+end
+```
+Check my Github repo *advanced-hashes-hashketball-prework* for the full version of this lab.
+
++ There are few bonus methods in this lab and I am going to work on it so I can learn and practice more.
