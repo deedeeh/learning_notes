@@ -328,3 +328,13 @@ end
 Check my Github repo *advanced-hashes-hashketball-prework* for the full version of this lab.
 
 + There are few bonus methods in this lab and I am going to work on it so I can learn and practice more.
+
++ I am doneeeee with this lab!!! I was a bit shocked with the Learn.co solution! How it is really fancy and short by using many helper methods and also `#fetch` that was the 1st time to see.
+>* `fetch` returns a value from the hash for the given key.
+>* If the key can't be found, there are several options:
+>>* `h = { "a" => 100, "b" => 200 }`
+>>* With no other arguments, it will raise an KeyError exception `h.fetch("z")` I will get an error msg.
+>>* if default is given, then that will be returned `h.fetch("z", "go fish")` will return ``#=>"go fish"``
+>>* if the optional code block is specified, then that will be run and its result returned `h.fetch("z") { |el| "go fish, #{el}"}` will return `#=>"go fish, z"`
+
++ Next I will be working on *__Programming Languages__* lab and practice more nested hashes and iteration.
