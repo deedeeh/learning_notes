@@ -526,6 +526,36 @@ def get_average_age_for_season(data, season)
   average_age.round
 end
 ```
+Code updated from Learn.co solution:
+
+```Ruby
+#my original solution
+def get_contestant_name(data, occupation)
+  # code here
+  name = nil
+  data.each do |season_number, season_data|
+    season_data.each do |contestants_data|
+      contestants_data.each do |k, v|
+        name = contestants_data["name"] if k == "occupation" && v == occupation
+      end
+    end
+  end
+  name
+end
+
+#solution after checking learn.co
+def get_contestant_name(data, occupation)
+  # code here
+  data.each do |season, contestants_data|
+    contestants_data.each do |contestant_hash|
+      if contestant_hash["occupation"] == occupation
+        return contestant_hash["name"]
+      end
+    end
+  end
+end
+```
+
 In `get_average_age_for_season` it was the first time to use `inject` which
 >* combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
 >* If you specify a block, then for each element in enum the block is passed an accumulator value (memo) and the element.
@@ -538,3 +568,4 @@ In `get_average_age_for_season` it was the first time to use `inject` which
 # Same using a block and inject
 (5..10).inject { |sum, n| sum + n }    #=> 45
 ```
+I need to work more on accessing the hash with keys like this `contestant_hash["hometown"] == hometown` instead of doing `|k, v|` and then do the comparison with `k` or `v`.
