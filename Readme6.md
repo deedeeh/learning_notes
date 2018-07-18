@@ -471,3 +471,70 @@ end
 >* `a ||= b` it is a conditional assignment operator which is `a || a = b`. It means  if `a` is *undefined* or *falsey* (false or nil), then evaluate `b` and set `a` to be the result.
 >* So in the above method it means if `language_attributes[language][:style]` is falsey(nil) it means evaluate the empty array and set `language_attributes[language][:style]` to that empty array.
 >* One of the best things to learn is to check other solutions!
+
++ Also, I worked on *__Bachelor Nested Iteration__* lab which consisted of 5 methods.
+
+```Ruby
+def get_first_name_of_season_winner(data, season)
+  # code here
+  winner_name = nil
+  data.each do |season_number, season_data|
+    if season_number == season
+      season_data.each do |contestants_data|
+        contestants_data.each do |k, v|
+          if k == "status" && v == "Winner"
+            winner_name = contestants_data["name"].split.first
+          end
+        end
+      end
+    end
+  end
+  winner_name
+end
+
+def count_contestants_by_hometown(data, hometown)
+  # code here
+  hometown_contestants = []
+  data.each do |season_number, season_data|
+    season_data.each do |contestants_data|
+      contestants_data.each do |k, v|
+        if k == "hometown" && v == hometown
+          hometown_contestants << contestants_data["name"]
+        end
+      end
+    end
+  end
+  hometown_contestants.length
+end
+
+def get_average_age_for_season(data, season)
+  # code here
+  average_array = []
+  average_age = nil
+  data.each do |season_number, season_data|
+    if season_number == season
+      season_data.each do |contestants_data|
+        contestants_data.each do |k, v|
+          if k == "age"
+            average_array << v.to_f
+            average_age = average_array.inject {|sum, i|sum + i} / average_array.size
+          end
+        end
+      end
+    end
+  end
+  average_age.round
+end
+```
+In `get_average_age_for_season` it was the first time to use `inject` which
+>* combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
+>* If you specify a block, then for each element in enum the block is passed an accumulator value (memo) and the element.
+>* If you specify a symbol instead, then each element in the collection will be passed to the named method of memo.
+>* In either case, the result becomes the new value for memo.
+>* At the end of the iteration, the final value of memo is the return value for the method.
+>* If you do not explicitly specify an initial value for memo, then the first element of collection is used as the initial value of memo.
+
+```Ruby
+# Same using a block and inject
+(5..10).inject { |sum, n| sum + n }    #=> 45
+```
