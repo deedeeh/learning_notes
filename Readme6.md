@@ -569,3 +569,9 @@ In `get_average_age_for_season` it was the first time to use `inject` which
 (5..10).inject { |sum, n| sum + n }    #=> 45
 ```
 I need to work more on accessing the hash with keys like this `contestant_hash["hometown"] == hometown` instead of doing `|k, v|` and then do the comparison with `k` or `v`.
+
++ I've done some *__HTML5__* such as  `<form></form>` has attributes `action` & `method`. Also, learned about iframes.
+>* Usually forms have attributes such as `type`, `name` & `value`.
+>* There are different types: `text`, `password`, `radio` and `checkbox`.
+>* One of forms tag is `<select>` that consists of `<option>` and it is a dropdown menu.
+>* `<textarea>` is another tag in forms.
