@@ -338,3 +338,136 @@ Check my Github repo *advanced-hashes-hashketball-prework* for the full version 
 >>* if the optional code block is specified, then that will be run and its result returned `h.fetch("z") { |el| "go fish, #{el}"}` will return `#=>"go fish, z"`
 
 + Next I will be working on *__Programming Languages__* lab and practice more nested hashes and iteration.
+
+######  Wednesday 18th July
++ I worked on *__Programming Languages__* lab and I solved it! I spent some time tying to make a condition to one of the keys which had 2 values but the other keys had just 1.
+
+The following code is called as an argument in the method `reformat_languages(languages)`
+
+```Ruby
+languages = {
+  :oo => {
+    :ruby => {
+      :type => "interpreted"
+    },
+    :javascript => {
+      :type => "interpreted"
+    },
+    :python => {
+      :type => "interpreted"
+    },
+    :java => {
+      :type => "compiled"
+    }
+  },
+  :functional => {
+    :clojure => {
+      :type => "compiled"
+    },
+    :erlang => {
+      :type => "compiled"
+    },
+    :scala => {
+      :type => "compiled"
+    },
+    :javascript => {
+      :type => "interpreted"
+    }
+  }
+}
+```
+My job is to reformat it programmatically in this way:
+
+```Ruby
+{
+  :ruby => {
+    :type => "interpreted",
+    :style => [:oo]
+  },
+  :javascript => {
+    :type => "interpreted",
+    :style => [:oo, :functional]
+  },
+  :python => {
+    :type => "interpreted",
+    :style => [:oo]
+  },
+  :java => {
+    :type => "compiled",
+    :style => [:oo]
+  },
+  :clojure => {
+    :type => "compiled",
+    :style => [:functional]
+  },
+  :erlang => {
+    :type => "compiled",
+    :style => [:functional]
+  },
+  :scala => {
+    :type => "compiled",
+    :style => [:functional]
+  }
+}
+```
+Here is my solution:
+
+```Ruby
+def reformat_languages(languages)
+  # your code here
+  new_hash = {}
+  js_styles = []
+  languages.each do |styles, data|
+    data.each do |language, type|
+      type.each do |k, v|
+        if language == :javascript
+          js_styles << styles
+          new_hash[language] = {k => v, :style => js_styles}
+        else
+          new_hash[language] = {k => v, :style => [styles]}
+        end
+      end
+    end
+  end
+  new_hash
+end
+```
+>* It was pretty easy to work on nested hashes but to push `:oo` and `:functional` in key `:style` for the key `javascript` was a bit tough.
+>* The order of the code is extremely important and I guess that one of the things that I was trying to work on to solve this lab.
+>* Creating an empty array and push both styles in was the easiest and simplest solution.
+
+I checked Learn.co solution and I believe it is a bit hard than my one. I totally understood it but I haven't thought about solving my lab in this way.
+
+```Ruby
+def reformat_languages(languages)
+  language_attributes = {}
+
+  languages.each do |oo_or_functional, language_hash|
+    #:oo, {:ruby => {...}}
+    language_hash.each do |language, attribute_hash|
+      #:ruby, {:type => "interpreted"}
+      attribute_hash.each do |attribute, str_value|
+        #:type, "interpreted"
+        if language_attributes[language].nil?
+          #if language :ruby doesn't exist in new hash
+          language_attributes[language] = {}  #initiate a new hash for the value of :ruby
+        end
+        # this would cause us problems if we had more than one attribute we're iterating over
+        language_attributes[language][:style] ||= []  # create a :style key within that hash and set it equal to an empty array
+        language_attributes[language][:style] << oo_or_functional  #added oo key from first level of languages hash to this key                                
+        if language_attributes[language][attribute].nil?
+          #if :ruby language key doesn't have a :type key nested within it
+          language_attributes[language][attribute] = str_value  #set this :type key to equal the str "interpreted"
+        end
+      end
+    end
+  end
+  language_attributes
+end
+```
+>* They used `.nil?` a lot to check if the key exists in the new hash.
+>* They didn't need to check if the key is `:javascript` but they just pushed the `oo_or_functional` content in the empty array.
+>* I didn't really understand `  language_attributes[language][:style] ||= []` because of `||=` unless there was a comment to explain what is happened.
+>* `a ||= b` it is a conditional assignment operator which is `a || a = b`. It means  if `a` is *undefined* or *falsey* (false or nil), then evaluate `b` and set `a` to be the result.
+>* So in the above method it means if `language_attributes[language][:style]` is falsey(nil) it means evaluate the empty array and set `language_attributes[language][:style]` to that empty array.
+>* One of the best things to learn is to check other solutions!
