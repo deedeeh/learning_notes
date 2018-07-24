@@ -30,3 +30,57 @@
 >>* While the content of the `<figure>` element is related to the main flow, its position is independent of the main flow.
 >>* If removed it should not affect the flow of the document.
 >* `<figcaption></figcaption>` tag defines a caption for a `<figure>` element. It can be placed as the first or last child of the `<figure>` element.
+
+######  Tuesday 24th July
++ I worked on *__Keys of Hash__* lab in *__More on Hashes__* section.
+
+This is in spec repo:
+
+```Ruby
+let(:animals) { {"sugar glider"=>"Australia","aye-aye"=> "Madagascar","red-footed tortoise"=>"Panama","kangaroo"=> "Australia","tomato frog"=>"Madagascar","koala"=>"Australia"} }
+```
+
+Here is my solution:
+
+```Ruby
+class Hash
+  def keys_of(*arguments)
+    # code goes here
+    result = []
+    self.each do |k, v|
+      arguments.map {|value| result << k if value == v}
+    end
+    result
+  end
+end
+```
+Learn.co solution:
+
+```Ruby
+class Hash
+  def keys_of(*args)
+    map {|key, value| args.include?(value) ? key : nil }.compact
+  end
+end
+```
+In Learn.co code I didn't know that I can use *map* or any other method inside the instance of a class without joining it to an argument. So the *map* works on `Hash.new` which is our example an hash of animals.
+
++ I've learned so many things today:
+>* *Monkey patching* is the practice of re-opening and modifying pre-existing classes.
+>>* It is generally avoided. You don't want to mess with the implementation of the objects and methods native to Ruby. It could get messy, fast.
+>* `class` is the blueprint from which individual objects are created. In object-oriented terms, we say that your bicycle is an instance of the class of objects known as bicycles.
+>>* To create a class you always start with the keyword *class* followed by the name of the class.
+>>* The name of the class should always be in CamelCase.
+>>* You terminate a class by using the keyword *end*.
+>* `self` is a special variable that points to the object that "owns" the currently executing code. Ruby uses self everywhere:
+>>* For instance variables: `@myvar`
+>>* For method and constant lookup.
+>>* When defining methods, classes and modules.
+>>* So in this lab `self` belongs to `Hash.new` class which is a Hash of animals.
+>* splat operator `*` has almost endless uses. But the main idea is that whenever you don’t want to specify the number of arguments you have, you would use a splat operator.
+>* `compact` I have seen it couple of times before but every time it feels like I see it for the first time. It returns a copy of self with all nil elements removed. Usually it is used with `map` or `collect`.
+>* Variables in Ruby Class are *4 types*:
+>>* __Local Variables -__  are the variables that are defined in a method. Local variables are not available outside the method. They begin with a lowercase letter or _ .
+>>* __Instance Variables -__ are available across methods for any particular instance or object. That means that instance variables change from object to object. They are preceded by the at sign @ followed by the variable name.
+>>* __Class Variables -__ are available across different objects. A class variable belongs to the class and is a characteristic of a class. They are preceded by the sign @@ and are followed by the variable name.
+>>* __Global Variables -__ Class variables are not available across classes. If you want to have a single variable, which is available across classes, you need to define a global variable. The global variables are always preceded by the dollar sign $.
