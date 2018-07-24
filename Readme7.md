@@ -84,3 +84,39 @@ In Learn.co code I didn't know that I can use *map* or any other method inside t
 >>* __Instance Variables -__ are available across methods for any particular instance or object. That means that instance variables change from object to object. They are preceded by the at sign @ followed by the variable name.
 >>* __Class Variables -__ are available across different objects. A class variable belongs to the class and is a characteristic of a class. They are preceded by the sign @@ and are followed by the variable name.
 >>* __Global Variables -__ Class variables are not available across classes. If you want to have a single variable, which is available across classes, you need to define a global variable. The global variables are always preceded by the dollar sign $.
+
++ I am working on *__Collections Practice__* lab which is the last lab in *__More on Hashes__* section.
+>* It contains 8 methods and I've done 4 of them and still have 4 more to do.
+
+```Ruby
+def begins_with_r(tools)
+  result = nil
+  tools.each {|tool| result = tool.start_with?("r")}
+  result
+end
+
+def contain_a(elements)
+  elements.collect do |element|
+    element if element.include?("a")
+  end.compact
+end
+
+def remove_non_strings(elements)
+  elements.map {|element| element if element.class == String}.compact
+end
+```
+I am pretty sure there are built-in methods that I can use to make my code shorter and cleaner that is why I always check Learn.co solutions after I pass the lab.
+
+I solved the following lab but I am extremely curious to see how Learn.co done it.
+
+```Ruby
+def first_wa(elements)
+  elements.each_with_index do |element, index|
+    if element.class == Symbol
+      elements.delete_at(index)
+      elements.insert(index, element.to_s)
+    end
+  end
+  elements.collect {|str| str if str.start_with?("wa")}.compact.first
+end
+```
