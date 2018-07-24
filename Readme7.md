@@ -120,3 +120,20 @@ def first_wa(elements)
   elements.collect {|str| str if str.start_with?("wa")}.compact.first
 end
 ```
++ New learning outcomes:
+>* `uniq` returns a new array by removing duplicate values in self. If a block is given, it will use the return value of the block for comparison.
+>* Using `count` with *array* returns the number of elements.
+>>* If an argument is given, counts the number of elements which equal *obj* using ==.
+>>* If a block is given, counts the number of elements for which the block returns a true value.
+
+```Ruby
+def count_elements(elements)
+  new_arr = elements.uniq
+  new_arr.collect do |element|
+    count = elements.count(element)
+    #Here we add a new symbol key (:count) to each existing element with the value of count for each one
+    element[:count] = count
+    element
+  end
+end
+```
