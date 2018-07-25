@@ -357,3 +357,29 @@ end
 >* I didn't know where exactly to use `break` but as I see from Learn.co they used it after the user `exit` the app.
 >* I can't seem to use `break` with `unless` and I am not sure the reason behind that!
 >* I was just reading right now that break is not defined outside a `for` or `while` loops. That explains it.
+
+My `#run` solution passes all tests but the app isn't working properly in CLI. After debugging with the help of a coach on Learn.co, here is the correct code:
+
+```Ruby
+def run(songs)
+  user_input = ""
+  help
+  unless user_input == "exit"
+    puts "Please enter a command:"
+    user_input = gets.downcase.chomp
+    case user_input
+    when "list"
+      list(songs)
+    when "play"
+      list(songs)
+      play(songs)
+    when "help"
+      help
+    when "exit"
+      exit_jukebox
+      exit
+    else
+      help
+    end
+  end
+```
