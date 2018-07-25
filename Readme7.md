@@ -88,6 +88,7 @@ In Learn.co code I didn't know that I can use *map* or any other method inside t
 + I am working on *__Collections Practice__* lab which is the last lab in *__More on Hashes__* section.
 >* It contains 8 methods and I've done 4 of them and still have 4 more to do.
 
+my solution:
 ```Ruby
 def begins_with_r(tools)
   result = nil
@@ -105,6 +106,26 @@ def remove_non_strings(elements)
   elements.map {|element| element if element.class == String}.compact
 end
 ```
+Learn.co solution for `#begins_with_r` & `remove_non_strings`
+```Ruby
+def begins_with_r(array)
+  flag = true
+  array.each do |element|
+    flag = false if element[0] != "r"
+  end
+  flag
+end
+
+def remove_non_strings(array)
+  container = []
+  array.each do |element|
+    container << element if element.is_a?(String)
+  end
+  container
+end
+```
+>* First time to see `is_a?(class)` returns true if class is the class of obj, or if class is one of the superclasses of obj or modules included in obj.
+
 I am pretty sure there are built-in methods that I can use to make my code shorter and cleaner that is why I always check Learn.co solutions after I pass the lab.
 
 I solved the following lab but I am extremely curious to see how Learn.co done it.
@@ -135,5 +156,44 @@ def count_elements(elements)
     element[:count] = count
     element
   end
+end
+```
+
+######  Wednesday 25th July
++ I worked on the rest of the *__Collections Practice__* lab which is the final lab in this section. Next is *__First Application__* section.
+
++ I've learned about few methods in the next 3 methods.
+>* `merge` returns a new hash containing the contents of other_hash and the contents of hash.
+>>* If no block is specified, the value for entries with duplicate keys will be that of other_hash.
+>>* Otherwise the value for each duplicate key is determined by calling the block with the key, its value in hash and its value in other_hash.
+
+```Ruby
+def merge_data(keys, data)
+  result = []
+  keys.each do |name|
+    data.each do |object|
+      object.each do |k, v|
+        result << name.merge(v) if k == name[:first_name]
+      end
+    end
+  end
+  result
+end
+```
+```Ruby
+def find_cool(objects)
+  objects.collect do |obj|
+    obj[:temperature] == "cool" ? obj : nil
+  end.compact
+end
+```
+```Ruby
+def organize_schools(schools)
+  result = {}
+  schools.each do |school, location|
+    school_location = location[:location]
+    result.has_key?(school_location) ? result[school_location] << school : result[school_location] = [school]
+  end
+  result
 end
 ```
