@@ -197,3 +197,163 @@ def organize_schools(schools)
   result
 end
 ```
++ I finished the first project *__Jukebox CLI__* and it was so fun to work on it. I still have an advanced exercise which is a bonus and I will work on it for more practice.
+>* `unless` isn't the first time to use but I always get confused how it works.
+>>* Executes code if conditional is false.
+>>* If the conditional is true, code specified in the else clause is executed.
+>* I also used *switch statement* to make the last method work.
+
+Here is my solution:
+
+```Ruby
+def list(songs)
+  songs.each_with_index {|song, i| puts "#{i+1}. #{song}"}
+end
+
+def play(songs)
+  puts "Please enter a song name or number:"
+  user_song = gets.chomp
+  if list(songs).include?(user_song)
+    puts "Playing #{user_song}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
+
+def run(songs)
+  help
+  puts "Please enter a command:"
+  user_input = gets.chomp
+  unless user_input == "exit"
+    puts "Please enter a command:"
+  else
+    case user_input
+    when "list"
+      list(songs)
+    when "play"
+      play(songs)
+    when "help"
+      help
+    when "exit"
+      exit_jukebox
+    end
+  end
+end
+```
+Note about bin repo:
+>* The executable file in bin is a Ruby file, but the ".rb" extension has been left off.
+>>* The ".rb" extension is not mandatory for Ruby files, it is just a nice thing to have for the purposes of identifying the type of the file.
+>>* However, it is a convention to leave the file extension off of executable files, which comes from true binary files that contain pure machine code (1's and 0's) rather than human readable source code like Ruby.
+
+Note about Stubbing:
+>* I've seen this term before but it is a bit confusing that is why I am going through it again.
+>>* Stubbing refers to the fake implementation of a method.
+>>* In the context of this test suite, we will stub the `gets` method call that our program relies on to obtain user input and feed it back into the application.
+>>* In this way, we can simulate the CLI and effectively test our app.
+
++ New learnings:
+>* *squiggly heredoc* which is `<<~` we can finally multiline strings in a nice manner.
+>>* Instead of adding `puts` to each string we can do this:
+
+```Ruby
+def help
+  help = <<~HELP
+    I accept the following commands:
+    - help : displays this help message
+    - list : displays a list of songs you can play
+    - play : lets you choose a song to play
+    - exit : exits this program
+  HELP
+  puts help
+end
+```
++ Here is the difference between my solution and Learn.co solution:
+
+```Ruby
+def play(songs)
+  puts "Please enter a song name or number:"
+  user_song = gets.chomp
+  if list(songs).include?(user_song)
+    puts "Playing #{user_song}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
+```
+```Ruby
+def play(songs)
+  puts "Please enter a song name or number:"
+  song_to_play = gets.chomp
+  if (1..9).to_a.include?(song_to_play.to_i)
+    puts "Playing #{songs[song_to_play.to_i - 1]}"
+  elsif songs.include?(song_to_play)
+    puts "Playing #{song_to_play}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
+```
+My solution didn't check if the user inserts a number for the song but Learn.co done that.
+>* They created an array from a range and then checked if it includes the user input after it is changed to an integer.
+>* `#{songs[song_to_play.to_i - 1]}"` this line is to get the user input from the songs array and -1 because index of songs starts from 0 and we have our range array starts from 1 to 9.
+>* The rest of the method is the same as my solution.
+>* The Learn.co solution is more efficient than mine cause it tests different ways of the user input.
+
+Last method in this lab there are few differences between my solution and Learn.co one:
+
+my solution:
+
+```Ruby
+def run(songs)
+  help
+  puts "Please enter a command:"
+  user_input = gets.chomp
+  unless user_input == "exit"
+    puts "Please enter a command:"
+  else
+    case user_input
+    when "list"
+      list(songs)
+    when "play"
+      play(songs)
+    when "help"
+      help
+    when "exit"
+      exit_jukebox
+    end
+  end
+end
+```
+Learn.co solution:
+
+```Ruby
+def run(songs)
+  # help
+
+  input = ""
+  while input
+    puts "Please enter a command:"
+    input = gets.downcase.strip
+    case input
+    when 'list'
+      list(songs)
+    when 'play'
+      list(songs)
+      play(songs)
+    when 'help'
+      help
+    when 'exit'
+      exit_jukebox
+      break
+    else
+      help
+    end
+  end
+end
+```
+>* They used `gets.downcase.chomp` instead of `gets.chomp`.
+>* They used `while` and I used `unless`
+>* They created an empty string and then stored the user input in this string.
+>* I didn't know where exactly to use `break` but as I see from Learn.co they used it after the user `exit` the app.
+>* I can't seem to use `break` with `unless` and I am not sure the reason behind that!
+>* I was just reading right now that break is not defined outside a `for` or `while` loops. That explains it.
