@@ -457,3 +457,69 @@ def run_guessing_game
 end
 ```
 I have done some changes in the app as you can see from comparing my code with Learn.co code.
+
++ I started on the new section *__Advanced Hashes__* which is the last one in *__Intro to Ruby!__* I worked on *__Pigeon Organizer__* and I've learned new things from this lab such as:
+>*  Conditional assignment: `||=` operator which checks first, if your value is already set. If it returns nil, it will assign the first value on the right side which doesn't return nil or false.
+>>* In our case `result[name] ||= {}` it will check if the value is already set for name and if it is not it will set a hash for it.
+>>* And it did the same for the array `result[name][category] ||= []`
+
+Here is my solution:
+
+```Ruby
+def nyc_pigeon_organizer(data)
+  # write your code here!
+  result = {}
+  data.each do |category, data_items|
+    data_items.each do |attributes, names|
+      names.each do |name|
+        if result[name] == nil
+          result[name] = {}
+          result[name][category] = [attributes.to_s]
+        elsif result[name][category] == nil
+          result[name][category] = [attributes.to_s]
+        else
+          result[name][category] << attributes.to_s
+        end
+      end
+    end
+  end
+  result
+end
+```
+In the above solution I am checking if it is nil then I will do something to my code. If name doesn't have a hash then I will insert a hash. If category is nil then I add the category and its value, and if I already have a category and value for it then I push the new value to the array.
+
+Learn.co solution:
+
+```Ruby
+# One of Learn.co solutions. I really like it!
+def nyc_pigeon_organizer(data)
+  result = {}
+  data.each do |category, data_items|
+    data_items.each do |attributes, names|
+      names.each do |name|
+        result[name] ||= {}
+        result[name][category] ||= []
+        result[name][category] << attributes.to_s
+      end
+    end
+  end
+  result
+end
+```
+This one is much more simple than mine and all they had to do is to use the `||=` operator.
+
+There is another answer from Learn.co where they used `each_with_object({})` and this is the first time I see this method.
+>* I think the only difference here is adding the result variable as an object instead of initialising the variable by itself at the beginning.
+```Ruby
+def nyc_pigeon_organizer(data)
+  data.each_with_object({}) do |(key, h), result|
+    h.each do |value, names|
+      names.each do |name|
+        result[name] ||= {}
+        result[name][key] ||= []
+        result[name][key] << value.to_s
+      end
+    end
+  end
+end
+```
