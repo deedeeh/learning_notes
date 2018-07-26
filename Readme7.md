@@ -159,7 +159,7 @@ def count_elements(elements)
 end
 ```
 
-######  Wednesday 25th July
+###### Wednesday 25th July
 + I worked on the rest of the *__Collections Practice__* lab which is the final lab in this section. Next is *__First Application__* section.
 
 + I've learned about few methods in the next 3 methods.
@@ -383,3 +383,77 @@ def run(songs)
     end
   end
 ```
+
+###### Thursday 26th July
++ I worked on *__Guessing CLI__* lab and I also extended the app for more practice and more fun!
+
++ It is an CLI app where the user gets a message to type a number between 1 and 6 if the user gets the correct guess, he/she gets a message you guessed a correct number if not he/she gets the computer guess. And then the user is asked if he wants to play again.
+
+Here is my solution:
+
+```Ruby
+def run_guessing_game
+  user_input = ""
+  random_num = rand(1...6).to_s
+  puts "Guess a number between 1 and 6."
+  while user_input != "exit"
+    user_input = gets.chomp
+    case user_input
+    when "exit"
+      puts "Goodbye!"
+      exit
+    when random_num
+      puts "You guessed the correct number!"
+      puts "Do you want to play again?"
+      puts "Please type yes or no."
+      user_answer = gets.downcase.chomp
+      if user_answer == "yes"
+        run_guessing_game
+      elsif user_answer == "no"
+        puts "Goodbye!"
+        exit
+      else
+        puts "Invalid answer, please type a correct answer"
+        run_guessing_game
+      end
+    else
+      puts "The computer guessed #{rand(1...6)}."
+      puts "Do you want to play again?"
+      puts "Please type yes or no."
+      user_answer = gets.downcase.chomp
+      if user_answer == "yes"
+        run_guessing_game
+      elsif user_answer == "no"
+        puts "Goodbye!"
+        exit
+      else
+        puts "Invalid answer, please type a correct answer"
+        run_guessing_game
+      end
+    end
+  end
+end
+```
+Learn.co solution:
+
+```Ruby
+
+def run_guessing_game
+  input = ""
+  while input
+    puts "Guess a number between 1 and 6."
+    input = gets.downcase.chomp
+    random_number = rand(1..6).to_s
+    case input.chomp
+    when random_number
+      puts "You guessed the correct number!"
+    when 'exit'
+      puts "Goodbye!"
+      break
+    else
+      puts "The computer guessed #{random_number}."
+    end
+  end
+end
+```
+I have done some changes in the app as you can see from comparing my code with Learn.co code.
