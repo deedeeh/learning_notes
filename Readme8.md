@@ -34,3 +34,5 @@
 __Check a list of the different Pseudo Classes and Pseudo elements__
 
 __Check font and text declarations__
+
++ I worked on the *__CSS code along__* lab and next I have one more lesson and 2 other labs to finish this section.
