@@ -36,3 +36,80 @@ __Check a list of the different Pseudo Classes and Pseudo elements__
 __Check font and text declarations__
 
 + I worked on the *__CSS code along__* lab and next I have one more lesson and 2 other labs to finish this section.
+
+###### Wednesday 1st August
++ I worked on 2 labs in *__CSS Introduction__* and still have 1 more lab to finish this section.
+>* One of the labs was to create a rainbow with divs and colors so it was a good practice to learn about hexadecimal color system.
+>* The second lab I had the styles written for me and all I had to do is to select the correct element with the correct selector syntax such as by ID, class, descendants, siblings and attribute selector.
+
+```CSS
+/* Select the image that has an attribute value matching "Kitty 5" (using attribute selector) */
+
+img[alt="Kitty 5"] {
+  position: absolute;
+  z-index: 3;
+  top: 217px;
+  left: 223px;
+}
+```
++ I finished the last lab *__Bonus - CSS Graffiti override__* which is mainly about specificity in CSS and how there are many ways to override styles.
+>* I tried to use different selectors such as descendants, child selector, sibling selector and Pseudo class.
+
+```HTML
+<div id="wall">
+  <div class="tag-1"></div>
+  <div id="tag-2"></div>
+  <div id="tag-3" class="slick wicked"></div>
+  <div class="parent">
+    <div id="tag-4"></div>
+  </div>
+  <div class="parent">
+    <div id="tag-5" class="slick"></div>
+  </div>
+  <div class="parent">
+    <div></div>
+    <div>
+      <div id="tag-6"></div>
+    </div>
+  </div>
+  <div class="parent">
+    <div>
+      <div id="tag-7" class="slick"></div>
+    </div>
+    <div></div>
+  </div>
+</div>
+```
+
+```CSS
+#wall .tag-1 {
+  display: none;
+}
+
+#wall .tag-1 + #tag-2 {
+  display: none;
+}
+
+div#wall div#tag-3.slick {
+  display: none;
+}
+
+#wall .parent #tag-4 {
+  display: none;
+}
+
+div#wall .parent div#tag-5.slick {
+  display: none;
+}
+
+div#wall div.parent div:last-child div#tag-6:nth-child(1) {
+  display: none;
+}
+
+body div#wall div.parent div > div#tag-7.slick {
+  display: none;
+}
+```
+This is the end of this section and next I am going to start *__ Front-End - CSS Page Layout__* which is the last section in *__Intro to HTML/CSS__*
+
+__I am almost there! :-)__ 
