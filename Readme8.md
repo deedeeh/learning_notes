@@ -163,4 +163,17 @@ Smaller screen resolutions may require horizontal scroll bar, depending the fixe
   line-height: 0;
 }
 ```
->*  Centring content in the middle of the page in any screen sizes we can add `margin: 0 auto` to the parent element.
+>* Centring content in the middle of the page in any screen sizes we can add `margin: 0 auto` to the parent element.
+>* *Positioning*: static, relative, fixed, absolute and sticky.
+>>* `position: static` it is by default and it is always positioned according to the normal flow of the page. Static elements are not affected by the top, bottom, left, and right properties.
+>>* `position: relative` is positioned relative to its normal position. We can add properties such as `top`, `right`, `left` or `bottom` if we want to change the position.
+>>* `position: fixed` is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+>>* `position: absolute` is positioned relative to the nearest positioned ancestor(parent). If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+>>* `position: sticky` is positioned based on the user's scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+>>>* `sticky` is not supported by earlier versions of IE so check what it does support.
+>>>* Safari requires a -webkit- prefix `position: -webkit-sticky;`
+>>>* Must specify at least one of `top`, `right`, `bottom` or `left` for sticky positioning to work.
+>* Overlapping elements: after applying some positioning to elements we can work with `z-index` property.
+>>* It specifies the stack order of an element (which element should be placed in front of, or behind, the others).
+>>* An element can have a positive or negative stack order.
+>>* By default any element starts with z-index of 0 and the higher the number the closer to the viewer the element will be.
