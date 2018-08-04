@@ -135,4 +135,32 @@ Smaller screen resolutions may require horizontal scroll bar, depending the fixe
 >>>* Cons => The designer has less control over what the user sees with regards to container sizes and where type and media wraps.
 >>* min-max sizing:
 >>>* We can add `min-width` or `max-width` so the layout can be fluid until a `min-width` then we change it to fixed layout. We can also do that with height.
->* We can specify a `height` property for an element (div) and if the div height is less than the content we can use the `overflow` property to fix this. 
+>* We can specify a `height` property for an element (div) and if the div height is less than the content we can use the `overflow` property to fix this.
+>>* `overflow` property can have values such as *visible*, *hidden*, and *scroll* and *auto* which does the same job.
+>>* *Fluid height* for ex. is to create an element that can extends from the top to the bottom and in this case we will have to create `height` property of 100% same as set the `width` to 100% but there is a difference between both properties:
+>>>* `width` is by default set to 100%
+>>>* `height` is by default only as tall as the content.
+>>>* That is why we will need to add to `body` and `html` elements a `height: 100%` and a `min-height: 100%` so the height will be expanded to the whole page from top to bottom.
+>* Elements display => inline, block and inline-block
+>>* `display: inline` appears side by side does not accept width or top and bottom margins. They are as wide as the content. An example of inline element is `span` & `img`
+>>* `display: block` displays one above the other, take up the whole line. Able to specify width, and top and bottom margins. Block elements such as `div`
+>>* `display: inline-block` displays side by side, allows top and bottom margins and width to be specified.
+>>* `display: table-cell` displays content in a table.
+>* Floating: We use it to create column structure and it is two values are `left` or `right`. It won't affect the elements before it but it will affect the way the element that comes after the `float` property.
+>>* That is why we use `clear` property:
+>>>* `clear: left` => It will clear the height of anything that is floating left and not allowing the element to float left.
+>>>* `clear: right` => It will clear the height of anything that is floating right and not allowing the element to float right.
+>>>* `clear: both` => It will clear the height on both sides, right and left so the element will be displayed after the floating elements.
+>>* Collapsed parents: If a parent element has floating children it might collapse and in this case we will need to add a *class* of `clearfix` for the parent in order to make the children inside the parent element again.
+```CSS
+.clearfix:after {
+  /* content property is a ref. for how tall a parent should be and we will set visibility to hidden so we don't see that ref. */
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+```
+>*  Centring content in the middle of the page in any screen sizes we can add `margin: 0 auto` to the parent element.
