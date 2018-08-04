@@ -112,4 +112,27 @@ body div#wall div.parent div > div#tag-7.slick {
 ```
 This is the end of this section and next I am going to start *__ Front-End - CSS Page Layout__* which is the last section in *__Intro to HTML/CSS__*
 
-__I am almost there! :-)__ 
+__I am almost there! :-)__
+
+###### Saturday 4th August
++ I am working on *__Front-End - CSS Page Layout__* section and the first lesson is *__CSS Layout__* where I've learned about:
+>* Box Model => margin (spacing inside an element), padding (spacing outside an element) and border.
+>>* There are 2 different box models: The W3C box model used by Chrome, Firefox, opera and safari, and Internet explorer use its own box model.
+>>* In W3C when you specify the width of an element it will just take into account the content area and not the padding and border while in Internet explorer it counts the content area, padding and border to calculate the width of an element.
+>>* To solve this CSS3 introduced the `box-sizing` property and if we want the IE model the value should be `border-box` and if we want the W3C model then it should be `content-box`.
+>>* This property has around 92% support across browsers.
+>* Layout types => fixed (px), elastic (em), fluid (%) and using min/max sizing.
+>>* Fixed layout (px):
+>>>* Pros => widths are the same for all screens large and small.
+>>>* Cons => A fixed-width layout may create excessive whitespace for users with larger screen resolutions.
+Smaller screen resolutions may require horizontal scroll bar, depending the fixed layout's width.
+>>* Elastic layout (em):
+>>>* Pros => In responsive design up-scaling/down-scaling the text will keep the containers in proportion with their text content.
+>>>* Cons => It takes a lot of savvy and testing to get the layout right for all users. Parent elements may begin to bump into each other as the type expands in size.
+>>>* If I want to calculate from px to em then I will take the px number and divide it by *16px* (1em) then I will have the correct em size.
+>>* Fluid layout (%):
+>>>* Pros => Makes full use of the screen and can eliminate horizontal scroll bars in smaller screen resolutions.
+>>>* Cons => The designer has less control over what the user sees with regards to container sizes and where type and media wraps.
+>>* min-max sizing:
+>>>* We can add `min-width` or `max-width` so the layout can be fluid until a `min-width` then we change it to fixed layout. We can also do that with height.
+>* We can specify a `height` property for an element (div) and if the div height is less than the content we can use the `overflow` property to fix this. 
