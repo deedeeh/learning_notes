@@ -177,3 +177,8 @@ Smaller screen resolutions may require horizontal scroll bar, depending the fixe
 >>* It specifies the stack order of an element (which element should be placed in front of, or behind, the others).
 >>* An element can have a positive or negative stack order.
 >>* By default any element starts with z-index of 0 and the higher the number the closer to the viewer the element will be.
+
+###### Sunday 5th August
++ I worked on *__Code Along IV__* lab which is mainly to practise what I've learned in the CSS layout properties.
+
+*__Note about Git:__* changes using Git. To do so, in Terminal type git add . and press return. Then type `git commit -m "add columns and fixed header and social bar"` and press return. Then push up this feature branch `git push -u origin columns` and press return. Next merge the changes into your master branch. Type `git checkout master` and press return, then `git merge columns` and press return. Then `git push origin master` and press return.
