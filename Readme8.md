@@ -182,3 +182,5 @@ Smaller screen resolutions may require horizontal scroll bar, depending the fixe
 + I worked on *__Code Along IV__* lab which is mainly to practise what I've learned in the CSS layout properties.
 
 *__Note about Git:__* changes using Git. To do so, in Terminal type git add . and press return. Then type `git commit -m "add columns and fixed header and social bar"` and press return. Then push up this feature branch `git push -u origin columns` and press return. Next merge the changes into your master branch. Type `git checkout master` and press return, then `git merge columns` and press return. Then `git push origin master` and press return.
+
++ I worked on *__Green Grocer__* lab which wasn't easy and I spent some time to work on it! 
