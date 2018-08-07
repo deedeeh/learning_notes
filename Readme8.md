@@ -342,3 +342,132 @@ end
 >* I believe this method is very similar to mine except using the conditional statement in the middle like this `total * 0.9 if total > 100`
 
 *There are __so many__ ways to execute your code and have the same result.*
+
+###### Tuesday 7th August
++ I worked on *__Emoticon Translator__* lab and it was so fun to learn about a new human-readable data serialisation language *YAML*
+
+>* *YAML* is a recursive acronym for "YAML Ain't Markup Language". YAML is used because it is easier for humans to read and write than typing out entire arrays, hashes, etc.
+>* This module provides a Ruby interface for data serialisation in YAML format.
+>* You can choose from one of two YAML engines that ship with Ruby 1.9. By default *Psych* is used but the old unmaintained *Syck* may chosen.
+>* To load the file in the Ruby file:
+```Ruby
+require "yaml"
+var = YAML.load_file('file.yml')
+```
+>* If we have a `.yml` file that contains an array, this is how it will look like:
+```YAML
+---
+# fruits.yml
+- Apple
+- Orange
+- Strawberry
+- Mango
+---
+```
+The result will be:
+ ```YAML
+require "yaml"
+fruits = YAML.load_file('fruits.yml')
+
+fruits
+# => ["Apple","Orange","Strawberry","Mango"]
+ ```
+>* What if we have a file of hash?
+```YAML
+---
+# government.yml
+president: Barack Obama
+vice president: Joe Biden
+secretary of state: John Kerry
+secretary of the treasury: Jacob Lew
+---
+```
+The result is:
+```YAML
+require "yaml"
+gov = YAML.load_file('government.yml')
+
+gov
+# =>
+# {
+#   "president" => "Barack Obama",
+#   "vice president" => "Joe Biden",
+#   "secretary of state" => "John Kerry",
+#   "secretary of the treasury" => "Jacob Lew"
+# }
+```
++ The lab is about translating the Japanese emojis to English ones and the meaning of it as emotion. We have a `.yml` file which contains a hash of emotions as keys and each emotion has 2 emojis, one eng and the other jpn.
+
+```Ruby
+def load_library(file_path)
+  # code goes here
+  emoticons = YAML.load_file(file_path)
+  emoticons_library = {
+    "get_emoticon" => {},
+    "get_meaning" => {}
+  }
+
+  emoticons.each do |emotion, emoticons|
+    eng = emoticons[0]
+    jpn = emoticons[1]
+    emoticons_library["get_emoticon"][eng] = jpn
+    emoticons_library["get_meaning"][jpn] = emotion
+  end
+  emoticons_library
+end
+```
+
+Learn.co result:
+
+```Ruby
+def load_library(file_path)
+  library = {"get_meaning" => {}, "get_emoticon" => {} }
+  YAML.load_file(file_path).each do |meaning, array|
+    english, japanese = array
+    library["get_emoticon"][english] = japanese
+    library["get_meaning"][japanese] = meaning
+  end
+  library
+end
+```
+>* In Learn.co they didn't store the file loading in a variable and they just used it straight away with `#each`
+>* I stored the eng & jpn emoticon each in a var but Learn.co had 2 vars and initialised the array of emoticons to it. NOT sure how is that possible and this is the 1st time to see it. The rest is a similar concept.
+
+```Ruby
+def get_japanese_emoticon(file_path, eng_emoticon)
+  # code goes here
+  jpn_emoticon = load_library(file_path)["get_emoticon"][eng_emoticon]
+  jpn_emoticon ? jpn_emoticon : "Sorry, that emoticon was not found"
+end
+
+def get_english_meaning(file_path, jpn_emoticon)
+  # code goes here
+  get_meaning = load_library(file_path)["get_meaning"][jpn_emoticon]
+  get_meaning ? get_meaning : "Sorry, that emoticon was not found"
+end
+```
+Learn.co:
+
+```Ruby
+def get_japanese_emoticon(file_path, emoticon)
+  library = load_library(file_path)
+  result = library["get_emoticon"][emoticon]
+  if result
+    result
+  else
+    "Sorry, that emoticon was not found"
+  end
+end
+
+def get_english_meaning(file_path, emoticon)
+  library = load_library(file_path)
+  result = library["get_meaning"][emoticon]
+  if result
+    result
+  else
+    "Sorry, that emoticon was not found"
+  end
+end
+```
+>* This time Learn.co stored the file loading a var but I used the loading straight away.
+>* I used a ternary operator instead of if/else.
