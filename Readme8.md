@@ -183,4 +183,162 @@ Smaller screen resolutions may require horizontal scroll bar, depending the fixe
 
 *__Note about Git:__* changes using Git. To do so, in Terminal type git add . and press return. Then type `git commit -m "add columns and fixed header and social bar"` and press return. Then push up this feature branch `git push -u origin columns` and press return. Next merge the changes into your master branch. Type `git checkout master` and press return, then `git merge columns` and press return. Then `git push origin master` and press return.
 
-+ I worked on *__Green Grocer__* lab which wasn't easy and I spent some time to work on it! 
++ I worked on *__Green Grocer__* lab which wasn't easy and I spent some time to work on it!
+
+There are few differences between my solution and Learn.co:
+
+```Ruby
+def consolidate_cart(cart)
+  # code here
+  new_hash = {}
+  cart.each do |groceries|
+    groceries.each do |item, item_data|
+      if new_hash[item] == nil
+        new_hash[item] = {}
+        new_hash[item] = item_data
+        new_hash[item][:count] = 1
+      else
+        new_hash[item][:count] += 1
+      end
+    end
+  end
+  new_hash
+end
+```
+Learn.co solution:
+
+```Ruby
+def consolidate_cart(cart)
+  cart.each_with_object({}) do |item, result|
+    item.each do |type, attributes|
+      if result[type]
+        attributes[:count] += 1
+      else
+        attributes[:count] = 1
+        result[type] = attributes
+      end
+    end
+  end
+end
+```
+>* They used `each_with_object({})` which saved lots of code comparing to my code.
+>* They use a lot the boolean values without comparing the condition to equal true or false.
+>>* In here `result[type]` is true which means there is that type already in result hash and that is why we are adding 1 and updating the value.
+>>* If I want to compare it to false I will do `!result[type]`.
+
+I want to start using `each_with_object({})` method to have clean and short codes.
+
+```Ruby
+def apply_coupons(cart, coupons)
+  # code here
+  result = {}
+  cart.each do |item, item_data|
+    result[item] = item_data
+    coupons.each do |coupon|
+      if item == coupon[:item] && item_data[:count] >= coupon[:num]
+        item_data[:count] -= coupon[:num]
+        if result["#{item} W/COUPON"] != nil
+          result["#{item} W/COUPON"][:count] += 1
+        else
+          result["#{item} W/COUPON"] = {
+            :price => coupon[:cost],
+            :clearance => item_data[:clearance],
+            :count => 1
+          }
+        end
+      end
+    end
+  end
+  result
+end
+```
+Learn.co:
+
+```Ruby
+def apply_coupons(cart, coupons)
+  coupons.each do |coupon|
+    name = coupon[:item]
+    if cart[name] && cart[name][:count] >= coupon[:num]
+      if cart["#{name} W/COUPON"]
+        cart["#{name} W/COUPON"][:count] += 1
+      else
+        cart["#{name} W/COUPON"] = {:count => 1, :price => coupon[:cost]}
+        cart["#{name} W/COUPON"][:clearance] = cart[name][:clearance]
+      end
+      cart[name][:count] -= coupon[:num]
+    end
+  end
+  cart
+end
+```
+>* Same thing here they used the boolean true with `cart["#{name} W/COUPON"]` without comparing it with `true` keyword.
+>* Here they update the cart instead of storing the result in a new hash.
+>* In here they didn't use `each` with cart they just used it with coupon (the 2nd argument for this method)
+>>* They didn't need to access nested cart arguments but they needed to do that with coupons to access each coupon.
+>>* They only had to use the cart and access it with keys.
+>* Those difference saved around 3-4 lines of code which is more neatly.
+
+```Ruby
+def apply_clearance(cart)
+  # code here
+  cart.each do |item, item_data|
+    cart_item = cart[item]
+    if cart_item[:clearance] == true
+      cart_item[:price] = cart_item[:price] - (cart_item[:price] * 0.2)
+    end
+  end
+  cart
+end
+```
+Learn.co:
+
+```Ruby
+def apply_clearance(cart)
+  cart.each do |name, properties|
+    if properties[:clearance]
+      updated_price = properties[:price] * 0.80
+      properties[:price] = updated_price.round(2)
+    end
+  end
+  cart
+end
+```
+>* Here I am updating the cart as well instead of storing it in a new hash.
+>* Again using the boolean value without comparing `properties[:clearance]`
+>>*  Mathematically I did the discount percent (20%) multiplied by the original price then I subtract it from the original price.
+>>* Learn.co they the took the rest of the value after the discount which is 80% percent (the new price of the item) and multiplied it by the original price then they added `round(2)` to the final price.
+
+```Ruby
+def checkout(cart, coupons)
+  # code here
+  total = 0
+  consolidated_cart = consolidate_cart(cart)
+  applied_coupons = apply_coupons(consolidated_cart, coupons)
+  applied_clearance = apply_clearance(applied_coupons)
+  applied_clearance.each do |k, v|
+    total += v[:price] * v[:count]
+  end
+  if total > 100
+    total *= 0.9
+  end
+  total
+end
+```
+Learn.co solution:
+
+```Ruby
+def checkout(cart, coupons)
+  consolidated_cart = consolidate_cart(cart)
+  couponed_cart = apply_coupons(consolidated_cart, coupons)
+  final_cart = apply_clearance(couponed_cart)
+  total = 0
+  final_cart.each do |name, properties|
+    total += properties[:price] * properties[:count]
+  end
+  total = total * 0.9 if total > 100
+  total
+end
+```
+>* I believe this method is very similar to mine except using the conditional statement in the middle like this `total * 0.9 if total > 100`
+
+*There are __so many__ ways to execute your code and have the same result.*
