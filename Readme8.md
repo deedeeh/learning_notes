@@ -471,3 +471,10 @@ end
 ```
 >* This time Learn.co stored the file loading a var but I used the loading straight away.
 >* I used a ternary operator instead of if/else.
+
+###### Wednesday 8th August
++ I worked on *__Zesty__* lab in *__CSS Page Layout__* section and I coded the site almost from scratch with HTML5 and CSS3.
+>* I learned a bit about transitions and I've done lots of pseudo classes work such as `:hover` and most of the selectors were by tag name, descendants and ID.
+>* I used *HTML5* tags such as `<header>`, `<section>` and `<footer>`.
+
+Check my code at *__fe-zesty-prework__* Github repo.
