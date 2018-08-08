@@ -478,3 +478,31 @@ end
 >* I used *HTML5* tags such as `<header>`, `<section>` and `<footer>`.
 
 Check my code at *__fe-zesty-prework__* Github repo.
+
++ Finallyyyyy! I finished *__Intro to Ruby__* section. The last lab called *__Alphabet in Esperanto__* and it was part of in *__Advanced Hashes__*.
+>* The lab was about sorting an array of sentences according to Esperanto alphabets which is one of the most popular international auxiliary languages.
+>* It was recommended to use `sort_by` and it was the 1st time to check it and work with this method.
+>* I've done some research to check how this method works behind the scenes like so many methods for ex. `<=>` spaceship operator which is used to compare two elements at the same time and the method use it behind the scenes is `sort`.
+
+Here is my solution:
+
+```Ruby
+def alphabetize(arr)
+  # code here
+  esperanto_alphabet = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+  arr.sort_by do |phrase|
+    phrase.split("").collect do |character|
+      esperanto_alphabet.index(character)
+    end
+  end
+end
+```
+
+Learn.co:
+
+```Ruby
+ESPERANTO_ALPHABET = " abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+def alphabetize(arr)
+  arr.sort_by { |a| a.split("").map{ |char| ESPERANTO_ALPHABET.index(char) } }
+end
+```
