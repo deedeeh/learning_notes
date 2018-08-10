@@ -39,3 +39,36 @@ Check *__hs-zhw-shoes-layout-prework__* repo for my code in *layout.css* file an
 >>>* It stands for *Global regular expression print*
 >>>* Function: search for *PATTERN* in each *FILE* or standard input.
 >>* To have the same output as the one we've done manually we can type `which ruby` and the filepath should match.
+
+###### Friday 10th August
++ I am learning about *BASH* commands in *__BASH Review__* lesson.
+>* `ls` => lists all folders & files in the current directory.
+>* `touch` => to create a file, next to it is the file name and you can create a hidden file by adding a dot at the beginning of the file name.
+>* `-al` => This is called flags and you can use it on most Unix commands. If I use it with `ls -al` it means list all folders and files including hidden ones `-a` in a long format `l`.
+>* *Flags* => Flags in Unix-like commands are uncountable, Every commands have own and different flags which print different information in different formats.
+>* `echo` => printing to the screen.
+>* `>>` => redirecting output into a file, for ex. `echo "I'm printing to the screen >> visible"`
+>* `cat` => short for *concatenate* and it allows us to create single or multiple files, view contain of file, concatenate files and redirect output in terminal or files. `cat visible` will print in terminal the sentence we redirect it in file visible in the above example.
+>* `mv` => rename files so `mv visible something_else` and to print the content of the file we can do `cat something_else`
+>* `mv` => is also can be used to move file.
+>* `rm` => remove file and we can also use it with hidden files.
+>* `mkdir` => make directory so we type the command and next to it the name of the directory.
+>* `cd` => change directory and we use it to move around directories.
+>* Unix process and how to kill them:
+>>* Look for them using `ps aux` and we will pipe those results into grep giving it something to look for `| grep ruby`
+>>>* `ps` short for process status and it is used to provide information about the currently running processes, including their process identification numbers (PIDs).
+>>>* a = show processes for all users.
+>>>* u = display the process's user/owner.
+>>>* x = also show processes not attached to a terminal.
+>* `kill` plus the PID number next to it to do the same job as `pkill` except it has the process PID number and it will just kill it.
+>* `pkill` it looks for a process and it kills it if it finds it, for ex. `pkill ruby` it will look for ruby process and it will kill it.
+>* __Executable Shell program:__
+>>* *shebang* tells the program loader what command to use to execute the file. So when you run `./myscript.rb`, it actually translates to `/usr/local/bin/ruby -w ./myscript.rb.`
+>>* `#!/bin/sh` => is an executable  representing the system shell.
+>>* Using `chmod +x FILENAME` on a file (your script) only means, that you'll make it executable.
+>>>* `chmod` meaning change mode.
+>>>* `+x` meaning adds executable flag to the file.
+>* `export` => is a built-in command of the bash shell. It is used to mark a shell variable for export to child processes.
+
+*I still don't really understand the part related to shebang `#!/bin/sh` and run a program using `chmod +x`. Also, to run our program file no matter where we go.
+I need to check resources in order to fully understand this part.*
