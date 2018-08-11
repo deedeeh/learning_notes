@@ -131,3 +131,36 @@ I need to check resources in order to fully understand this part.*
 >* Stay away from ‘copy and paste.
 
 __Your GitHub should communicate that you can build purposeful, meaningful apps and features.__
+
++ The next lesson is *__Git Todo__* where I will set up an SSH key that will allow to communicate with Github using the SSH protocol.
+>* One of the benefits of this is that it will allow to communicate securely with Github without having to type in your password.
+
++ Also this lesson contains a tutorial for creating the most basic git repository possible and adding it to the online service Github. At the end of this tutorial, you will have 1 copy of your repository on your computer and 1 copy of your repository on Github.
+>* Git is a "distributed source control management system".
+>* It helps programmers to control and manage changes being made to a collection of files and their contents.
+>* It is a critical tool for all software development teams.  
+>* It is *"distributed"* in the sense that many copies of a given repository can exist, but each copy can *operate independently* of any other copies.
+>>* `mkdir Directory_name` and now we have a new directory(folder).
+>>* `cd Directory_name` to change the directory we are in.
+>>* To check the present working directory run `pwd`.
+>>* To create an empty file in your current directory `touch README.md`
+>>* To check the directories or files in the current directory run `ls`.
+>>* Now we will start using Git:
+>>>* `git init` it initialises the git repository, or in other words, it creates a directory called ".git" which contains some stuff that git needs.
+>>>* If you type in `ls` the `.git` file won't appear because it is a hidden file but if I run `ls -a` it shows all files including hidden ones.
+>>>* Everything that makes your git repository a git repository is in this directory! This means that if you were to delete the ".git" directory then this directory would no longer be a git repository.
+>>>* Now you have to tell git which files you would like to keep track of by `git status` and this says you have a file "not staged" for commit.
+>>>* In git, you have to stage the files that you want git to keep track of because it's not always the case that you want to keep track of all the changes you just made and we can do that by `git add README.md`
+>>>* Now lets commit the changes by `git commit -m "Initial commit"`. Once you do so, the new README.md file will be in your git repository.
+>>>>* `commit` => Commits are the building blocks of a git repository.They represent a set of changes made to the contents of the repository.
+>>>>* `-m` => the -m option to commit indicates that you are providing a message to go along with this particular commit.
+>* Github is an online service that augments the experience of using git.
+>>* Go to repositories on your Github account then click the green button *New* on the right hand side.
+>>* Insert the name of the repo and select the *private* option. __DO NOT__ check the box that says "initialise this repository with a README". Then "Create repository".
+>>* You will be taken to the "git-todo" repository page and be shown the view for a repository with no content.
+>>>*  This is because our new Github repository doesn't know about the commits on our computer yet!
+>>* We have an *existing repository on our computer*, so paste the 2 lines in that section in to your terminal within the "git-todo" repository directory.
+>>>* Make sure to toggle the SSH tab and copy that and paste it like that `git remote add origin git@github.com:username/git-todo.git`
+>>>>* Tells your git repository where on the internet your Github repository lives.
+>>>* Then `git push -u origin master`
+>>>>* Instructs your git repository to send it's commits to the Github repository!
