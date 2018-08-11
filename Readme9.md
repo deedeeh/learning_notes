@@ -72,3 +72,62 @@ Check *__hs-zhw-shoes-layout-prework__* repo for my code in *layout.css* file an
 
 *I still don't really understand the part related to shebang `#!/bin/sh` and run a program using `chmod +x`. Also, to run our program file no matter where we go.
 I need to check resources in order to fully understand this part.*
+
+###### Saturday 11th August
++ I am currently working on *__Git__* section as part of *__Advanced BASH & Git__*. I am doing *__Thinking Ahead: Github as career differentiator__* lesson and I've came up with some notes to check for every project/repo in Github:
+>* __Project Structure and Organisation:__
+>>* In regards to architecture and design, make sure it easy to figure out where to go in the project to locate the various functional areas and layers.
+>>* Use relevant and well known *design patterns/file structure*.
+>* __Description & Tags:__
+>>* Every project including Flatiron School projects should have a description. Have a small, one-sentence description.
+>>* Descriptions should include a few sentences about *functionality*, *languages* and/or *major tools* used. Be concise while explaining what the project is about.
+>>* They should also include a *link to a live site* (at one point or another every final project should be hosted).
+>>>* If your live site is buggy, make sure to video a demo of yourself using the project before the site comes down.
+>>>* Add that instead of a live link.
+>>* Make sure descriptions are up-to-date by adding/editing it on projects repo.
+>* __ReadMe:__
+>>* All projects should have a ReadMe attached (gifs are highly recommended).
+>>* It can include wireframes or videos demonstrating app design and/or functionality.
+>>>* This differs from a description as it should be *longer*, and about app functionality.
+>>* ReadMes can also include *links to live apps* - if Front End and Back End are broken into separate repos, provide a link to the other relevant portion.
+>>* If you wrote a *blog post* about your project, *link it* here.
+>>* Make sure ReadMes are up-to-date by adding/editing it on projects repo.
+
+#### BONUS Tips
+>* __Tests:__
+>>* Building out tests is impressive — especially at a junior level.
+>>* [Check out this article](https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters) for tips on how to write testable code and why it matters.
+>* __Comments on Code:__
+>>* In a great code base, you’ll see a line about each code before writing the method, giving a description of what it does.
+>>* On the next project start adding in comments - this will prepare you for working on a common code base at your future developer gig, and demonstrate to employers that you’re ready to collaborate effectively.
+
+### General Tips for Github:
++ Fill out *ALL* Profile Information
+>* Full Name
+>* Bio (if nothing else, Full Stack Web Developer)
+>* URL (to something! blog, personal portfolio, etc - preferably something with contact info)
+>* Email (personal choice)
+>* Company
+>* Location
+>>* Recruiters use search tools and filter out profiles based on location. Having this information on your profile makes it easy for them to find you.
+>* Picture (*professional*: think LinkedIn)
+
++ Pin Projects to the Top of Profile
+>* Highlight your most impressive, large and/or recent projects to the top of your GitHub page.
+>* Having small projects is okay, but try to make them diverse. Having projects using different languages or technologies will show that you possess a variety of skills.
+
++ Commit Often
+>* Make consistent (daily) contributions to your Github profile.
+>* Think *GREEN BOXES!* Your daily activity will show potential employers your level of activity each day, week, month - and commits should be frequent!
+
++ Contribute to Open Source Projects.
+>* This shows that you can work well with a community, you know how to dive into large codebases and can adapt to different coding standards.
+>* Having pull requests/issues/reviews visible on your profile makes you stand out.
+
++ Have Clean, Easy to Read Code on Your GitHub
+>* Functions should be responsible for one thing in general.
+>* Keep your code modular and DRY (‘Don’t Repeat Yourself’).
+>* Keep methods small, and create a chunk you can reuse in different places and stack in different orders.
+>* Stay away from ‘copy and paste.
+
+__Your GitHub should communicate that you can build purposeful, meaningful apps and features.__
