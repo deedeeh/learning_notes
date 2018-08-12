@@ -164,3 +164,16 @@ __Your GitHub should communicate that you can build purposeful, meaningful apps 
 >>>>* Tells your git repository where on the internet your Github repository lives.
 >>>* Then `git push -u origin master`
 >>>>* Instructs your git repository to send it's commits to the Github repository!
+
+###### Sunday 12th August
++ I am working on *__Git Flow__* lab where I will practice working with Git and Github.
+>* `git branch` => to check on which branch I am in.
+>* `git branch NEW-BRANCH` => to add a new branch.
+>*  `git checkout NEW-BRANCH` => to switch to that branch.
+>* Now you can add/edit my code then I will merge it with master branch if I am satisfied about my code.
+>>* `git checkout master` => to switch to master.
+>>* `git merge NEW-BRANCH` => to merge those changes to master branch.
+>>*  `git push origin master` => update to master branch on my remote repo.
+>>* To check if this push worked,  visit my fork of this repo on Github.
+>* After merging to master and pushing this remotely I can now delete my branch if I don't need it anymore by `git branch -d NEW-BRANCH`
+>* I can then check if this was successfully deleted by `git branch`
