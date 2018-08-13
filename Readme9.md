@@ -177,3 +177,19 @@ __Your GitHub should communicate that you can build purposeful, meaningful apps 
 >>* To check if this push worked,  visit my fork of this repo on Github.
 >* After merging to master and pushing this remotely I can now delete my branch if I don't need it anymore by `git branch -d NEW-BRANCH`
 >* I can then check if this was successfully deleted by `git branch`
+
+###### Monday 13th August
++ I am working on how to create a merge conflict and how to fix those conflicts in order to be able to stage, commit and merge my work.
+>* I can have 2 branches and then merge one of them to the other. If both have same content I will get a message "Automatic merge failed; fix conflicts and then commit the result."
+>* I will have to check which file have the conflicts by `git status` then I will open that file and fix that.
+>* Then delete the arrows, HEAD and ===
+
+```HTML5
+<<<<<<< HEAD
+HTML for polar bear
+=======
+HTML for walrus
+>>>>>>> add-walrus
+```
+>* After fixing the file I will `git add` then `git commit` those changes.
+>* To check my *unmerged paths* I will type `git status` then I can merge it by `git merge BRANCH_NAME`
