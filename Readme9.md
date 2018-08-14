@@ -193,3 +193,23 @@ HTML for walrus
 ```
 >* After fixing the file I will `git add` then `git commit` those changes.
 >* To check my *unmerged paths* I will type `git status` then I can merge it by `git merge BRANCH_NAME`
+
+###### Tuesday 14th August
++ I have a problem with IDE, I can't work on *__Git Flow__* lab because IDE is always disconnecting but my internet connection is working good with everything else from youtube to online movies! I posted a question on Learn.co about this and still waiting for an answer.
+
++ I am working now on *__Git Review__* lesson until the IDE problem is fixed.
+>* `git pull origin master` => is to download all the files and directories locally from remote repo.
+>* `git commit -am file-name` => is when I want to add and commit with 1 command line.
+>* `git branch -v` => to see the last commit on each branch.
+>* `git branch --merged` => to see which branches are already merged into the branch you’re on.
+>* `git branch --no-merged` => to see all the branches that contain work you haven’t yet merged in.
+>* `echo "I'm steven" >> steven` => it means print "I'm steven" in steven file.
+>* `git diff` => what changes exactly in the file are made.
+>* `git reset` => reset current HEAD to the specified state.
+>>* `--hard` => resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded.
+>>* `--keep` => resets index entries and updates files in the working tree that are different between <commit> and HEAD. If a file that is different between <commit> and HEAD has local changes, reset is aborted.
+>* The rest of the lesson is reviewing `mkdir folder-name`, `touch file-name`, `git init`, `git status`, `git add .`, `git commit -m file-name`, `git branch`, `git branch branch-name`, `git checkout branch-name`, `git merge file-name`, `git push`, `git push origin master` and there are many others but those are the common ones.
+
++ I worked back on bootcamp prep track that I've left to start *__Web Development Fundamentals__* prework which I must complete before starting my bootcamp in Sept. I am doing that now until I have this IDE disconnected issue solved then I can do my 2 Git labs. I am planning to finish bootcamp prep as well before starting in Sept.
+
++ I completed under *__Iteration__* section in *__Ruby Fundamentals__* a lab called *__Tic Tac Toe Current Player__* where I worked with `each` to iterate over the board as my given argument and I also practiced modulo operator and learned about `even?` & `odd?` which does the same job as modulo. 
