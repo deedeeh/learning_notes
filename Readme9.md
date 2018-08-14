@@ -212,4 +212,44 @@ HTML for walrus
 
 + I worked back on bootcamp prep track that I've left to start *__Web Development Fundamentals__* prework which I must complete before starting my bootcamp in Sept. I am doing that now until I have this IDE disconnected issue solved then I can do my 2 Git labs. I am planning to finish bootcamp prep as well before starting in Sept.
 
-+ I completed under *__Iteration__* section in *__Ruby Fundamentals__* a lab called *__Tic Tac Toe Current Player__* where I worked with `each` to iterate over the board as my given argument and I also practiced modulo operator and learned about `even?` & `odd?` which does the same job as modulo. 
++ I completed under *__Iteration__* section in *__Ruby Fundamentals__* a lab called *__Tic Tac Toe Current Player__* where I worked with `each` to iterate over the board as my given argument and I also practiced modulo operator and learned about `even?` & `odd?` which does the same job as modulo.
+
+my solution:
+
+```Ruby
+def turn_count(board)
+  counter = 0
+  board.each do |element|
+    if element.include?("X") || element.include?("O")
+      counter += 1
+    end
+  end
+  counter
+end
+
+def current_player(board)
+  turn_count(board).even? ? "X" : "O"
+end
+```
+Both methods on Learn.co were the same as mine except a commented method that used `#count`.
+>* `count → int` => returns the number of elements.
+```Ruby
+ary = [1, 2, 4, 2]
+ary.count                  #=> 4
+```
+>* `count(obj) → int` => if an argument is given, counts the number of elements which equal obj using ==.
+```Ruby
+ary.count(2)               #=> 2
+```
+>* `count { |item| block } → int` => if a block is given, counts the number of elements for which the block returns a true value.
+```Ruby
+ary.count { |x| x%2 == 0 } #=> 3
+```
+>>* The bellow method was given a block to count the tokens if it "X" or "O".
+>>* It is shorter and cleaner than my method.
+
+```Ruby
+def turn_count(board)
+  board.count{|token| token == "X" || token == "O"}
+end
+```
