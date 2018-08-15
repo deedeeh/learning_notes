@@ -274,3 +274,15 @@ end
 >>* `git push origin :add-avatar` => the syntax for deleting a branch called 'add-avatar' on the remote 'origin' using the push and colon syntax.
 >* It is best practice to add a feature on the master branch. __false__
 >* Merge conflicts are bad and always mean that you did something wrong. __false__
+
++ I completed *__Git Merge Conflicts__* lab and that is the end of this section *__Advanced BASH & Git__*
+>* When I am on master branch and run `git merge BRANCH_NAME` I sometimes get a message in terminal if this merge is necessary and I need to write a commit message.
+>>* It's not a Git error message, it's the editor as git uses your default editor. To solve this:
+>>>* press "i"
+>>>* write your merge message
+>>>* press "esc"
+>>>* write ":wq"
+>>>* then press enter
+>>* I will have a printout message in terminal 'Merge made by the 'recursive' strategy.'
+>* To fetch remote branches I can run the following command:
+>>* `git checkout -t origin/BRANCH-NAME` this creates a new branch on my computer that matches the BRANCH_NAME branch on GitHub.
