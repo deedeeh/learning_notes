@@ -255,7 +255,7 @@ end
 ```
 
 ###### Wednesday 15th August
-+ I finally worked on *__Git Flow__* lab after having a bad connection. I've learned about so many about git and Github especially with the quiz they had in the spec folder. I am going to review some of the git commands:
++ I finally worked on *__Git Flow__* lab after having a bad connection. I've learned so many about git and Github especially with the quiz they had in the spec folder. I am going to review some of the git commands:
 >* Different `push` commands:
 >>* `git push origin master` => From the master branch, pushing the master branch to the remote master branch where the remote is called 'origin'
 >>* `git push origin add-links` => From the feature branch 'add-links', the syntax for creating a remote add-links branch with all of the local branch's content.(remote is still called 'origin')"
