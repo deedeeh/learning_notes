@@ -253,3 +253,24 @@ def turn_count(board)
   board.count{|token| token == "X" || token == "O"}
 end
 ```
+
+###### Wednesday 15th August
++ I finally worked on *__Git Flow__* lab after having a bad connection. I've learned about so many about git and Github especially with the quiz they had in the spec folder. I am going to review some of the git commands:
+>* Different `push` commands:
+>>* `git push origin master` => From the master branch, pushing the master branch to the remote master branch where the remote is called 'origin'
+>>* `git push origin add-links` => From the feature branch 'add-links', the syntax for creating a remote add-links branch with all of the local branch's content.(remote is still called 'origin')"
+>>* `git push upstream master` => From the master branch, the syntax for pushing the master branch to the remote master branch where the remote is called 'upstream'
+>>* `git push upstream add-image` => From the feature branch 'add-image', the syntax for creating a remot add-image branch with all of the local branch's content. (remote is still called 'upstream')"
+>* Different `fetching` commands:
+>>* `git fetch --all` => to update all branches from all remotes
+>>* `git fetch upstream master` => to update the local master branch with the master branch on the remote 'upstream'
+>* Different `pulling` commands
+>>* _`git pull`_ the same as running `git fetch` followed by `git merge`.
+>>* `git pull origin add-img` => From the add-img branch, to fetch and merge all the changes from the add-img branch on the remote 'origin'
+>* Different `branching` commands:
+>>* `git checkout -b add-nav-bar` => one line syntax for creating and switching to a branch called 'add-nav-bar'
+>* Different `deleting` commands:
+>>* `git branch -d add-link` => From master, the syntax for deleting a local branch called 'add-link'.
+>>* `git push origin :add-avatar` => the syntax for deleting a branch called 'add-avatar' on the remote 'origin' using the push and colon syntax.
+>* It is best practice to add a feature on the master branch. __false__
+>* Merge conflicts are bad and always mean that you did something wrong. __false__
