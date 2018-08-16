@@ -341,3 +341,50 @@ the_numbers = [4,8,15,16,23,42]
 the_numbers.include?(42)   #=> true
 the_numbers.include?(6)   #=> false
 ```
++ I am working on *__Search Enumerables__* lesson and I've learned so much from it same as the previous lesson.
+>* *Overview* for why we need the methods I am learning now.
+>>* When we iterate or enumerate over a collection with `#each`, the return value is always the original collection.
+>>* Often we want to search for elements in a collection based on a condition. Imagine wanting to find all even numbers in a collection of numbers using `#each`.
+```Ruby
+matches = []
+[1,2,3,4,5].each do |i|
+  matches << i if i.even? # add i to the matches array if it is even
+end #=> [1,2,3,4,5]
+matches #=> [2,4]
+```
+>>>* We have to hang on to the matches within the local array matches. Programmers use the phrase __maintain state__ to refer to this task.
+>>>>* Cars can be in a state like "Reverse, Drive, Neutral".
+>>>>* Our matches array has states of "Empty, [2], [2,4]".
+>>>* Our block is complicated with conditional logic that can be implicit with a better enumerator.
+>>>* Our code lacks intention and clear semantics.
+>* `#select` => the return value will be a new array containing all the elements of the collection that cause the block passed to `select` to return true.
+>>* That means for each iteration, if the block evaluates to true, the element yielded to that iteration will be kept in the return value array.
+```Ruby
+[1,2,3,4,5].select do |number|
+  number.even?
+end #=> [2,4]
+```
+>>* check the clarity and expressiveness of this syntax in the short block from below.
+```Ruby
+[1,2,3,4,5].select{|i| i.odd?} #=> [1,3,5]
+[1,2,3].select{|i| i.is_a?(String)} #=> []
+```
+>>* Notice that if no element makes the block evaluate to true, an empty array is returned.
+
+>* `#detect`/`#find` => are two names for the same method. Those enumerators will only return the first element that makes the block true.
+```Ruby
+[1,2,3].detect{|i| i.odd?} #=> 1
+[1,2,3].find{|i| i.odd?} #=> 1
+[1,2,3,4].detect{|i| i.is_a?(String)} #=> nil
+```
+>>* As you can see, even though both 1 and 3 would cause the block to evaluate to true, because 1 is first in the array, it alone is returned.
+>>* Notice also that `#detect` will always return a *single object* where `#select` will always return an *array*.
+
+>* `#reject` =>  It will return an array with the elements for which the block is *false*.
+```Ruby
+[1,2].reject{|i| i.even?} #=> [1]
+```
+
+`#select`, `#detect` & `#reject` are part of a family of *search and filter type enumerators* whose purpose is to help you refine a collection to only matching elements.
+
+They are way easier to manage than using lower-level methods like `#each` and create *meaningful return values* based on expressions in a block.
