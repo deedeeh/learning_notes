@@ -286,3 +286,8 @@ end
 >>* I will have a printout message in terminal 'Merge made by the 'recursive' strategy.'
 >* To fetch remote branches I can run the following command:
 >>* `git checkout -t origin/BRANCH-NAME` this creates a new branch on my computer that matches the BRANCH_NAME branch on GitHub.
+
+###### Thursday 16th August
++ After finishing the *__Web Development Fundamentals__* prework I am going to work on the rest of *__Bootcamp prep__* on Learn.co and the web developer bootcamp on Udemy. I am not going to take notes of everything except things that I always forget about or new things.
+
++ I worked on *__Intro to Ruby Iterators__* lesson and next is *__Tic Tac Toe__* section. 
