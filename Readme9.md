@@ -290,4 +290,54 @@ end
 ###### Thursday 16th August
 + After finishing the *__Web Development Fundamentals__* prework I am going to work on the rest of *__Bootcamp prep__* on Learn.co and the web developer bootcamp on Udemy. I am not going to take notes of everything except things that I always forget about or new things.
 
-+ I worked on *__Intro to Ruby Iterators__* lesson and next is *__Tic Tac Toe__* section. 
++ I worked on *__Intro to Ruby Iterators__* lesson and next is *__Tic Tac Toe__* section.
+
++ I completed *__Nested Arrays__* lesson where I practised a bit multidimensional arrays.
+
++ I worked on *__Boolean Enumerables__* where I've learned more about true/false return values and some of the methods to use.
+>* `#all?` => Passes each element of the collection to the given block. The method returns *true* if the block *never* returns *false or nil*. If the block is not given, Ruby adds an implicit block of { |obj| obj } which will cause all? to return true when none of the collection members are false or nil.
+>>* Imagine wanting to know if all the numbers in an array are odd.
+```Ruby
+all_odd = true
+[1,2,3].each do |number|
+  if number.even? # Will evaluate to false for 1, true for 2, false for 3
+    all_odd = false
+  end
+end
+all_odd #=> false
+```
+>>* Instead of `each` we can use `all?` method like this:
+```Ruby
+all_odd = [1,2,3].all? do |number|
+  number.odd? # Will evaluate to true for 1, false for 2, true for 3
+end #=> false
+all_odd #=> false
+```
+>* `#none?` => Passes each element of the collection to the given block. The method returns *true* if the block *never* returns *true for all elements*. If the block is not given, none? will return true only if none of the collection members is true.
+>>* Imagine it is the opposite of `all?`
+>>* It means we are interested in none of the elements in a collection producing a true expression within the block passed to `#none?`
+```Ruby
+[1,3].none?{|i| i.even?} #=> true
+```
+>>* If we compare it with `each`
+```Ruby
+none_even = true
+[1,3].each do |i|
+  if i.even?
+    none_even = false
+  end
+end #=> [1,3] because `#each` always returns the original collection
+none_even #=> true
+```
+>* `#any?` => This enumerator will return true if at least one iteration of the block evaluates to true, but false if none of them do.
+>>* Sometimes you want to be a bit more forgiving than `#all?` or `#none?` and just ensure that *at least one element* in a collection will create a *true* expression within the block passed.
+```Ruby
+[1,2,100].any?{|i| i > 99} #=> true
+```
+>* `#include?()` => It is helpful if you'd like to merely compare actual contents of a known value.
+>>*  It will return *true* if the given object *exists* in the element. If it *doesn't find a match*, it will return *false*.
+```Ruby
+the_numbers = [4,8,15,16,23,42]
+the_numbers.include?(42)   #=> true
+the_numbers.include?(6)   #=> false
+```
