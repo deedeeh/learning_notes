@@ -47,3 +47,75 @@ end
 >* `#first` => returns the first element, or the first n elements, of the array. If the array is empty, the first form returns nil, and the second form returns an empty array.
 
 I checked Learn.co solution and it almost the same as mine.
+
+###### Thursday 23rd August
++ I am working on *__TicTacToe.rb__* lab which is the last lab in *__Tic Tac Toe__* section.
+
++ I finished lots of methods but still have 1 more to do `#play` which is the main one for the CLI application.
+
+```Ruby
+def input_to_index(user_input)
+  user_input.to_i - 1
+end
+
+def move(board, position, token)
+  board[position] = token
+end
+
+def position_taken?(board, position)
+  board[position].include?("X") || board[position].include?("O")
+end
+
+def valid_move?(board, position)
+  position.between?(0,8) && !position_taken?(board, position)
+end
+
+def turn_count(board)
+  count = 0
+  board.each {|cell| count += 1 if cell == "X" || cell == "O"}
+  count
+end
+
+def current_player(board)
+  count = turn_count(board)
+  count.even? ? "X" : "O"
+end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  user_input = gets.chomp
+  index = input_to_index(user_input)
+  if valid_move?(board, index)
+    move(board, index, current_player(board))
+    display_board(board)
+  else
+    turn(board)
+  end
+end
+
+def won?(board)
+  WIN_COMBINATIONS.detect do |win_combination|
+    if board[win_combination[0]] == board[win_combination[1]] && board[win_combination[1]] == board[win_combination[2]] && position_taken?(board, win_combination[0])
+      win_combination
+    end
+  end
+end
+
+def full?(board)
+  board.all? {|cell| cell == "X" || cell == "O"}
+end
+
+def draw?(board)
+  full?(board) && !won?(board)
+end
+
+def over?(board)
+  full?(board) || won?(board)
+end
+
+def winner(board)
+  if win = won?(board)
+    board[win.first]
+  end
+end
+```
