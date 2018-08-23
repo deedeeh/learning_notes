@@ -119,6 +119,16 @@ def winner(board)
   end
 end
 ```
+
+>* One of Learn.co methods that used a `#count` which I haven't used before with a block is `turn_count(board)`
+```Ruby
+def turn_count(board)
+  board.count {|token| token == "X" || token == "O"}
+end
+```
+>>* This method is much easier & shorter than mine.
+>>* They didn't have to create var count and then return it at the end plus increment it in the block.
+
 + I've learned about `between?(min, max)` which is a *comparable* and we use it to check if a value is between a range.
 ```Ruby
 3.between?(1, 5)               #=> true
@@ -133,3 +143,53 @@ Comparable:
 >* The class must define the `<=>` operator, which compares the receiver against another object, returning -1, 0, or +1 depending on whether the receiver is less than, equal to, or greater than the other object.
 >* If the other object is not comparable then the <=> operator should return *nil*.
 >* Comparable uses `<=>` to implement the conventional comparison operators (`<`, `<=`, `==`, `>=`, and `>`) and the method `between?`
+
++ I worked on the last `#play`, I passed all the tests and lastly tested the CLI for the app, it works perfectly!
+
+My solution:
+
+```Ruby
+def play(board)
+  display_board(board)
+  until over?(board)
+    turn(board)
+    break if draw?(board)
+  end
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+    puts "Cat's Game!"
+  end
+end
+```
+Learn.co:
+
+```Ruby
+def play(board)
+  while !over?(board)
+    turn(board)
+  end
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+    puts "Cat's Game!"
+  end
+end
+```
+
+>* Most of the method is created with helper methods that I've created perviously.
+>* The steps are as following:
+>>* After greeting the player the board is displayed then it asks the user for a number between 1-9
+>>* Each player(X & O) will have his turn until the game is over.
+>>* After each turn the method checks if it is a draw and if that is true it breaks the loop.
+>>* If a player wins, a message will be printed to congratulate him/her and if it is a draw; which means the board is full & there is no winner, it prints the message "Cat's Game!"  
+
+>* Learn.co used `while` instead of `until` and they used not operator for the condition so while the game is not over keep running turn method.
+>* They didn't check if it is a draw after each turn and break if it is a draw otherwise continue with turn.
+>>* I tried this `#play` method instead of mine and I get an infinite loop plus this error message `rspec ./spec/02_play_spec.rb:63 # ./lib/tic_tac_toe.rb #play checks if the gameis draw after every turn`
+>>* I believe I will stick with mine!
+
++ I've seen the word *__stubbing__* today for the 2nd or 3rd time since I've started the prep & prework courses.
+>* We can stub the functionality of any method to behave exactly as we would like for this test to function and create the conditions that allow us to specify functionality.
+>* This technique of faking or hardcoding the return value and behaviour of a method is called *Mocking* or *Stubbing*.
+>* It's a bit of an advanced technique in testing & I don't need to worry about it but it is good to understand what is stubbing for my own knowledge.
