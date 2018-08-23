@@ -119,3 +119,17 @@ def winner(board)
   end
 end
 ```
++ I've learned about `between?(min, max)` which is a *comparable* and we use it to check if a value is between a range.
+```Ruby
+3.between?(1, 5)               #=> true
+6.between?(1, 5)               #=> false
+'cat'.between?('ant', 'dog')   #=> true
+'gnu'.between?('ant', 'dog')   #=> false
+```
+
+Comparable:
+---
+>* The Comparable *mixin* is used by classes whose objects may be ordered.
+>* The class must define the `<=>` operator, which compares the receiver against another object, returning -1, 0, or +1 depending on whether the receiver is less than, equal to, or greater than the other object.
+>* If the other object is not comparable then the <=> operator should return *nil*.
+>* Comparable uses `<=>` to implement the conventional comparison operators (`<`, `<=`, `==`, `>=`, and `>`) and the method `between?`
