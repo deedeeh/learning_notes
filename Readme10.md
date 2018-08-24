@@ -193,3 +193,6 @@ end
 >* We can stub the functionality of any method to behave exactly as we would like for this test to function and create the conditions that allow us to specify functionality.
 >* This technique of faking or hardcoding the return value and behaviour of a method is called *Mocking* or *Stubbing*.
 >* It's a bit of an advanced technique in testing & I don't need to worry about it but it is good to understand what is stubbing for my own knowledge.
+
+###### Friday 24th August
++ I started working on *__Intro to Object Oriented__* and *__Classes & Instances__*. I am working on *__Intro to Classes & Instances__* lesson.
