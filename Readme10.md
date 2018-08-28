@@ -320,3 +320,15 @@ bark # NameError: undefined local variable or method `bark' for main:Object
 ```
 >* __Classes as Blueprints__
 >>* The ability to define methods and behaviours in our classes for our instances makes Ruby classes behave not just as factories, capable of instantiating new individual instances, but also as a *blueprint*, defining what those instances can do.
+
++ I worked on *__Instance Methods Lab__* where i practised building classes & instances methods.
+```Ruby
+class Dog
+  def bark
+    puts "Woof!"
+  end
+  def sit
+    puts "The Dog is sitting"
+  end
+end
+```
