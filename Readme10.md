@@ -403,3 +403,80 @@ Conclusion
 >* Using instance variables frequently to pass information around the instance methods of a class.
 >* Think of instance variables as the containers for instance-specific information.
 >* The ability of instance variables to *store information* and be accessible within different instance methods is one of the things that makes it possible for us to create *similar*, but *unique* objects in object oriented Ruby.
+
++ I'm learning about *__Object Attributes__* and what is the difference between a setter & a getter method.
+>* I've learned how to build classes and even how to give classes instance methods.
+>* Now, I can add the special method `initialize`, which will require certain arguments to be passed when instantiating the class to provide it with initial data.
+
+```Ruby
+class Person
+  def initialize(name)
+    @name = name
+  end
+
+  def name
+    @name
+  end
+end
+
+kanye = Person.new("Kanye")
+kanye.name #=> "Kanye"
+```
+>>* `Person` class has an instance method, `#name`, that is *set* each time a new Person class is created.
+>>* This `name` method can be called on an instance of Person (an individual person object) and return that person's name.
+>>* What if Kanye wants to be referred to as another name?
+```ruby
+kanye.name = "Yeezy"
+```
+>* We get a no method error! Kanye's name change is just one example of the many common situations in which we might want to *alter the information or attributes* associated with a given object.
+
+>* So __how__ to add that functionality to our classes?
+>* __Setter vs. Getter Methods__
+>>* Our Person class' `#name` method is referred to as a __"getter"__ or reader method.
+>>* It returns information stored in an instance variable.
+>>*  In order to make a person's name attribute writable, we need to define a __"setter"__ or writer method.
+>* *Defining a setter method*
+
+```Ruby
+class Person
+
+  def initialize(name)
+    @name = name
+  end
+
+  def name
+    @name
+  end
+
+  def name=(new_name)
+    @name = new_name
+  end
+
+end
+```
+>* A __setter__ method is defined with an `=`, equals sign, appended to the name of the method.
+>>* The `=` is followed by the (argument_name)
+>* *Calling a Setter Method*
+>>* To call a setter method, you use the `.` notation (dot notation) to call the method and set it equal to a new value.
+
+```Ruby
+kanye = Person.new("Kanye")
+
+kanye.name
+  => "Kanye"
+
+kanye.name = "Yeezy"
+kanye.name
+  => "Yeezy"
+```
+>* In the previous example we:
+>>* Instantiate a Person instance and name him "Kanye".
+>>* Call our getter method, `#name` to return his name, `"Kanye"`
+>>* Call our setter method `#name=` to change his name to "Yeezy"
+>>* Call our getter method again and see that `kanye`'s name is now `"Yeezy"`.
+
+>* I can also call a setter method like this:
+```Ruby
+kanye.name=("Yeezy")
+```
+>>* But the first notation is preferable.
