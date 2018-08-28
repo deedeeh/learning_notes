@@ -332,3 +332,74 @@ class Dog
   end
 end
 ```
++ I am working on *__Object Properties__* section and the 1st lesson is *__Instance Variables__*
+>* When we build objects through our own classes we know we can *add behaviour to the objects* through *instance methods*.
+>* But how do we give our objects data? How do we give objects attributes or properties?
+>>* *Local variable* can only be accessed in a specific, local environment.
+>>* A local variable that is defined inside one method, for example, *cannot be accessed by another method*.
+>>* In order to get around this limitation, we can use __instance variables__ inside our Ruby classes.
+>>* An __instance variable__ is a variable that is accessible in any instance method in a particular instance of a class.
+
+>* Let's say we have a class called `Dog` that is responsible for producing individual dog objects. We want each dog to be able to have a name and show its name.
+
+```Ruby
+class Dog
+  def name=(dog_name)
+    this_dogs_name = dog_name
+  end
+
+  def name
+    this_dogs_name
+  end
+end
+```
+>>* Here we've defined two instance methods, the `name=`, or "name equals" method, and the `name` method.
+>>* The first method takes in an argument of a dog's name and *sets* that argument equal to a variable, `this_dogs_name`.
+>>* The second method is responsible for *reporting*, or *reading* the name.
+>>* The methods act as mechanisms to expose data from inside of the object to the outside world.
+>>* Our two methods therefore are responsible for *"setting"* and *"getting"* an individual dog's name.
+
+>* If I add this code and then run the file `ruby dog.rb`
+
+```Ruby
+lassie = Dog.new
+lassie.name = "Lassie"
+
+lassie.name #=> "Lassie"
+```
+>>* This should create a new dog instance, give it a name (Lassie) and try to access- or read- its name.
+>>* When I run the file I should see an error message `'name': undefined local variable or method 'this_dogs_name'`
+>>* Looks like the `#name` method doesn't know about the `this_dogs_name` variable from the `#name=` method.
+>>* That is because `this_dogs_name` is a __local variable__. A local variable has a __local scope__. That means that it *cannot* be accessed outside of the method in which it is defined.
+
+#### Instance Variable:
+>* We define an instance variable by prefacing the variable name with an `@` symbol.
+>* Instance variables are *bound* to an instance of a class. That means that the value held by an instance variable is specific to whatever instance of the class it happens to belong to.
+>*  Instance variables *hold information* about an instance, usually an attribute of that instance, and can be called on throughout the class, without needing to be passed into other methods as arguments (as would be the case with local variables).
+
+```Ruby
+class Dog
+  def name=(dog_name)
+    @this_dogs_name = dog_name
+  end
+
+  def name
+    @this_dogs_name
+  end
+end
+
+lassie = Dog.new
+
+lassie.name = "Lassie"
+
+puts lassie.name
+```
+>* Now we will be able to see `Lassie` outputted to my terminal.
+>>* Why did it work? Inside the `#name=` method, we set the value of `@this_dogs_name` equal to whatever string is passed in as an argument.
+>>* Then, we are able to *call* on that same instance variable in a totally separate method, the `#name` method.
+
+Conclusion
+---
+>* Using instance variables frequently to pass information around the instance methods of a class.
+>* Think of instance variables as the containers for instance-specific information.
+>* The ability of instance variables to *store information* and be accessible within different instance methods is one of the things that makes it possible for us to create *similar*, but *unique* objects in object oriented Ruby.
