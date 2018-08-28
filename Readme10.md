@@ -236,3 +236,87 @@ Summary:
 ---
 >* Classes are the blueprints that define the behaviour and information our objects will contain.
 >* They let us manufacture and instantiate new instances.
+
++ I worked on *__Classes & Instances Lab__* which contains 2 files in lib directory and each one of them require to add a class definition and then instantiate instances from that class in local variables.
+
+```Ruby
+class Person
+end
+
+adele_goldberg = Person.new
+alan_kay = Person.new
+```
+
++ I've started working on *__Instance methods__* section which contains a lesson & a lab.
+>* __The behaviour of objects__
+>>* We know that classes act as a factory for our objects, capable of instantiating new instances.
+>>* How do we ask the object to do something?
+>>* We send objects messages asking them to perform an operation or task through a syntax known as *"Dot Notation"*.
+
+```Ruby
+class Dog
+end
+
+fido = Dog.new #=> #<Dog:0x007fc52c2cc588>
+
+fido.object_id #=> 70173135795280
+```
+>* The `#object_id` method simply tells you the object's identifier in your computer's memory (the place where all things live in your computer).
+>* In dot notation, we call the __object__ that received the method message the __"receiver"__ and we call the __method__ the __"message"__.
+
+```Ruby
+# The receiver is this very string      # reverse is the message
+"Strings are instances and objects too".reverse
+```
+>* One interesting method provided is the `#methods` method that returns an array of all the methods and messages an object responds to.
+
+I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages. - *Alan Kay*
+
+>* __Building Your Own Instance methods__
+>>* We're used to defining methods already with the `def` keyword. If we place this method definition within the body of a class, that method becomes a specific behaviour of instances of that class, not a generic procedure we can just call whenever we want.
+>>* We call the methods defined within the object's class __Instance Methods__ because *they are methods that belong to any instance of the class*.
+
+```Ruby
+class Dog
+  # Class body
+
+  # Instance Method Definition
+  def bark
+    puts "Woof!"
+  end
+end
+
+fido = Dog.new
+fido.bark #> "Woof!"
+```
+>* Objects can only do what we teach them to do via the code we write and the methods we define.
+>>* For example, currently, Dogs do not know how to sit.
+
+```Ruby
+class Dog
+  def bark
+    puts "Woof!"
+  end
+end
+
+fido = Dog.new
+fido.bark #> "Woof!"
+fido.sit # NoMethodError: undefined method `sit' for #<Dog:0x007fa4e9a9e8a0>
+```
+
+>* Instance methods, the methods that belong to particular instances of particular classes, are *not globally evocable* like procedural methods. They cannot be called without an instance.
+
+```Ruby
+class Dog
+  def bark
+    puts "Woof!"
+  end
+end
+
+fido = Dog.new
+
+# Let's try just calling bark without fido
+bark # NameError: undefined local variable or method `bark' for main:Object
+```
+>* __Classes as Blueprints__
+>>* The ability to define methods and behaviours in our classes for our instances makes Ruby classes behave not just as factories, capable of instantiating new individual instances, but also as a *blueprint*, defining what those instances can do.
