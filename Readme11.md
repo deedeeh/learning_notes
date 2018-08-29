@@ -69,3 +69,34 @@ class Person
 end
 ```
 >* We can change the content of these methods according to our needs, without needing to hunt down every appearance of them in our program and change them as well, like we would need to do with our `instance_method_set` and `instance_method_get` usages.
+
+###### Wednesday 29th August
++ I worked on *__Object Attributes Lab__* where I practice to create classes, methods inside those classes with instance variables to write & read the added attributes.
+
+```Ruby
+class Person
+  def name=(person_name)
+    @name = person_name
+  end
+
+  def name
+    @name
+  end
+
+  def job=(person_job)
+    @job = person_job
+  end
+
+  def job
+    @job
+  end
+end
+
+# Extra work
+ashley = Person.new
+
+ashley.name = "Ashley"
+ashley.job = "Web Developer"
+
+puts "Hello, my name is #{ashley.name} and I am a #{ashley.job}."
+```
