@@ -40,6 +40,8 @@ Check *__hs-zhw-shoes-layout-prework__* repo for my code in *layout.css* file an
 >>>* Function: search for *PATTERN* in each *FILE* or standard input.
 >>* To have the same output as the one we've done manually we can type `which ruby` and the filepath should match.
 
+---
+
 ###### Friday 10th August
 + I am learning about *BASH* commands in *__BASH Review__* lesson.
 >* `ls` => lists all folders & files in the current directory.
@@ -72,6 +74,8 @@ Check *__hs-zhw-shoes-layout-prework__* repo for my code in *layout.css* file an
 
 *I still don't really understand the part related to shebang `#!/bin/sh` and run a program using `chmod +x`. Also, to run our program file no matter where we go.
 I need to check resources in order to fully understand this part.*
+
+---
 
 ###### Saturday 11th August
 + I am currently working on *__Git__* section as part of *__Advanced BASH & Git__*. I am doing *__Thinking Ahead: Github as career differentiator__* lesson and I've came up with some notes to check for every project/repo in Github:
@@ -165,6 +169,8 @@ __Your GitHub should communicate that you can build purposeful, meaningful apps 
 >>>* Then `git push -u origin master`
 >>>>* Instructs your git repository to send it's commits to the Github repository!
 
+---
+
 ###### Sunday 12th August
 + I am working on *__Git Flow__* lab where I will practice working with Git and Github.
 >* `git branch` => to check on which branch I am in.
@@ -177,6 +183,8 @@ __Your GitHub should communicate that you can build purposeful, meaningful apps 
 >>* To check if this push worked,  visit my fork of this repo on Github.
 >* After merging to master and pushing this remotely I can now delete my branch if I don't need it anymore by `git branch -d NEW-BRANCH`
 >* I can then check if this was successfully deleted by `git branch`
+
+---
 
 ###### Monday 13th August
 + I am working on how to create a merge conflict and how to fix those conflicts in order to be able to stage, commit and merge my work.
@@ -193,6 +201,8 @@ HTML for walrus
 ```
 >* After fixing the file I will `git add` then `git commit` those changes.
 >* To check my *unmerged paths* I will type `git status` then I can merge it by `git merge BRANCH_NAME`
+
+---
 
 ###### Tuesday 14th August
 + I have a problem with IDE, I can't work on *__Git Flow__* lab because IDE is always disconnecting but my internet connection is working good with everything else from youtube to online movies! I posted a question on Learn.co about this and still waiting for an answer.
@@ -254,6 +264,8 @@ def turn_count(board)
 end
 ```
 
+---
+
 ###### Wednesday 15th August
 + I finally worked on *__Git Flow__* lab after having a bad connection. I've learned so many about git and Github especially with the quiz they had in the spec folder. I am going to review some of the git commands:
 >* Different `push` commands:
@@ -286,6 +298,8 @@ end
 >>* I will have a printout message in terminal 'Merge made by the 'recursive' strategy.'
 >* To fetch remote branches I can run the following command:
 >>* `git checkout -t origin/BRANCH-NAME` this creates a new branch on my computer that matches the BRANCH_NAME branch on GitHub.
+
+---
 
 ###### Thursday 16th August
 + After finishing the *__Web Development Fundamentals__* prework I am going to work on the rest of *__Bootcamp prep__* on Learn.co and the web developer bootcamp on Udemy. I am not going to take notes of everything except things that I always forget about or new things.

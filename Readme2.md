@@ -31,6 +31,8 @@ var funkyFunction = function() {
 var theFunk = funkyFunction()();
 ```
 
+---
+
 ###### Friday 11th and Saturday 12th May
 + I worked on the *bootcamp pre-course* and done around four lessons including scopes and arithmetic labs.
 
@@ -77,8 +79,13 @@ function destructivelyDeleteFromObjectByKey(object, key) {
   return object;
 }
 ```
+
+---
+
 ###### Sunday 13th, Monday 14th and Tuesday 15th May
 I wasn't feeling well so I wasn't able to code.
+
+---
 
 ###### Wednesday 16th May
 + Today I worked on loops and I am still working on loops lab which contains 3 exercises.
@@ -105,6 +112,8 @@ function whileLoop(n) {
   return "done";
 }
 ```
+
+---
 
 ###### Thursday 17th May
 + Today I am working on the rest of Data Structures section. I did the Beatles loops lab and I really enjoyed it and learned something new:
@@ -170,6 +179,9 @@ function currentLine(katzDeliLine) {
   }
 }
 ```
+
+---
+
 ###### Friday 18th May
 + I am working on Online Shopping Lab which has 5 functions to work on. I have done 2 until now and still working on the rest.
 
@@ -247,6 +259,8 @@ function removeFromCart(item) {
 }
 ```
 
+---
+
 ###### Sunday 20th May
 + I started *The DOM* section in the bootcamp pre-course and learned about traversing nested objects and DOM tree and done a lab with 4 exercises.
 
@@ -312,6 +326,8 @@ for(let i = 0; i < divs.length; i++) {
 }
 ```
 
+---
+
 ###### Monday 21st May
 + Today I worked on the last lesson in DOM section which is Konami Code Lab.
 
@@ -360,6 +376,8 @@ function init() {
 ```
 
 + I think the rest of the day I will be preparing for behavioural interview questions and register on cv-library and co-hire because I am actively looking for jobs beside practising and learning new things.
+
+---
 
 ###### Tuesday 22nd May
 + I was working on behavioural interview questions because I have an interview this week with Flatiron School Bootcamp admission team.
@@ -412,16 +430,21 @@ function pressIt() {
 }
 ```
 
+---
+
 ###### Wednesday 23rd May
 + I continued interview questions for the first half of the day.
 
 + I finished jQuery section and now I have one more task to do to finish *JavaScript Fundamentals* part, which is a project called Rock Dodger. It doesn't seem easy at all but hopefully will be able to do it, might not be able to finish it today tho.
 
+---
 
 ###### Thursday 24th May
 + I started *Ruby Fundamentals* part which consists of many sections. I am doing today the introduction and next time I will start Debugging.
 
 + The rest of the time I will be doing interview questions.  
+
+---
 
 ###### Sunday 27th May
 + I haven't been coding for the past 2 days cause of some circumstances. Today I worked on *Ruby Fundamentals* Debugging section. Mainly it was about the 4 types of error and how to read errors.
@@ -430,10 +453,14 @@ function pressIt() {
 
 + Once I finish my technical track I will go back to the Rock Dodger project to finish the *Javascript Fundamentals* part in the pre-course track.
 
+---
+
 ###### Tuesday 29th May
 + I worked on the technical track and finished it and I booked my technical interview for my admissions to the bootcamp.
 
 + I will start working on the Rock Dodger project.
+
+---
 
 ###### Wednesday 30th May
 + Today I am working on *JavaScript Fundamentals Project* Rock Dodger. I am half way through the lab but it is not an easy one at all!
@@ -475,6 +502,9 @@ function checkCollision(rock) {
   }
 }
 ```
+
+---
+
 ###### Thursday 31st May
 + Finallyyyyy!!! I finished the Rock Dodger lab and I am so happy! It is a great practice and I've learned many things during the *JavaScript Fundamentals* section. Now I can continue working on *Ruby Fundamentals* plus maybe working on JS in Udemy bootcamp that I was doing before the Learn.co pre-course.
 

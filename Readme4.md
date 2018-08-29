@@ -55,6 +55,9 @@ The *Booleans* section it was mostly a quiz with multiple choices using logical 
   $("#third").css("border", "3px solid orange");
   $("div:first-of-type").css("color", "pink");
 ```
+
+---
+
 ######  Thursday 21st June
 + I worked on operators and conditionals lab in *Conditionals* section, which introduces ternary operator.
 
@@ -83,10 +86,14 @@ The string will be printed unless `this_year == 2015` then it will stop.
 
 + I am working on the rest of this section which is a lesson and a quiz then I will start working on *Looping*.
 
+---
+
 ######  Friday 22nd June
 + I started *Looping* section and I worked on `loop` & `times` constructs. This part mostly includes labs which is a great way to practice and understand more my code.
 
 + I also worked on `while` and `until` looping which isn't the 1st time to learn about them.
+
+---
 
 ######  Saturday 23rd June
 + I am working on just labs for the rest of *Looping* section. I already practised `break` and when to use it and also how to get standard input from user with `gets` and we use another keyword next to it `chomp` which removes the new line we have if we just use `gets` so we use `gets.chomp` and we usually store user input in a variable.
@@ -181,7 +188,9 @@ The previous code could be a bit better like not having a variable counter and j
 
 + I learned about stubbing which refers to the fake implementation of a method. Learn.co explanation of stubbing for `puts` and `gets` - we will stub the `puts` method to trick our test suite into thinking the stdout file has received the `puts` method and to trick our test suite into recognising that the `gets` method has been used.
 
-+ I am working on the last lab __Blackjack CLI__ and I passed 11 tests and still have 4 more tests to pass.  
++ I am working on the last lab __Blackjack CLI__ and I passed 11 tests and still have 4 more tests to pass.
+
+---
 
 ######  Sunday 24th June
 + I started my day working on *__Advanced jQuery__* as part of the Web Developer Bootcamp on Udemy.
@@ -260,6 +269,7 @@ end
 >* There are some methods to check the array or elements of the array such as `inspect` which returns a string containing a human-readable representation of an object. So `animals.inspect` will return an array of strings.
 >* Retrieve items from an array with an index so arrays start with 0 and not 1 like humans counting and always the indexes are less than count by one. We can also check an item index by using `index()` and it will return at which index is the item we passed as an argument. There is `include?()` which returns a boolean if the item is included in the array. At last we can use `first` to retrieve 1st item or `last` to retrieve last item.
 
+---
 
 ######  Monday 25th June
 + Today I am working on *__Arrays & Iteration__* section which is mostly got labs. I will try to finish most of it today.
@@ -344,10 +354,14 @@ end
  >* `delete(item)` which deletes the item we specify in the array.
  >* `delete_at(index)` which deletes the item in the array at the index we passed in.
 
+ ---
+
 ######  Tuesday 26th June
 + I am practising `each` in different labs and after I pass the lab I check the solution of Learn.co and they are using `map` which takes an item and a block and returns a new array. Also we can use the `!` convention to make the changes to the original array and not returning an updated copy.
 
 + In the solution for *__Badges and Schedules__* lab I have seen method chaining such as `assign_rooms(attendees).each_with_index.map` so I believe checking other solutions is an awesome thing where I can learn about new ways of solving the problem.
+
+---
 
 ######  Wednesday 27th June
 + I worked on just 1 lab,  *__Implementing Primes__* and I really enjoyed the challenge because I didn't really understand at the beginning what is a Prime but I googled it and seen couple of math videos and then started to solve the problem. Maybe my solution isn't the best but it is a good start!
@@ -370,6 +384,8 @@ def prime?(num)
 end
 ```
 It took me a while to solve this lab but I've learned so much.
+
+---
 
 ######  Thursday 28th June
 + I worked on the *__Deli Counter__* lab in Ruby prework and I thought it is going to take a while to solve it like it happened in JS but it seemed that I have learned so many things when I solved that lab in JS so I passed the tests in less than I expected which is awesome!
@@ -464,6 +480,7 @@ I know there is more than 1 way to solve a problem and I am really glad that Lea
 
 + Next is *__Enumerables__* section!
 
+---
 
 ######  Friday 29th June
 + Today I am working on *__Enumerables__* and I am learning about the meaning of enumerator and its methods to use with data collections specially on arrays and hashes.

@@ -173,3 +173,6 @@ class Dog
 
 end
 ```
+
++ And now I will continue the *__Web developer bootcamp__* on Udemy that I haven't finished yet. I am in *section 18* which is a __Todo List Project__
+>* I will be using jQuery, HTML & CSS with some slide animations.

@@ -37,6 +37,8 @@ __Check font and text declarations__
 
 + I worked on the *__CSS code along__* lab and next I have one more lesson and 2 other labs to finish this section.
 
+---
+
 ###### Wednesday 1st August
 + I worked on 2 labs in *__CSS Introduction__* and still have 1 more lab to finish this section.
 >* One of the labs was to create a rainbow with divs and colors so it was a good practice to learn about hexadecimal color system.
@@ -114,6 +116,8 @@ This is the end of this section and next I am going to start *__ Front-End - CSS
 
 __I am almost there! :-)__
 
+---
+
 ###### Saturday 4th August
 + I am working on *__Front-End - CSS Page Layout__* section and the first lesson is *__CSS Layout__* where I've learned about:
 >* Box Model => margin (spacing inside an element), padding (spacing outside an element) and border.
@@ -177,6 +181,8 @@ Smaller screen resolutions may require horizontal scroll bar, depending the fixe
 >>* It specifies the stack order of an element (which element should be placed in front of, or behind, the others).
 >>* An element can have a positive or negative stack order.
 >>* By default any element starts with z-index of 0 and the higher the number the closer to the viewer the element will be.
+
+---
 
 ###### Sunday 5th August
 + I worked on *__Code Along IV__* lab which is mainly to practise what I've learned in the CSS layout properties.
@@ -343,6 +349,8 @@ end
 
 *There are __so many__ ways to execute your code and have the same result.*
 
+---
+
 ###### Tuesday 7th August
 + I worked on *__Emoticon Translator__* lab and it was so fun to learn about a new human-readable data serialisation language *YAML*
 
@@ -471,6 +479,8 @@ end
 ```
 >* This time Learn.co stored the file loading a var but I used the loading straight away.
 >* I used a ternary operator instead of if/else.
+
+---
 
 ###### Wednesday 8th August
 + I worked on *__Zesty__* lab in *__CSS Page Layout__* section and I coded the site almost from scratch with HTML5 and CSS3.

@@ -11,6 +11,8 @@
 >>* Its attributes `src` & `type` so example `src="movie.mp4"` & `type="video/mp4"`.
 >* There is a converter for videos, audios, etc..., *miro video converter*. It contains different file types.  
 
+---
+
 ######  Monday 23rd July
 + Today I continued the rest of *__Front-End HTML5__* section which contained a code along lab and a lesson full of resources to check.
 
@@ -30,6 +32,8 @@
 >>* While the content of the `<figure>` element is related to the main flow, its position is independent of the main flow.
 >>* If removed it should not affect the flow of the document.
 >* `<figcaption></figcaption>` tag defines a caption for a `<figure>` element. It can be placed as the first or last child of the `<figure>` element.
+
+---
 
 ######  Tuesday 24th July
 + I worked on *__Keys of Hash__* lab in *__More on Hashes__* section.
@@ -158,6 +162,7 @@ def count_elements(elements)
   end
 end
 ```
+---
 
 ###### Wednesday 25th July
 + I worked on the rest of the *__Collections Practice__* lab which is the final lab in this section. Next is *__First Application__* section.
@@ -383,6 +388,8 @@ def run(songs)
     end
   end
 ```
+
+---
 
 ###### Thursday 26th July
 + I worked on *__Guessing CLI__* lab and I also extended the app for more practice and more fun!

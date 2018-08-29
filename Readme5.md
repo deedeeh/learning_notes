@@ -59,6 +59,8 @@ yielding_with_arguments(2) {|i| puts i * 2}
 
 + I've learned about Closures: blocks, Procs and Lambdas.
 
+---
+
 ######  Tuesday 3rd July
 + I am practising `yield` and return the original array or return a new array. I am building the functionality of `each` and `collect`.
 
@@ -89,6 +91,8 @@ def my_collect(array)
 end
 ```
 `#my_collect` also takes one argument and it loops through the array and it returns a new array by pushing `yield` with array elements.
+
+---
 
 ######  Saturday 7th July
 + Today I am working on the rest of the *__Enumerables__*. I started with a lab to create my own `select` method and then I will start few lessons and a quiz.
@@ -269,6 +273,8 @@ end
 ```
 In the previous lab I tried to use the *hash_bracket* and the colon `:` method after the key when using symbols so instead of `:key => "value"` I did `key: "value"`
 
+---
+
 ######  Monday 9th July
 + I worked on a *Simple Nesting* lab where I practised retrieve, update and add data.
 
@@ -380,6 +386,8 @@ end
 ```
 I had to grape a pencil and paper to explain to myself the iteration process and how when we call this method it will return the *key for min value*.
 
+---
+
 ######  Wednesday 11th July
 + Today I've learned about `#values` which collects all of the values in a hash, `#keys` returns an array containing all of the keys in the hash and `#min` use it on a hash to return the key/value pair that contains that lowest key, either alphabetically or numerically.
 
@@ -401,6 +409,8 @@ contacts["Freddy Mercury"].each do |attribute, value|
     end
   end
 ```
+
+---
 
 ######  Thursday 12th July
 + I worked on the last lab, *Manipulation Lab*, in *__Intro to Hashes__*. It was a bit hard and I was confused most of the time especially in the last 2 methods. As usual I checked the solution after I passed the lab and I want to share some of the differences.

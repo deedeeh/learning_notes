@@ -24,6 +24,8 @@ def
 end
 ```
 
+---
+
 ###### Sunday 3rd June
 + I worked on the rest of Ruby *Methods* section and I leaned about default arguments and required arguments. I also learned how to use array elements with string interpolation instead of having the data stored in variables especially when it is a list of data.
 
@@ -52,6 +54,8 @@ board = ["O", "O", "O", "O", "O", "O", "O", "O", "O"]
     expect(rows[3]).to eq("-----------")
     expect(rows[4]).to eq(" O | O | O ")
 ```
+
+---
 
 ###### Monday 4th June
 + I started to work on *Color Game Project* in the web developer bootcamp on Udemy and it is been great so far! I am going to add this project on Github.
@@ -154,12 +158,16 @@ move(board, index)
 display_board(board)
 ```
 
+---
+
 ###### Tuesday 5th June
 + I worked on *Logic and Conditionals* section in Ruby pre-course bootcamp. I learned that everything in Ruby is truthy except false and nil are falsey. I also learned about boolean operators (!, &&, || ) and comparison operators.
 
 Next time I am working on this section I will be working on 3 labs to practice what I've learned so far.
 
 + I went through my code for the technical track and checked the solution on Learn.co and comparing it to my code so I understand if there are different and better ways to implement my code. MY TECHNICAL INTERVIEW IS TOMORROW!
+
+---
 
 ###### Wednesday 6th June
 + I was preparing for my technical interview and reading about the interview process and then I had my technical interview which consisted of 2 parts: the 1st part was explaining my Deli Counter Lab code and the 2nd part I was asked to improve one of the functions in the lab. Within a week I will know the result of the interview and if I got accepted in the bootcamp!
@@ -191,6 +199,8 @@ def position_taken?(board, index)
 end
 ```
 
+---
+
 ###### Friday 8th June
 + I worked on the last lab in *Logical & Conditionals* section in Ruby Fundamentals, Valid Tic Tac Toe Move. Next is *Loops* section.
 
@@ -206,6 +216,8 @@ end
 + I have an interview next week and I have done my research today on the company. Still will be working on interview questions in the next few days.
 
 + The rest of the day I will working on the Color Game Project.
+
+---
 
 ###### Saturday 9th June
 + I worked on the rest of the Color Game Project. It was mostly fixing some of the functionalities and refactoring code.
@@ -241,6 +253,8 @@ end
 ```
 + The rest of the day I will be working on interview questions.
 
+---
+
 ###### Sunday 10th June
 + I worked on Tic Tac Toe Turn lab in *Loops* section and it was fun working on it. I still have 1 more lab to finish loops.
 
@@ -261,6 +275,8 @@ end
 ```
 + I also worked on *Intro to jQuery* in the online web developer bootcamp and I have few more lessons to finish until I start *Advanced jQuery* section. I will create a repository on Github for small projects related to this course.
 
+---
+
 ###### Tuesday 12th June
 + I worked on the last lab in *Loops* section and now I am ready for the next section *Iteration*
 
@@ -277,11 +293,17 @@ end
 ```
 + I done few interview questions today as well.
 
+---
+
 ###### Wednesday 13th June
 + Today I worked on interview questions and still have some more to work on until next week.
 
+---
+
 ###### Thursday 14th June
-+ I worked on *Intro to command line and BASH* plus *Intro to Git and Github*. I just practised a bit in terminal and refreshed my memory with informations I used to know.  
++ I worked on *Intro to command line and BASH* plus *Intro to Git and Github*. I just practised a bit in terminal and refreshed my memory with informations I used to know.
+
+---  
 
 ###### Tuesday 19th June  
 + I did ittttt!!! I am going to start my Flatiron School Bootcamp in September! I am excited and ready to learn tones :)

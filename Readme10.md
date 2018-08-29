@@ -48,6 +48,8 @@ end
 
 I checked Learn.co solution and it almost the same as mine.
 
+---
+
 ###### Thursday 23rd August
 + I am working on *__TicTacToe.rb__* lab which is the last lab in *__Tic Tac Toe__* section.
 
@@ -194,8 +196,12 @@ end
 >* This technique of faking or hardcoding the return value and behaviour of a method is called *Mocking* or *Stubbing*.
 >* It's a bit of an advanced technique in testing & I don't need to worry about it but it is good to understand what is stubbing for my own knowledge.
 
+---
+
 ###### Friday 24th August
 + I started working on *__Intro to Object Oriented__* and *__Classes & Instances__*. I am working on *__Intro to Classes & Instances__* lesson.
+
+---
 
 ###### Tuesday 28th August
 + I am learning about classes which create new bundles of information regarding individual objects every time a new object is added. Think of a class like the blueprint that defines how to build an object.

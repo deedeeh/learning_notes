@@ -9,6 +9,8 @@ Currently I am doing a Web Developer Bootcamp on Udemy by Colt Steele who is a d
 
 The course covers Frontend which I have some of its skills and Backend which I know nothing about! It is a good opportunity to learn new technologies that will help me in my career and understand what happens under the hood.
 
+---
+
 ###### Tuesday 6th of March
 + I did an *Image Blog* using HTML and CSS as part of the Bootcamp Intermediate CSS section and next I will be creating a Blog.
 
@@ -61,10 +63,14 @@ Here are few lines of my stylesheet:
 }
 ```
 
+---
+
 ###### Wednesday 7th March
 + Today I am doing the Introduction to JavaScript as a quick reminder to JS because I haven't be coding regularly for some time. I did the primitive data types in addition to 2 simple exercises.
 
 Next is JS Basics: Control Flow.
+
+---
 
 ###### Thursday 8th March
 + Today I went off track by having a basic knowledge about *React* and the reason for that I am going to ReactFest 9 March 2018. I applied for the diversity ticket and I got one! I am excited!
@@ -88,6 +94,8 @@ class MyComponent extends React.Component {
 };
 ```
 
+---
+
 ###### Friday 9th March
 + Today I went to ReactFest which was awesomeeeeee!!! I am really glad I had the chance to attend this event.
 + I did continue some of the *Web Developer Bootcamp* JavaScript Basics: Control Flow. Here are some of the things I worked on:
@@ -95,6 +103,8 @@ class MyComponent extends React.Component {
 >* Logical operators & short circuit evaluation.
 >* Truthy & Falsy values.
 >* Conditional statements.
+
+---
 
 ###### Sunday 29th April
 + I am back to coding after being away for a while and I finished the *Web Developer Bootcamp* JavaScript Basics: Control Flow section. I have worked on *while* and *for* loops and done few exercises.
@@ -159,6 +169,9 @@ function factorial(num) {
   return result;
 }
 ```
+
+---
+
 ###### Monday 30th April
 + I worked on  JavaScript basics: Arrays and did a small version of a todo list exercise.
 
@@ -197,6 +210,8 @@ window.setTimeout(function() {
   console.log("OK, YOU QUIT THE APP");
 }, 500);
 ```
+---
+
 ###### Tuesday 1st May
 + Today I spent couple of hours coding and the rest of the day was enjoying my birthday! I did continue the Arrays sections and finished array iteration with for loop and forEach method plus I learned about splice method.
 
@@ -219,6 +234,8 @@ function deleteTodo() {
     console.log("Deleted todo");
   }
 ```
+
+---
 
 ###### Wednesday 2nd May
 + I worked on Array Problem Set which contains 4 exercises involves using functions with arguments, loops and conditional statements.
@@ -247,6 +264,8 @@ function sumArray(arr) {
   return sum;
 }
 ```
+
+---
 
 ###### Thursday 3rd May
 + Today I am Working on JavaScript basics: Objects. Learned about the different ways for initialisation such as object literal notation, initialise a variable with curly braces and then add data and finally use the  keyword new Object(). Objects use key/value pairs to access data, update, add and delete.
@@ -293,11 +312,15 @@ movies.forEach(function(movie) {
 });
 ```
 
+---
+
 ###### Friday 4th May
 + I learned about object methods and the reasons to use them such as namespace collision.
 + The use of the keyword *this* inside methods.
 
 Next will be working on DOM Manipulation.
+
+---
 
 ###### Saturday 5th May
 + I started to work on *DOM Manipulation* section and I did an exercise for different ways to select an element.
@@ -330,6 +353,8 @@ var sixth = document.getElementsByTagName("p")[0];
 + I learned about classList property to add, remove and toggle elements, properties like textContent and innerHTML and the difference between them. Also, worked with getAttribute and setAttribute properties.
 
 + Next I am going to start *Advanced DOM Manipulation* and will work on exercises and a project to practise it.
+
+---
 
 ###### Tuesday 8th May
 + Today I started *Advanced DOM Manipulation* and I worked on few tutorials and an exercise which is based on events Listeners.
@@ -440,10 +465,14 @@ numInput.addEventListener("change", function() {
 
 In the previous JS I added the player 1 to show my work without player 2 to make things short. And the winner class just to add green colour to whoever has reached the winning score.
 
+---
+
 ###### Wednesday 9th May
 + Today I applied for a scholarship for software engineering bootcamp and I have started to do the free online pre-course on Learn.co until I get a response on my application.
 
 + I will try to continue the online bootcamp I have been doing and to do the pre-course for the on campus bootcamp I applied for.
+
+---
 
 ###### Thursday 10th May
 + I worked on the rest of *Advanced DOM manipulation* section and did a small exercise.

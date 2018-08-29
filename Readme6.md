@@ -47,12 +47,16 @@ __Summary:__
 + Also, I worked on *__HTML Fundamentals__* and I create a website along with the instructor. Next lesson contains lots of HTML resources and I want to check them.
 >* HTML Language Code Reference, ISO Language codes. Check it on https://www.w3schools.com/tags/ref_language_codes.asp
 
+---
+
 ######  Saturday 14th July
 + Today I worked on *__HTML Album Cover__* and the rest of this section *__Front-End HTML Fundamentals__*. Next section in *__Intro to HTML/CSS__* is *__Front-End HTML5__*.
 
 + I learned about a new tag `<span></span>` plus previously `<img>`, `<h1></h1>` to `<h6></h6>`, `<p></p>` and `<a></a>`. All of the previous tags have an opening and closing tags except `<img>` is a self closing tag. I also learned about attributes where we can add them in the opening tag to provide more information about the tag.
 
 + I learned about *Developer tools* where we can change our HTML & CSS code in my browser and test my code and results but once I refresh the page my tests will go back to its original code so I have to change the source code. It is a great way to experiment and learn about different behaviours.
+
+---
 
 ######  Sunday 15th July
 + I finished the first lab in *__More on Hashes__* which consists of 4 methods. It took me a while to solve the first method but I've learned a lot through the process.
@@ -112,6 +116,8 @@ def shortened_tweet_truncator(tweet)
 end
 ```
 `shortened_tweet_truncator` is to check after the tweet is replaced by the substituter if it is still more than 140 characters then I make it 140 and then add an ellipsis otherwise just print the original tweet.
+
+---
 
 ######  Monday 16th July
 + I am working on *__Hashketball__* lab which is the second lab in *__More on Hashes__*.
@@ -259,6 +265,8 @@ def num_points_scored(player_name)
 end
 ```
 
+---
+
 ######  Tuesday 17th July
 + I worked on the rest of the lab *__Hashketball__*. It was tough and a bit confusing working with nested hashes but I've learned a lot through the process and I used `binding.pry` all the time to check which data I am working on at the time.
 >* All I was thinking about at the beginning is to make my code work and then I can think about refactoring but I don't want my code to be confusing and not easy to understand at this stage.
@@ -338,6 +346,8 @@ Check my Github repo *advanced-hashes-hashketball-prework* for the full version 
 >>* if the optional code block is specified, then that will be run and its result returned `h.fetch("z") { |el| "go fish, #{el}"}` will return `#=>"go fish, z"`
 
 + Next I will be working on *__Programming Languages__* lab and practice more nested hashes and iteration.
+
+---
 
 ######  Wednesday 18th July
 + I worked on *__Programming Languages__* lab and I solved it! I spent some time tying to make a condition to one of the keys which had 2 values but the other keys had just 1.
