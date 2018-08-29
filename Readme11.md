@@ -39,7 +39,7 @@ class Person
 
 end
 ```
->* Our program has some added functionalty. We could imagine collecting all of our instances of `Person` and sorting them by last name, for example.
+>* Our program has some added functionality. We could imagine collecting all of our instances of `Person` and sorting them by last name, for example.
 >>* Now, any other part of our program that was calling `instance_variable_get(:@name)` is broken!
 >>* Additionally, any part of our program that is calling `instance_variable_set(:@name)` isn't taking advantage of our new first name and last name functionality.
 >>* Allowing our code to rely on an instance variable directly created a program that is not flexible.
@@ -69,6 +69,8 @@ class Person
 end
 ```
 >* We can change the content of these methods according to our needs, without needing to hunt down every appearance of them in our program and change them as well, like we would need to do with our `instance_method_set` and `instance_method_get` usages.
+
+---
 
 ###### Wednesday 29th August
 + I worked on *__Object Attributes Lab__* where I practice to create classes, methods inside those classes with instance variables to write & read the added attributes.
@@ -100,3 +102,53 @@ ashley.job = "Web Developer"
 
 puts "Hello, my name is #{ashley.name} and I am a #{ashley.job}."
 ```
++ I am working on *__Object Lifecycle__*
+section where I will be learning about `#initialize` and work on a lab to practice its use.
+>* I've learned about creating new instances of a class and sets that object equal to a variable and if we want to give our class attributes we can create a method to write & another one to read that attribute.
+>* But for example most dogs are born with a breed, not assigned a breed afterwards.
+>>* How can we model the behavior of dogs being born with a breed in our `Dog` class?
+>>* `#initialize` method let us assign an individual dog a breed *automatically upon creation*, or *instantiation*.
+>>* If we want *each* instance of our class to be created with certain attributes, we must define an `#initialize` method.
+>>* An `#initialize` method is a method that is *called automatically* whenever `#new` is used.
+>* Let's define our `#initialize` method to contain the functionality of the `#breed=` method, so that a dog instance will get a breed assigned to it right away when it is created, without us having to explicitly use the `#breed=` method.
+
+```Ruby
+class Dog
+  def initialize(breed)
+    @breed = breed
+  end
+
+  def breed=(breed)
+    @breed = breed
+  end
+
+  def breed
+    @breed
+  end
+end
+```
+Now we can call `#new`
+
+```Ruby
+lassie = Dog.new("Collie")
+
+lassie.breed #=> "Collie"
+```
+>* When `#new` is called with an argument, it will pass that argument (or arguments) to the `#initialize` method and invoke that method. The code in `#initialize` will then run, using any arguments from `#new`.
+>* The initialize method is what's called a *callback method*, because it is automatically invoked every time the `#new` method is used to create a new instance of the class.
+>* Think of the initialize method as a *constructor method*. A constructor method is invoked upon the creation of an instance of a class and used to help define the instance of that class.
+>* Every time you type `Dog.new("some breed")`, a new dog instance is created that has a breed of "some breed".
+
++ I completed *__Object Initialize Lab__* and here is my code for one of the classes:
+
+```Ruby
+class Dog
+  def initialize(name, breed="Mutt")
+    @name = name
+    @breed = breed
+  end
+end
+```
+>>* In this class I created an `#initalize` method that accepts 2 arguments, the 2nd one is a default argument which is optional to add a breed and if not it is going to be "Mutt".
+>>* Then I stored each of these arguments in its own instance variable.
+>>* If I want to extend my code I can create the setter & getter methods so once I have new instances I can read these objects or edit attributes values.
