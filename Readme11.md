@@ -152,3 +152,24 @@ end
 >>* In this class I created an `#initalize` method that accepts 2 arguments, the 2nd one is a default argument which is optional to add a breed and if not it is going to be "Mutt".
 >>* Then I stored each of these arguments in its own instance variable.
 >>* If I want to extend my code I can create the setter & getter methods so once I have new instances I can read these objects or edit attributes values.
+
++ I worked on *__Object Models__* lab where I created a class `Dog` with a setter and a getter methods for a dog's name plus bark method.
+
+```Ruby
+# Your code goes here!
+class Dog
+
+  def name=(name)
+    @name = name
+  end
+
+  def name
+    @name
+  end
+
+  def bark
+    puts "woof!"
+  end
+
+end
+```
