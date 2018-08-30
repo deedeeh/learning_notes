@@ -176,3 +176,92 @@ end
 
 + And now I will continue the *__Web developer bootcamp__* on Udemy that I haven't finished yet. I am in *section 18* which is a __Todo List Project__
 >* I will be using jQuery, HTML & CSS with some slide animations.
+
+---
+
+###### Thursday 30th August
++ I've started with *__OO Tic Tac Toe__* section in my bootcamp prep and the lesson here shows the difference between __Procedural Programming__ & __Object Oriented Programming__
+>* In programming we have data and we have the procedures or instructions for operating on that data.
+>>* In __procedural programming__, data and procedures, or instructions, are *two separate* things.
+>>* In __object-oriented programming__, we have units of code that contain *both* data and instructions, such that an "object" operates on its own data structure.
+>* Here is an example of procedural implementation:
+
+```Ruby
+board = Array.new(9, " ") # Creates an array with 9 elements filled with " "
+
+def current_player(board)
+  turn_count(board) % 2 == 0 ? "X" : "O"
+end
+
+def turn_count(board)
+  board.count{|token| token == "X" || token == "O"}
+end
+
+def display_board(board)
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts "-----------"
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts "-----------"
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+end
+```
+>>* Each of our methods must take the board array in as an argument and operate on that array.
+>>* Here, our data structure, the board array, is operated on by each method.
+>>* The data is separate from the behaviour or operations. In fact, the board array is so separate from the behaviours defined in our method that the *only indication* that our data and our methods are related is the fact that the board array is defined in the same general area as our methods.
+>>* We constantly have to pass around the board array to every method. This is tedious and potentially very troublesome as any method can modify that variable and continue passing it around, thus causing errors in our program.
+
+__What's so bad about procedural approach?__
+>* We don't want to manage our data through proximity and arguments, we want to teach our objects to manage their own data.
+>* What happens if we want to grow our tic tac toe game by adding more data or more behaviours? Our program gets *messy*, fast.
+>* The more we add different data and behaviours that are linked only by proximity or via arguments, the more *confusing* and *buggy* our program is likely to be.
+
+>* Here is how we use object oriented programming:
+
+```Ruby
+class TicTacToe
+  def initialize(board = nil)
+    @board = board || Array.new(9, " ")
+  end
+
+  def current_player
+    turn_count % 2 == 0 ? "X" : "O"
+  end
+
+  def turn_count
+    @board.count{|token| token == "X" || token == "O"}
+  end
+
+  def display_board
+    puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
+    puts "-----------"
+    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
+    puts "-----------"
+    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
+  end
+end
+```
+
+__What's so great about object-oriented approach?__
+>* Every method became easier to understand.
+>* They no longer require arguments and instead can rely on the *internal state* of the object.
+>>* The board array is a property of an instance of the TicTacToe game.
+>>* The `@board` instance variable, and the data that is stored in it, is attached to the instance of the game that is playing out at a given point in time.
+>>* The *state* of the game, i.e. who is winning, what squares have been filled in, is expressed by the content of the `@board` variable, which itself is a property of the given instance of `TicTacToe`.
+>>* The methods of our `TicTacToe` class are also part of an object.
+>>* When we called `TicTacToe.new` and create a new instance of the class (and start a new game), that instance, that tic tac toe object, has properties, like the `@board` variable, that describe its state.
+>>* That tic tac toe instance will also have methods that allow it to enact behaviours and operate on the data stored in its properties.
+>* Our tic tac toe object has the whole package––attributes that contain data describing the state of the object and methods that enact behaviours on that data.
+>* Not only our code is now more *organised* and *easier to read* and *understand*, it is also *accommodating* of future growth and change.
+
+#### Moving from Procedural to Object-Oriented
+>*  The things you want to look for when refactoring procedural code into object-oriented code are:
+>>* Find any data the methods rely on.
+>>* Is this data related to the core functionality of our program? If so, think about where this data belongs.
+>>>* Should you pass it in as an argument to an `#initialize` method?
+>>>* Can the class you are writing create the data structure itself?
+>>* Are your methods passing data around as arguments?
+>>>* Could this data instead be made into an *instance variable*?
+>>* Is there any code that isn't contained in a method?
+>>>* Could that code be placed inside a method in your class and therefore become behaviour that belongs to your object?
+
+__Anything that works procedurally can also work in an object-oriented fashion and being able to move between these two styles of programming is crucial.__
