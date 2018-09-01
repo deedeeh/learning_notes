@@ -1,4 +1,4 @@
-#### Continue Learning Notes - 9
+#### Continue Learning Notes - 11
 
 ###### Continue: Tuesday 28th August
 
@@ -413,3 +413,56 @@ end
 >>* With this ternary operator I can save around 5 lines of code.
 
 + Now I am done with *__Ruby Fundamentals__* section in bootcamp prep & finally is an *__interview prep__* section in this course in order to completed it.
+
+---
+
+###### Saturday 1st September
++ Today I will be working on *__Todo List Project__*. You can check my code on Github.
+
++ Things I've learned & used during this project that is worth mentioning:
+
+>* `this` keyword => there are many ways to use `this` and it depends on the context but so far in this project it's to select the clicked `li` and not all `lis`.
+
+```javascript
+$("span").click(function(e){
+  $(this).parent().fadeOut(500,function(){
+    $(this).remove();
+  });
+  e.stopPropagation();
+});
+```
+>>* For ex. in the previous code the 1st `this` refers to the `span` element then we have `parent()` method which refers to an `li` so the 2nd `this` inside `fadeOut()` refers to the `li` & not the `span`.
+
+>* `css()` => *Get the value* of a computed style property for the first element in the set of matched elements or *set one or more* CSS properties for every matched element.
+>>* For single property we can do `$(this).css("text-decoration", "line-through");`
+>>* Multiple properties doesn't take a hyphen `-` so we need a camelCased property name such as `textDecoration`
+
+```javascript
+if($(this).css("color") === "rgb(128, 128, 128)"){
+  $(this).css({
+    color: "#000",
+    textDecoration: "none"
+  });
+}
+```
+
+>* `toggleClass()` => Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the state argument.
+
+```css
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
+```
+```javascript
+$("li").click(function(){
+  $(this).toggleClass("completed");
+});
+```
+
+>* *Event bubbling*
+>>* The concept of "bubbling up" is like if you have a child element with a click event and you don't want it to trigger the click event of the parent.
+>>* This is when we should use `stopPropagation()` method with the argument given to the callback function in the event listener such as `click`.
+>>* `stopPropagation()` => Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
+>* `parent()` => Get the parent of each element in the current set of matched elements, optionally filtered by a selector.
+>* `fadeOut()` => if you inspect it, it doesn't delete the element from the DOM, it just `display="none"` and that is when an argument of duration & a callback function can be used to add a `remove()` method on the clicked element once the duration of the fadeOut has ended.
