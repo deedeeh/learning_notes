@@ -1,4 +1,4 @@
-#### Continue Learning Notes - 7
+#### Continue Learning Notes - 8
 
 ###### Tuesday 31st July
 + I am working on *__Front_End - CSS Introduction__* section as part of the *__Intro to HTML/CSS__*.

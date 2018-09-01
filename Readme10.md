@@ -1,4 +1,4 @@
-#### Continue Learning Notes - 9
+#### Continue Learning Notes - 10
 
 ###### Monday 20th August
 + I worked on *__Tic Tac Toe Game Status__* lab where I practised boolean & search enumerables such as `detect` & `all?` plus I used logical operators; `&&`, `||` and not operator `!`.

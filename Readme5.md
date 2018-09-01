@@ -1,4 +1,4 @@
-#### Continue Learning Notes - 4
+#### Continue Learning Notes - 5
 
 ######  Monday 2nd July
 + I finished the *__Cartoon Collections__* lab and I used `collect`, `map`, `find` and `include?` and `each_with_index` methods.

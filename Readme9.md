@@ -1,4 +1,4 @@
-#### Continue Learning Notes - 8
+#### Continue Learning Notes - 9
 
 ###### Thursday 9th August
 + I worked on the last lab, *__Zhw Shoes__*, in *__CSS Page Layout__* and this is the end of *__Intro to HTML/CSS __* section.

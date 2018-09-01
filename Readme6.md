@@ -1,4 +1,4 @@
-#### Continue Learning Notes - 5
+#### Continue Learning Notes - 6
 
 ######  Continue: Thursday 12th July
 + *How the web works* lesson explains how browsers connect to a server to retrieve web pages. Describes the role of domains, IPs, DNS(Domain Name System) and host servers. What is the headers and body requests and response cycle.
