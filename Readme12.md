@@ -121,3 +121,15 @@ html {
 >>>* `dotted`, `dashed`, `solid` and `double`
 >>>* Check for the rest of the values online.
 >>* `ouline-color`
+>* __CSS gradients__ let you display smooth transitions between two or more specified colors. There are 2 types of gradients:
+>>* *Linear Gradients* (direction, color1, color2, ...)
+>>>* direction => the default is top to bottom, and I can change that by bottom to top, left to right, right to left or diagonal.
+>>>* If I want more control over the direction of the gradient I can add angle instead of the previous directions. For ex. `background-image: linear-gradient(-90deg, red, yellow)`
+>>* Radial Gradients (defined by their center)
+>>* We can add transparency by adding `rgba()` color.
+>>>* To create a radial gradient you must also define at least two color stops.
+>>>* For more check online resources.
+>>* With gradients we have the vendor prefixes issue and that is why we use different cross-browser like `-webkit`
+>>* We also need a backup color for older browsers so we add `background-color`.
+>* A new CSS framework __Font Awesome__ that I can download or have it as a cdn link. [Check it out!](https://fontawesome.com/)
+>>* To add it in my project, I will insert the path or link between a `<link>` tag under the styling file.
