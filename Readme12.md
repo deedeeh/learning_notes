@@ -227,3 +227,130 @@ ary.count { |x| x%2 == 0 } #=> 3
 >>>* `to_proc` it is a part of the protocol for *converting objects* to *Proc objects*. Instances of class Proc simply return themselves.
 
 >* __teardown__ => It is the return of a method. It is the last thing it does.
+
++ After I'm done with the video, I've started reading about a blog post [Learning Ruby: From Zero to Hero](https://medium.freecodecamp.org/learning-ruby-from-zero-to-hero-90ad4eecc82d) by *TK* on medium and here are few things I wanted to take notes of:
+>* __Classes & Objects__
+>>* “Class” is a way to define objects. In the real world there are many objects of the same type. Like vehicles, dogs, bikes. Each vehicle has similar components (wheels, doors, engine).
+>>* “Objects” have two main characteristics: data and behaviour. Vehicles have data like number of wheels and number of doors. They also have behaviour like accelerating and stopping.
+>>* In object oriented programming we call
+>>>* Data = `attributes`
+>>>* Behaviour = `methods`.
+>>* We can "get" or "set" an object attribute without using methods
+>>>* `attr_reader` => implements the *getter* method.
+>>>* `attr_writer` => implements the *setter* method.
+>>>* `attr_accessor` => implements *both* methods.
+
+```Ruby
+class Vehicle
+  attr_accessor :number_of_wheels, :seating_capacity, :maximum_velocity
+
+  def initialize(number_of_wheels, seating_capacity, maximum_velocity)
+    @number_of_wheels = number_of_wheels
+    @seating_capacity = seating_capacity
+    @maximum_velocity = maximum_velocity
+  end
+end
+
+# number_of_wheels equals 4
+tesla_model_s = Vehicle.new(4, 'electric', 5, 250)
+tesla_model_s.number_of_wheels # => 4
+
+# number_of_wheels equals 3
+tesla_model_s.number_of_wheels = 3
+tesla_model_s.number_of_wheels # => 3
+```
+>* __Encapsulation: Hiding information__
+>>* Encapsulation is a way to restrict direct access to objects’ data and methods. At the same time it facilitates operation on that data (objects’ methods).
+>>* All internal representation of an object is *hidden from the outside*, __only__ the object can interact with its internal data.
+>>* __Remember__ in Ruby we use methods to directly access data. Without those methods of `name` & `age` we can't access those informations.
+
+```Ruby
+class Person
+  def initialize(name, age)
+    @name = name
+    @age  = age
+  end
+
+  def name
+    @name
+  end
+
+  def age
+    @age
+  end
+end
+```
+
+```Ruby
+tk = Person.new("Leandro Tk", 24)
+```
+>>* With encapsulation we can ensure that the object (tk in this case) is only allowed to access name and age.
+>>* The internal representation of the object is hidden from the outside.
+
+>* __Inheritance: behaviour & characteristics__
+>>* Certain objects have something in common. Behaviour and characteristics.
+>>* In object oriented programming, classes can inherit common characteristics (data) and behaviour (methods) from another class.
+>>* In Ruby, we use the `<` operator to show a class inherits from another.
+
+From the previous example `Vehicle` class we can have a new class of `ElectricCar` that can inherit from the `Vehicle` class.
+
+```Ruby
+class ElectricCar < Vehicle
+end
+```
+>>* We don’t need to implement the initialize method and any other method, because this class already has it (inherited from the Vehicle class).
+
+```Ruby
+tesla_model_s = ElectricCar.new(4, 5, 250)
+tesla_model_s.number_of_wheels # 4
+tesla_model_s.seating_capacity # 5
+tesla_model_s.maximum_velocity # 250
+```
+>>* I've checked the code on irb to prove it to myself and it worked!
+
+>* __Module: A Toolbox__
+>>* We can think of a module as a toolbox that contains a set of constants and methods. (This is the best way TK explained it)
+>>* An example of a Ruby module is `Math`
+>>>* constant PI => `Math::PI # > 3.141592653589793`
+>>>* the `.sqrt` method => `Math.sqrt(9) # 3.0`
+>>* we can implement our own `module` and use it in classes.
+
+```Ruby
+class RunnerAthlete
+  def initialize(name)
+    @name = name
+  end
+end
+```
+>>* And implement a module `Skill` to have the `average_speed` method.
+
+```Ruby
+module Skill
+  def average_speed
+    puts "My average speed is 20mph"
+  end
+end
+```
+>>* How do we add a module to a class so it has this behaviour `average_speed` method?
+
+```Ruby
+class RunnerAthlete
+  include Skill
+
+  def initialize(name)
+    @name = name
+  end
+end
+```
+>>* See the `include Skill`?
+>>* And now we can use this method in our instance of RunnerAthlete class.
+```Ruby
+mohamed = RunnerAthlete.new("Mohamed Farah")
+mohamed.average_speed # "My average speed is 20mph"
+```
+
+>* We need to *understand* that:
+>>* A module can have no instances.
+>>* A module can have no subclasses.
+>>* A module is defined by module…end.
+>>* A module's name is capital same as a class or camelCased.
