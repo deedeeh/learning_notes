@@ -198,3 +198,32 @@ The default is 400. Values could be:
 >>>* More easing functions are available in external plugins.
 >>* *complete* => A function to call once the animation is complete, called once per matched element.
 >>* All of the above parameters are __optional__.
+
++ I completed the *__Todo List Project__*. You can check my code on Github.
+
++ I am watching a video on Youtube with the title *__Yield & Enumerables__* by Learn.co channel. And here are some of the new things I've learned:
+
+#### New Terminology In Programming
+>* __Polymorphism & Interfaces__ or *Polymorphic Interfaces*
+>>* Polymorphism provides one of the most useful programming techniques of the object-oriented paradigm.
+>>* It means "many forms" (poly = many, morphos = form) because it changes its behaviour based on how you use it.
+>>* Most of Ruby methods are polymorphic Interfaces such as:
+>>>* `#count` method without giving an argument it will return an integer.
+>>>* `#count(obj)` if we pass an argument it counts the number of elements which equal obj using ==.
+>>>* `#count{|item| block}` it counts the number of elements for which the block returns a true value.
+
+To demonstrate the previous interfaces check out this code:
+```Ruby
+ary = [1, 2, 4, 2]
+ary.count                  #=> 4
+ary.count(2)               #=> 2
+ary.count { |x| x%2 == 0 } #=> 3
+```
+
+>* __Named block__ => `&block` (ampersand parameter). Usually blocks are anonymous in Ruby but we can give them a name by adding an `&` before the object's name then we do `object.call` in order to call the block to be executed. Here is what `&object` does:
+>>* if the object is a block, it converts it to a `Proc`.
+>>* if the object is a `Proc`, it converts it to a `block`.
+>>* if the object is something else, it calls `to_proc` on it, and then converts it to a block.
+>>>* `to_proc` it is a part of the protocol for *converting objects* to *Proc objects*. Instances of class Proc simply return themselves.
+
+>* __teardown__ => It is the return of a method. It is the last thing it does.
