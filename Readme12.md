@@ -133,3 +133,68 @@ html {
 >>* We also need a backup color for older browsers so we add `background-color`.
 >* A new CSS framework __Font Awesome__ that I can download or have it as a cdn link. [Check it out!](https://fontawesome.com/)
 >>* To add it in my project, I will insert the path or link between a `<link>` tag under the styling file.
+
+---
+
+###### Monday 3rd September
++ I have few coding to do for this project and then I am done!
+>* After linking the __Font Awesome__ framework to our HTML file we can pick on the above website the icon we want, click on it and then under the big svg illustration there is an HTML tag to copy includes `<i></i>` stands for icon.
+>>* Between that tag a `class` with the values of the icon you selected.
+>>* Copy & paste in HTML then voilà you have your icon on your project.
+>* `transition` => allows you to change property values smoothly (from one value to another), over a given duration.
+>>* This is the shorthand for the following properties & they should be added in the same order like this `{transition: <property> <duration> <timing-function> <delay>;}`
+>>>* `transition-property` => Specifies the name or names of the CSS properties to which transitions should be applied. Here are some of the values:
+>>>>* `none`
+>>>>* `all` => Default value. All properties will get a transition effect
+>>>>* __property__ => Defines a comma separated list of CSS property names the transition effect is for.
+>>>* `transition-duration` => specifies how many seconds (s) or milliseconds (ms) a transition effect takes to complete.
+>>>>*  Default value is 0s, meaning there will be no effect
+>>>* `transition-timing-function` => specifies the speed curve of the transition effect. It allows a transition effect to change speed over its duration. The most common values are:
+>>>>* `ease` => Default value. Specifies a transition effect with a slow start, then fast, then end slowly.
+>>>>* `linear` => Specifies a transition effect with the *same speed* from start to end.
+>>>>* `ease-in` => Specifies a transition effect with a *slow start*.
+>>>>* `ease-out` => Specifies a transition effect with a *slow end*.
+>>>>* `ease-in-out` => Specifies a transition effect with a slow start and end.
+>>>>* Check the rest of the values online.
+>>>* `transition-delay` => Defines how long to wait between the time a property is changed and the transition actually begins. Value is defined in seconds (s) or milliseconds (ms).
+>>* This is one of the properties that has the __vendor prefixes__ problem and that is why we use
+>>>* `-webkit-` (Chrome, Safari, newer versions of Opera, almost all iOS browsers (including Firefox for iOS); basically, any WebKit based browser)
+>>>* `-moz-` for Firefox
+>>>* `-o-` (Old, pre-WebKit, versions of Opera)
+>>>* `-ms-` (Internet Explorer and Microsoft Edge)
+
+>>* The following code snippet basically hides the `span` that contains the trash icon then when the user hovers on the `li` the `span` appears.  
+>>* The `span` disappears again when the user removes the cursor from that `li`.
+>>* The main properties that does that are `width` & `opacity` plus of course `display` & `height`.
+
+```css
+span {
+  background: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: #fff;
+  width: 0;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+li:hover span{
+  width: 40px;
+  opacity: 1.0;
+}
+```
+
+##### New jQuery Method:
+>* `fadeToggle()` => Display or hide the matched elements by animating their opacity. It takes arguments such as:
+>>* *duration* => A string or number determining how long the animation will run.
+The default is 400. Values could be:
+>>>* milliseconds
+>>>* `slow`
+>>>* `fast`
+>>* *easing* => A string indicating which easing function to use for the transition. Default is "swing".
+>>>* `linear` => moves in a constant speed
+>>>* More easing functions are available in external plugins.
+>>* *complete* => A function to call once the animation is complete, called once per matched element.
+>>* All of the above parameters are __optional__.
