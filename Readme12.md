@@ -354,3 +354,90 @@ mohamed.average_speed # "My average speed is 20mph"
 >>* A module can have no subclasses.
 >>* A module is defined by module…end.
 >>* A module's name is capital same as a class or camelCased.
+
+---
+
+###### Tuesday 4th September
++ I have worked on Codeacademy *__Learn Ruby__* course long time ago but I haven't finished it. I still had OOP sections to finish so I thought it is a good time for more Ruby practice.
+
++ Here are some new things I've learned & used during those sections:
+>* __Class variable__ => They are prefixed with `@@` before the name .
+>* They can be used to *store data* that belongs to a *class*, but __not__ to its instances.
+>* `public` methods => methods are public by default unless you use the private 0r protected keyword/method to make them not public.
+>>* Public methods describe the outside (outside of the class definition) behaviours of an object.
+>>* They are called with the object as the explicit receiver(thing you’re calling the method on: receiver.method)
+>* `private` methods => are methods defined under the private keyword/method. Private methods can only be used within the class definition; they’re for internal usage.
+>>* private methods can not be called with an explicit receiver, the receiver is always *implicitly self*.
+>>* The only way to have external access to a private method is to call it within a public method.
+>>* Think of private methods as internal helper methods.
+>* __Constants__ = > is like a variable, except that its value is supposed to *remain constant* for the duration of the program.
+>>* The Ruby interpreter does not actually enforce the constancy of constants, but it does issue a *warning* if a program changes the value of a constant.
+>>* Ruby constants are written in ALL_CAPS and are separated with *underscores* if there's more than one word.
+>* __Namespacing__ => is a way of bundling logically related objects together. Modules serve as a convenient tool for this such as `Math::PI`
+>>* This allows classes or modules with conflicting names to co-exist while avoiding collisions.
+>>* Think of this as storing different files with the same names under separate directories in your filesystem.
+>>* The double colon you see is called the *scope resolution operator*, which is a fancy way of saying it tells Ruby where you're looking for a specific bit of code so in this case Ruby knows to look inside the `Math` module to get the `PI`.
+
+##### Notes  
+>* Some modules, like `Math`, are already present in the interpreter.
+>* Others need to be *explicitly* brought in, however, and we can do this using `require`.
+>* For example if we want to use the Ruby `Date` module to show today's date we need to do this:
+```Ruby
+require 'date'
+puts Date.today
+```
+
+>* We can do more than just `require` a module but also we can `include` it!
+>>* Any class that `include`s a certain module can use those module's methods.
+>>* It should be after defining the class and we add `include Math` .
+
+```Ruby
+class Angle
+  include Math
+  attr_accessor :radians
+
+  def initialize(radians)
+    @radians = radians
+  end
+
+  def cosine
+    cos(@radians)
+  end
+end
+
+acute = Angle.new(1)
+acute.cosine
+```
+>>* In the previous code we mixed together the behaviours of a class and a module!
+>>* __mixin__ => When a module is used to mix additional behaviour and information into a class.
+>>>* Mixins allow us to customize a class without having to rewrite code!
+
+__The difference between `include` & `extend`__
+>* `include` => mixes a module's methods in at *the instance level* (allowing instances of a particular class to use the methods)
+>* `extend` => mixes a module's methods at *the class level*. This means that class itself can use the methods.
+
+An example to demonstrate it:
+```Ruby
+module Foo
+  def foo
+    puts 'heyyyyoooo!'
+  end
+end
+
+class Bar
+  include Foo
+end
+
+Bar.new.foo # heyyyyoooo!
+Bar.foo # NoMethodError: undefined method ‘foo’ for Bar:Class
+
+class Baz
+  extend Foo
+end
+
+Baz.foo # heyyyyoooo!
+Baz.new.foo # NoMethodError: undefined method ‘foo’ for #<Baz:0x1e708>
+```
+
+#### Note:
+>* We can use underscores in numbers `1_000_000`. Ruby allows this, and it makes it easier to read big numbers!
