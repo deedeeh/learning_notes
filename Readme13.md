@@ -62,3 +62,45 @@ p call_proc
 >* Procs *don’t* care about the correct number of arguments, while lambdas will *raise* an exception.
 
 We can see that `lambdas` are a lot closer to a regular method than `procs` are.
+
+Ruby procs & lambdas also have another special attribute. When you create a Ruby proc, it *captures the current execution scope* with it. This concept is called *closure*.
+>* __Closure__ => it means that a `proc` will *carry* with it values like local variables and methods from the *context* where it was defined.
+>>* They don’t carry the actual values, but a *reference* to them, so if the variables change after the proc is created, the proc will always have the latest version.
+
+```Ruby
+def call_proc(my_proc)
+  count = 500
+  my_proc.call
+end
+count   = 1
+my_proc = Proc.new { puts count }
+p call_proc(my_proc) # What does this print?
+```
+>>* because of the ‘closure’ effect this will print `1` and NOT `500`
+>>* This happens because the proc is using the value of `count` from the place where the proc was *defined*, and that’s *outside of the method* definition.
+
+##### Where do Ruby procs & lambdas store this scope information?
+>* When you create a `Binding` object via the `binding` method, you are creating an *‘anchor’* to this point in the code.
+>>* Every variable, method & class defined at this point will be *available later* via this object, even if you are in a completely different scope.
+>>* In other words, executing something under the context of a `binding` object is the same as if that code was in the same place where that `binding` was defined (remember the ‘anchor’ metaphor).
+
+Example to demonstrate `binding`
+```Ruby
+def return_binding
+  foo = 100
+  binding
+end
+# Foo is available thanks to the binding,
+# even though we are outside of the method
+# where it was defined.
+puts return_binding.class     #Binding
+puts return_binding.eval('foo')     #100
+# If you try to print foo directly you will get an error.
+# The reason is that foo was never defined outside of the method.
+puts foo      #NameError
+```
+>>* `eval(string [, binding [, filename [,lineno]]])` => it returns an obj.
+>>>* Evaluates the Ruby expression(s) in *string*. If *binding* is given, which must be a `Binding` object, the evaluation is performed in its context.
+>>>* If the optional *filename* and *lineno* parameters are present, they will be used when reporting syntax errors.
+
+You don’t need to use `binding` objects directly, but it’s still good to know this is a thing!
