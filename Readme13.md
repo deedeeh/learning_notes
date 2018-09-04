@@ -104,3 +104,9 @@ puts foo      #NameError
 >>>* If the optional *filename* and *lineno* parameters are present, they will be used when reporting syntax errors.
 
 You don’t need to use `binding` objects directly, but it’s still good to know this is a thing!
+
++ Enough with *Ruby* today! It is time for some *JS* and I will be practising that on Codeacademy *__Learn JavaScript__* course.
+>* I've already started it ages ago but then the curriculum has been updated so it is a good time to sharpen my skills.
+
++ After working on some *Ruby* & *JavaScript*, I've decided that is enough with programming languages I will practice some HTML, CSS & responsive design on FreeCodeCamp *__Responsive Web Design Certification__* that I've started it very long time ago and after the curriculum is updated I will try to finish it!
+>* I will take __quick notes__ on things I haven't seen/learned about before because I would rather practice on the platform than documenting plenty of info.
