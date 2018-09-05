@@ -142,3 +142,5 @@ puts numbers
 9
 ```
 >>* From what I understand `obj` parameter is the array we have in there but is the `&3` coming from `self` inside the block or it is from `*args` parameter.
+
++ I am watching a Ruby video [Intro to Object Orientation](https://www.youtube.com/watch?v=UysgBTrJoTc) on Learn.co youtube channel & I hope to learn new things. 
