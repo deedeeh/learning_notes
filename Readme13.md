@@ -110,3 +110,35 @@ You don’t need to use `binding` objects directly, but it’s still good to kno
 
 + After working on some *Ruby* & *JavaScript*, I've decided that is enough with programming languages I will practice some HTML, CSS & responsive design on FreeCodeCamp *__Responsive Web Design Certification__* that I've started it very long time ago and after the curriculum is updated I will try to finish it!
 >* I will take __quick notes__ on things I haven't seen/learned about before because I would rather practice on the platform than documenting plenty of info.
+
+---
+
+###### Wednesday 5th September
+
++ I am starting my day with a blog post [Mastering Ruby Blocks in Less Than 5 Minutes](https://mixandgo.com/learn/mastering-ruby-blocks-in-less-than-5-minutes) by *Cezar Halmagean* and I am doing it because I feel I need more practice & understanding of blocks.
+
+NEED EXPLANATION!
+---
++ I am still struggling with some of the concepts like for instance the following example:
+
+Let’s say you want to get every element of an array that is divisible by 3 (or any number you choose), how would you do that with ruby blocks?
+
+```Ruby
+class Fixnum
+  def to_proc
+    Proc.new do |obj, *args|
+      obj % self == 0
+    end
+  end
+end
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].select(&3)
+puts numbers
+
+# output
+
+3
+6
+9
+```
+>>* From what I understand `obj` parameter is the array we have in there but is the `&3` coming from `self` inside the block or it is from `*args` parameter.
