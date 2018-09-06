@@ -149,3 +149,35 @@ puts numbers
 
 + I am continuing the video from the previous day & still haven't decided yet what I should be doing for the rest of the day.
 >* `initialize` method can set optional arguments like this `def initialize(name = nil)` so I won't have to add an argument when I instantiate.
+
++ I've started to do the *__Command Line__* course on Codeacademy and here are few things I've learned:
+>* I can create a file `touch` or a directory `mkdir` while I am not in the directory that I want by doing
+>>* `touch directory/new_file`
+>>* `mkdir directory/new_directory`
+>>* It is the same idea if I am for example in `home/dev/ruby` so my current directory is `home` and I want to create a new file or directory in `ruby`.
+>>>* I will do `mkdir dev/ruby/new_directory`
+>>>* So I always have to go down or up in the filesystem (the tree).
+>* Just to remind myself I combine different flags with the command like `ls -alt`
+>>* `-a` => including hidden files & directories.
+>>* `-l` => in long format.
+>>* `-t` => ordered by the date and time they were last modified.
+>* `cp` => copy and we can do something like this `cp file1 file2` it means:
+>>* We copy the contents of `file1` *into* `file2`
+>>* We can also copy a file from a directory and paste it to another one
+>>>* Lets say from our example `home/dev/ruby` we have in `dev` js & ruby directories and we want to copy a file from js to ruby. My current directory is `dev`
+>>>* `cp js/file ruby/`
+>>* I can copy more than 1 file from a directory a paste it into another directory by doing this:
+>>>* `cp js/file1 js/file2 ruby/`
+>>>* It means I copied file1 & file2 from js and paste it in ruby.
+>>* More ways of using `cp` like `cp * ruby/` so lets say we are still in `dev` and we have files `notes.txt` `jobs.txt`
+>>>* `*` => We can use special characters like asterisk to select groups of files. These characters are called wildcards.
+>>>* In the above example it means we copied *ALL* he files in dev directory and paste it in ruby.
+>>* We can select all files that starts by a specific alphabet like `n` and ending with for example `.txt` copy them and paste them in the selected directory.
+>>>* `cp n*.txt ruby/` that means it will only copy and paste the file `notes.txt`
+>* `mv` => We can also move files and rename it with this command.
+>>* Let's say we are still in `dev` and we want to move a file `tech.txt` to a directory we have in `dev` called jobs so what we will do
+>>>* `mv tech.txt jobs/`
+>>* We can do that with multiple files separated by a space.
+>>>* `mv file1 file2 directory/`
+>>* Let's say we are in jobs directory and now we want to __rename__ the `tech.txt` to `technical.txt` so we will do this
+>>>* `mv tech.txt technical.txt`
