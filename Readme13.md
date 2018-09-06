@@ -143,4 +143,9 @@ puts numbers
 ```
 >>* From what I understand `obj` parameter is the array we have in there but is the `&3` coming from `self` inside the block or it is from `*args` parameter.
 
-+ I am watching a Ruby video [Intro to Object Orientation](https://www.youtube.com/watch?v=UysgBTrJoTc) on Learn.co youtube channel & I hope to learn new things. 
++ I am watching a Ruby video [Intro to Object Orientation](https://www.youtube.com/watch?v=UysgBTrJoTc) on Learn.co youtube channel & I hope to learn new things.
+
+###### Thursday 6th September
+
++ I am continuing the video from the previous day & still haven't decided yet what I should be doing for the rest of the day.
+>* `initialize` method can set optional arguments like this `def initialize(name = nil)` so I won't have to add an argument when I instantiate.
