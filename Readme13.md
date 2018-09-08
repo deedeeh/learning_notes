@@ -292,3 +292,7 @@ tesla_model_s.number_of_wheels = 3
 tesla_model_s.number_of_wheels # => 3
 ```
 >>* But we can also use methods to other things like “make_noise” method.
+
+>* The second resource is the second part of the previous blog post by *TK* [Ruby 101: Object-Oriented Programming part 2](https://medium.com/the-renaissance-developer/ruby-101-object-oriented-programming-part-2-80b3eca2a318)
+>>* I won't take any notes because I've already done this part even also part 1 which was included in [Learning Ruby: From Zero to Hero](https://medium.freecodecamp.org/learning-ruby-from-zero-to-hero-90ad4eecc82d)
+>>* Check it in [here](https://github.com/deedeeh/learning_notes/blob/master/Readme12.md)
