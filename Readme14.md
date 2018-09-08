@@ -219,3 +219,78 @@ test.rb:42: protected method 'printArea' called for #
 ```
 
 >>* I've tried to call the private methods as well and I get the same `NoMethodError`.
+
+>* __Class Inheritance__ => Inheritance allows us to define a class in terms of another class, which makes it easier to create and maintain an application.
+>>* Inheritance also provides an opportunity to
+>>>* *reuse* the code functionality and
+>>>* *fast* implementation time
+>>>* but unfortunately Ruby does not support multiple levels of inheritances but Ruby supports __mixins__.
+>>* __mixin__  => is like a specialized implementation of multiple inheritance in which *only the interface portion is inherited*.
+>>* When creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should *inherit* the members of an *existing class*.
+>>>* This existing class is called the __base class or superclass__, and the new class is referred to as the __derived class or sub-class__
+>>>* The syntax for extending a class is simple. Just add a `<` character and the name of the *superclass* to your class statement.
+
+```Ruby
+# define a class
+class Box
+   # constructor method
+   def initialize(w,h)
+      @width, @height = w, h
+   end
+   # instance method
+   def getArea
+      @width * @height
+   end
+end
+
+# define a subclass
+class BigBox < Box
+
+   # add a new instance method
+   def printArea
+      @area = @width * @height
+      puts "Big box area is : #@area"
+   end
+end
+
+# create an object
+box = BigBox.new(10, 20)
+
+# print the area
+box.printArea()
+
+#=> Big box area is : 200
+```
+
+>* __Methods Overriding__ => you can add new functionality in a derived class, but sometimes you would like to change the behaviour of *already defined method* in a parent class.
+>>* You can do so simply by *keeping* the method name same and overriding the functionality of the method.
+
+```Ruby
+# define a class
+class Box
+   # constructor method
+   def initialize(w,h)
+      @width, @height = w, h
+   end
+   # instance method
+   def getArea
+      @width * @height
+   end
+end
+
+# define a subclass
+class BigBox < Box
+
+   # change existing getArea method as follows
+   def getArea
+      @area = @width * @height
+      puts "Big box area is : #@area"
+   end
+end
+
+# create an object
+box = BigBox.new(10, 20)
+
+# print the area using overriden method.
+box.getArea()
+```
