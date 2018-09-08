@@ -211,3 +211,84 @@ puts numbers
 >>>* Polymorphism (poly = many / morph = forms)
 >>>>* Refactor ugly code
 >>>>* Methods behave differently depending on the type of object we are referencing.
+
++ Then I will focus on __OOP in Ruby__ and the resources are:
+>* [Ruby 101: Object-Oriented Programming part 1](https://medium.com/the-renaissance-developer/ruby-101-object-oriented-programming-part-1-af734f87f481) by *TK*
+>>* Objects are representation of the real world objects such as cars, bikes, etc...
+>>* The objects share two main characteristics: data & behaviour.
+>>* In OOP we call data as *attributes* and behaviour as *methods*
+>>* A __Class__ is a blueprint from which individual objects are created.
+>>* In the real world we often find many objects with all the same type like cars.
+>>* Ruby as an OOP language has these concepts: __class__ & __object__.
+>>>* A class is a blueprint, a model for its objects.
+>>* Objects are instances of a class. We create an instance by calling `.new` method.
+```Ruby
+vehicle = Vehicle.new
+```
+>>>* Here vehicle is an *object* (or *instance*) of the class Vehicle.
+>>* Here we define our class to receive data when instantiates it.
+
+```Ruby
+class Vehicle
+  def initialize(number_of_wheels, type_of_tank, seating_capacity, maximum_velocity)
+    @number_of_wheels = number_of_wheels
+    @type_of_tank = type_of_tank
+    @seating_capacity = seating_capacity
+    @maximum_velocity = maximum_velocity
+  end
+end
+```
+>>* `initialize` we call it a a constructor method.
+>>* So when we create the vehicle object we can define these attributes like this:
+```Ruby
+tesla_model_s = Vehicle.new(4, 'electric', 5, 250)
+```
+>>* All attributes set. But how can we access this attributes values?
+>>>* We send a message to the object asking about them.
+>>>* We call it a *__method__*. It’s the *__object__*’s *__behaviour__*.
+>>>* We need a "getter" get the attribute value and a "setter" set a new value for the attribute.
+
+```Ruby
+class Vehicle
+  def initialize(number_of_wheels, type_of_tank, seating_capacity, maximum_velocity)
+    @number_of_wheels = number_of_wheels
+    @type_of_tank = type_of_tank
+    @seating_capacity = seating_capacity
+    @maximum_velocity = maximum_velocity
+  end
+
+  def number_of_wheels
+    @number_of_wheels
+  end
+
+  def set_number_of_wheels=(number)
+    @number_of_wheels = number
+  end
+end
+```
+>>* In Ruby, we can do that without this methods.
+>>>* `attr_reader` => implements the "getter" method
+>>>* `attr_writer` => implements the "setter" method
+>>>* `attr_accessor` => implements both methods.
+
+```Ruby
+class Vehicle
+  attr_accessor :number_of_wheels
+
+  def initialize(number_of_wheels, type_of_tank, seating_capacity, maximum_velocity)
+    @number_of_wheels = number_of_wheels
+    @type_of_tank = type_of_tank
+    @seating_capacity = seating_capacity
+    @maximum_velocity = maximum_velocity
+  end
+end
+
+# number_of_wheels equals 4
+tesla_model_s = Vehicle.new(4, 'electric', 5, 250)
+tesla_model_s.number_of_wheels # => 4
+
+# number_of_wheels equals 3
+tesla_model_s.number_of_wheels = 3
+tesla_model_s.number_of_wheels # => 3
+```
+>>* But we can also use methods to other things like “make_noise” method.
