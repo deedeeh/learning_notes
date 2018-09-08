@@ -181,3 +181,11 @@ puts numbers
 >>>* `mv file1 file2 directory/`
 >>* Let's say we are in jobs directory and now we want to __rename__ the `tech.txt` to `technical.txt` so we will do this
 >>>* `mv tech.txt technical.txt`
+>* `rm` => stands for remove/delete
+>>* If we want to remove a file we can do this `rm file`
+>>* but if we want to remove a directory
+`rm -r directory`
+>>>* `-r` => stands for *recursive* and it is an option to modifies the behaviour of the `rm` command.
+>>>* It is used to delete a directory and all of its child directories.
+>>* __WARNING__
+>>>* Be careful when you use `rm`! It deletes files and directories permanently. There isn't an undelete command!
