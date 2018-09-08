@@ -189,3 +189,25 @@ puts numbers
 >>>* It is used to delete a directory and all of its child directories.
 >>* __WARNING__
 >>>* Be careful when you use `rm`! It deletes files and directories permanently. There isn't an undelete command!
+
+---
+
+###### Saturday 8th September
+
++ After completing 2 parts from *__Command Line__* course on Codeacademy, I still have *redirecting input & output* and also *configuring the environment* sections. I will try to work on that later today but now I need to focus on more Ruby.  
+
++ I will start my day by learning more on the general concept of __Object Oriented Programming__ and here are the resources:
+>* [Chapter 3: What is Object-Oriented Programming?](https://medium.com/learn-how-to-program/chapter-3-what-is-object-oriented-programming-d0a6ec0a7615) by *Richard Kenneth Eng*
+>* [Object-Oriented Programming in 7 minutes](https://www.youtube.com/watch?v=pTB0EiLXUC8) by *Mosh Hamedani*
+>>* The 4 pillars of OOP:
+>>>* Encapsulation
+>>>>* Reduce complexity.
+>>>>* Increase reusability.
+>>>* Abstraction
+>>>>* Reduce Complexity.
+>>>>* Isolate impact of changes.
+>>>* Inheritance
+>>>>* Eliminate redundant code.
+>>>* Polymorphism (poly = many / morph = forms)
+>>>>* Refactor ugly code
+>>>>* Methods behave differently depending on the type of object we are referencing.
