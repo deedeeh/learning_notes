@@ -20,6 +20,7 @@
 >* `<` => takes the standard input from the file on the right and inputs it into the program on the left.
 >* `|` => is a "pipe". The `|` takes the standard output of the command on the left, and pipes it as standard input to the command on the right.
 >>* ` cat volcanoes.txt | wc`
+>>>* `wc` => stands for "word count"
 >>>* Here the output of `cat volcanoes.txt` is the standard input of `wc`. in turn, the `wc` command outputs the number of lines, words, and characters in `volcanoes.txt`, respectively. (17  26  204)
 >>* Multiple `|`s can be chained together like `cat volcanoes.txt | wc | cat > islands.txt`  
 >>>* Here the standard output of `cat volcanoes.txt` is "piped" to the `wc` command. The standard output of `wc` is then "piped" to `cat`. Finally, the standard output of `cat` is redirected to `islands.txt`.
@@ -54,3 +55,5 @@
 >>>* `g` => This expression stands for "global"
 >>>* Here sed searches `forests.txt` for the word "snow" and replaces it with "rain", *globally*.
 >>>* All instances of "snow" on a line will be turned to "rain".
+
++ I've done couple of projects on codeacademy and a quiz to practise redirecting (I/O). I still have 1 more section left *__Configuring The Environment__* which I find it the hardest of them all! I will work on it probably tomorrow.
