@@ -57,3 +57,11 @@
 >>>* All instances of "snow" on a line will be turned to "rain".
 
 + I've done couple of projects on codeacademy and a quiz to practise redirecting (I/O). I still have 1 more section left *__Configuring The Environment__* which I find it the hardest of them all! I will work on it probably tomorrow.
+
+---
+
+###### Tuesday 11th September
+
++ Today I am doing more Ruby, just reading blogs, watching videos and trying different things out. If I encountered a new information I will note it down.
+
++ I might work on *__Configuring The Environment__* in Command Line, even though, I believe it is too advanced materials & I won't be using it regularly or maybe at all. I won't take notes if I work on this section in codeacademy except the extremely useful info that I will use it all the time.
