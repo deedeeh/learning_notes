@@ -63,6 +63,12 @@
 ###### Tuesday 11th September
 
 + Today I am doing more Ruby, just reading blogs, watching videos and trying different things out. If I encountered a new information I will note it down.
->* Went over methods, hashes, classes & OOP. Nothing really new that I haven't seen before.  
+>* Went over methods, hashes, classes & OOP. Nothing really new that I haven't seen before.
 
 + I might work on *__Configuring The Environment__* in Command Line, even though, I believe it is too advanced materials & I won't be using it regularly or maybe at all. I won't take notes if I work on this section in codeacademy except the extremely useful info that I will use it all the time.
+>* I don't want to go into details but I just mention this section is about `nano` command line text editor so we can open a file and add content like greeting `Hello, Dina` to it or create aliases.
+>>* You can interact with it only through keyboard (you will have a list of shortcuts at the bottom of the text editor when you access it).
+>>* So we do `nano file_name` then a text editor in terminal will open.
+>>* There I can add text, save it and then exit nano.
+>* To activate the text we do `source file_name` so it won't have to exit the current session and make the command or changes available to it.
+>* `alias` => allows to create keyboard shortcuts for commonly used commands (to make our life easier).
