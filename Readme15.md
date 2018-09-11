@@ -63,5 +63,6 @@
 ###### Tuesday 11th September
 
 + Today I am doing more Ruby, just reading blogs, watching videos and trying different things out. If I encountered a new information I will note it down.
+>* Went over methods, hashes, classes & OOP. Nothing really new that I haven't seen before.  
 
 + I might work on *__Configuring The Environment__* in Command Line, even though, I believe it is too advanced materials & I won't be using it regularly or maybe at all. I won't take notes if I work on this section in codeacademy except the extremely useful info that I will use it all the time.
