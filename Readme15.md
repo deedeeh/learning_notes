@@ -66,9 +66,22 @@
 >* Went over methods, hashes, classes & OOP. Nothing really new that I haven't seen before.
 
 + I might work on *__Configuring The Environment__* in Command Line, even though, I believe it is too advanced materials & I won't be using it regularly or maybe at all. I won't take notes if I work on this section in codeacademy except the extremely useful info that I will use it all the time.
->* I don't want to go into details but I just mention this section is about `nano` command line text editor so we can open a file and add content like greeting `Hello, Dina` to it or create aliases.
+>* I don't want to go into many details but I will briefly share few quick notes.
+>* The *environment* refers to the preferences and settings of the current user.
+>* `nano` => command line text editor used to configure the environment. We can open a file and add content like greeting `Hello, Dina` to it or create aliases.
 >>* You can interact with it only through keyboard (you will have a list of shortcuts at the bottom of the text editor when you access it).
 >>* So we do `nano file_name` then a text editor in terminal will open.
 >>* There I can add text, save it and then exit nano.
 >* To activate the text we do `source file_name` so it won't have to exit the current session and make the command or changes available to it.
+>* `~/.bash_profile` => is where environment settings are stored. You can edit this file with nano.
 >* `alias` => allows to create keyboard shortcuts for commonly used commands (to make our life easier).
+>* *environment variables* => are variables that can be used across commands and programs and hold information about the environment.
+>>* `export VARIABLE="Value"` sets and exports an environment variable.
+>>* `USER` is the name of the current user.
+>>>* `echo $USER` => __Note__ that `$` is always used when returning a variable's value.
+>>* `PS1` is the command prompt.
+>>* `HOME` is the home directory. It is usually not customized.
+>>* `PATH` returns a colon separated list of file paths. It is customized in advanced cases.
+>>* `env` returns a list of environment variables.
+
++ This is the end of the *__Command Line__* course on Codeacademy. I might be doing more of this topic in the next few days on Udemy.
