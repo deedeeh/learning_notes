@@ -85,3 +85,73 @@
 >>* `env` returns a list of environment variables.
 
 + This is the end of the *__Command Line__* course on Codeacademy. I might be doing more of this topic in the next few days on Udemy.
+
+---
+
+###### Wednesday 12th September
+
++ I am doing more Ruby OOP and I have come across few methods that I've seen many times before but I didn't decide to check it but it is time to do that.
+>* `#inject` => The `inject` method in Ruby is most commonly used with arrays, with the enumerable module and with converting array elements into hashes. Here are the possible ways of using it from a [blog post](http://blog.jayfields.com/2008/03/ruby-inject.html) by *Jay Fields*:
+>>* __Summing Numbers__ It is the most common example for using inject. You have an array of numbers and you want the sum of those numbers.
+```Ruby
+[1, 2, 3, 4].inject(0) { |result, element| result + element } # => 10
+```
+>>>* The block will be executed once for each element contained in the object that inject was called on ([1,2,3,4] in our example).
+>>>* The argument passed to inject will be yielded as the first argument to the block, the first time it's executed.
+>>>* The second argument yielded to the block will be the first element of the object that we called inject on & etc...
+>>>* So, the block will be executed 4 times, once for every element of our array ([1,2,3,4]).
+>>>* The return value of the block will be yielded as the result argument the next time the block is executed.
+>>>* That's the very long version of how inject works, but you could actually __shortcut__ one of the block executions by *not passing an argument* to inject. The argument to `inject` is optional.
+```Ruby
+[1, 2, 3, 4].inject { |result, element| result + element } # => 10
+```
+>>>* The first time the block executes the first argument (result) will be set to the first element of the enumerable (1) and the second argument (element) will be set to the second element of the enumerable (2). Check the above example.
+>>>* In this case the block will only need to be executed 3 times, since the first execution will yield both the first and the second element.
+>>* __Building a Hash__ you may have an array that contains keys and values as pairs, but it's really just an array of arrays. In that case, `inject` is a nice solution for quickly converting your array of arrays into a hash.
+
+```Ruby
+hash = [[:first_name, 'Shane'], [:last_name, 'Harvie']].inject({}) do |result, element|
+  result[element.first] = element.last
+  result
+end
+
+hash # => {:first_name=>"Shane", :last_name=>"Harvie"}
+```
+>>* As the example shows, start with an empty hash (the argument to inject) and iterate through each element in the array adding the key and value one at a time to the result.
+
+>* __Building an Array__ Enumerable gives you many methods you need for manipulating arrays.
+>>* For example, if want all the integers of an array, that are even, as strings, you can do so chaining various methods from Enumerable.
+```Ruby
+[1, 2, 3, 4, 5, 6].select { |element| element % 2 == 0 }.collect { |element| element.to_s } # => ["2", "4", "6"]
+```
+>>* Chaining methods of Enumerable is a solution but as the chain gets longer it is better to use `inject`
+>>* The `inject` method allows to handle everything needed without having to chain multiple independent methods.
+```Ruby
+array = [1, 2, 3, 4, 5, 6].inject([]) do |result, element|
+  result << element.to_s if element % 2 == 0
+  result
+end
+array # => ["2", "4", "6"]
+```
+>* A convenient way to use this method is with a symbol for an operation.
+```Ruby
+[1, 2, 3, 4].inject(:+)
+```
+>>* returns the sum of everything in the array, or in this example 10
+
+>* `reduce` => It is an alias for `inject` so it does exactly the same job.
+>* `max_at` => Returns the object in enum that gives the maximum value from the given block.
+If no block is given, an enumerator is returned instead.
+>>* max_by {|obj| block } → obj
+>>* max_by → an_enumerator
+>>* max_by(n) {|obj| block } → obj
+>>* max_by(n) → an_enumerator
+```Ruby
+a = %w(albatross dog horse)
+a.max_by { |x| x.length }   #=> "albatross"
+```
+>>* If the n argument is given, maximum n elements are returned as an array. These n elements are sorted by the value from the given block, in descending order.
+```Ruby
+a = %w[albatross dog horse]
+a.max_by(2) {|x| x.length } #=> ["albatross", "horse"]
+```
