@@ -155,3 +155,31 @@ a.max_by { |x| x.length }   #=> "albatross"
 a = %w[albatross dog horse]
 a.max_by(2) {|x| x.length } #=> ["albatross", "horse"]
 ```
+
+---
+
+###### Saturday 15th September
+
++ I am working today on *__Backend Basics__* section from *__The Web Developer Bootcamp__* on Udemy and here are some of the things I wanted to take notes of:
+>* How the internet works, the request response cycle.
+>* Difference between static & dynamic websites.
+>>* *Static websites* have the same HTML, CSS & JS even if it is interactive like a colors app that you get random colors every time you click.
+>>* *Dynamic websites* will have new contents every time you refresh the webpage such ask reddit, Facebook & Twitter.
+>* FullStack Web Development refers to writing code on all parts of the stack, the backend and the frontend.
+>* __HTTP__ => defines a set of request methods to indicate the desired action to be performed for a given resource.
+>>* `GET` => Requests using GET should only retrieve data.
+>>* `POST` => The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+>>* `PUT` => The PUT method replaces all current representations of the target resource with the request payload.
+>>* `PATCH` => The PATCH method is used to apply partial modifications to a resource.
+>>* `DELETE` => The DELETE method deletes the specified resource.
+>>* There are other methods but those are the most common ones or as far as I've seen those are used most of the time.
+>* __Query String__ => A query string is the portion of a URL where data is passed to a web application and/or back-end database. The reason we need query strings is that the HTTP protocol is stateless by design.
+>>* For a website to be anything more than a brochure, you need to maintain state (store data).
+>>* There are a number of ways to do this:
+>>>* On most web servers, you can use something like *session state* server-side.
+>>>* On the client, you can store via *cookies*.
+>>>* In the URL, you can store data via a *query string*.
+>>* On the world wide web, all URLs can be broken down into the *protocol*, the *location* of the file (or program) and the *query string*.
+>>>* The __protocol__ you see in a browser is almost always HTTP.
+>>>* The __location__ is the typical form of the hostname and filename.
+>>>* the __query string__ is whatever follows the question mark sign ("?").
