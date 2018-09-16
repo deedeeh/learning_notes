@@ -183,3 +183,10 @@ a.max_by(2) {|x| x.length } #=> ["albatross", "horse"]
 >>>* The __protocol__ you see in a browser is almost always HTTP.
 >>>* The __location__ is the typical form of the hostname and filename.
 >>>* the __query string__ is whatever follows the question mark sign ("?").
+
+---
+
+### Tomorrow the 17th of September 2018 is my 1st day in Flatiron School Bootcamp!!!
+### I can't wait to start :)
+
+---
